@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barcelona ⇄ Dolomitas · Ruta camper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1F3EF;
+  --card:#FBFCFA;
+  --ink:#1C2A26;
+  --muted:#5C6963;
+  --line:#D8DDD7;
+  --pine:#2F6F63;      /* IDA */
+  --pine-soft:#E3EEEA;
+  --amber:#B77A1F;     /* DOLOMITAS */
+  --amber-soft:#F5EAD5;
+  --rose:#A94E63;      /* VUELTA */
+  --rose-soft:#F3E3E7;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Instrument Sans',system-ui,sans-serif;
+  font-size:15.5px;
+  line-height:1.55;
+}
+.mono{font-family:'IBM Plex Mono',monospace}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+
+/* ---------- HERO ---------- */
+header{
+  padding:56px 0 36px;
+  border-bottom:1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(47,111,99,.06), rgba(169,78,99,.05) 90%);
+}
+.kicker{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:14px;
+}
+h1{
+  font-family:'Bricolage Grotesque',sans-serif;
+  font-weight:800;font-size:clamp(34px,6vw,58px);
+  line-height:1.02;letter-spacing:-.02em;
+}
+h1 .ida{color:var(--pine)} h1 .vuelta{color:var(--rose)}
+.hero-sub{margin-top:14px;color:var(--muted);max-width:56ch}
+.hero-stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.stat{
+  background:var(--card);border:1px solid var(--line);border-radius:999px;
+  padding:7px 16px;font-size:13px;color:var(--muted);
+}
+.stat b{color:var(--ink);font-weight:600}
+
+/* ---------- NAV TABS ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(241,243,239,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.tabs{display:flex;gap:4px;padding:10px 0;overflow-x:auto}
+.tab{
+  border:1px solid var(--line);background:var(--card);color:var(--muted);
+  border-radius:999px;padding:8px 18px;font-size:13.5px;font-weight:500;
+  cursor:pointer;white-space:nowrap;font-family:inherit;transition:all .15s;
+}
+.tab:hover{color:var(--ink)}
+.tab.active[data-tab="ida"]{background:var(--pine);border-color:var(--pine);color:#fff}
+.tab.active[data-tab="dolo"]{background:var(--amber);border-color:var(--amber);color:#fff}
+.tab.active[data-tab="vuelta"]{background:var(--rose);border-color:var(--rose);color:#fff}
+.tab.active[data-tab="tips"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.tab:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+/* ---------- SECTIONS ---------- */
+section{display:none;padding:34px 0 60px}
+section.visible{display:block}
+.leg-head{margin-bottom:26px}
+.leg-tag{
+  display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:11px;
+  letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:4px;margin-bottom:10px;
+}
+#ida .leg-tag{background:var(--pine-soft);color:var(--pine)}
+#dolo .leg-tag{background:var(--amber-soft);color:var(--amber)}
+#vuelta .leg-tag{background:var(--rose-soft);color:var(--rose)}
+h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(24px,4vw,34px);letter-spacing:-.01em}
+.leg-desc{color:var(--muted);margin-top:8px;max-width:62ch}
+
+/* ---------- ROUTE SPINE + DAY CARDS ---------- */
+.route{position:relative;padding-left:26px}
+.route::before{
+  content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;
+  background:var(--line);border-radius:2px;
+}
+#ida .route::before{background:linear-gradient(var(--pine),var(--line))}
+#dolo .route::before{background:linear-gradient(var(--amber),var(--line))}
+#vuelta .route::before{background:linear-gradient(var(--rose),var(--line))}
+.day{position:relative;margin-bottom:16px}
+.day::before{
+  content:"";position:absolute;left:-25px;top:22px;width:12px;height:12px;
+  border-radius:50%;background:var(--paper);border:3px solid var(--muted);
+}
+#ida .day::before{border-color:var(--pine)}
+#dolo .day::before{border-color:var(--amber)}
+#vuelta .day::before{border-color:var(--rose)}
+
+details{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;transition:box-shadow .15s;
+}
+details[open]{box-shadow:0 6px 24px rgba(28,42,38,.07)}
+summary{
+  list-style:none;cursor:pointer;padding:16px 18px;display:flex;
+  flex-wrap:wrap;align-items:baseline;gap:8px 14px;
+}
+summary::-webkit-details-marker{display:none}
+summary:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+.d-num{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);
+}
+.d-title{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:18px;flex:1 1 auto}
+.d-km{
+  font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--muted);
+  background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:3px 9px;
+}
+.d-body{padding:0 18px 18px;border-top:1px dashed var(--line)}
+.d-body p{margin:12px 0 0;color:#33413C}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:14px}
+.cell{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.cell h4{
+  font-size:11px;font-family:'IBM Plex Mono',monospace;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:6px;
+}
+.cell p{font-size:14px;margin:0;color:#33413C}
+.cell p + p{margin-top:6px}
+.temp{font-family:'IBM Plex Mono',monospace;font-size:13.5px}
+.warn{
+  margin-top:14px;background:#FBF3E4;border:1px solid #E8D9B8;border-radius:10px;
+  padding:11px 14px;font-size:13.5px;color:#6E5620;
+}
+.warn b{color:#5A430F}
+
+/* ---------- TIPS ---------- */
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:22px}
+.tip{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.tip h3{font-family:'Bricolage Grotesque',sans-serif;font-size:16.5px;font-weight:600;margin-bottom:8px}
+.tip p, .tip li{font-size:14px;color:#33413C}
+.tip ul{padding-left:18px;margin-top:6px}
+.tip li{margin-bottom:5px}
+
+footer{
+  border-top:1px solid var(--line);padding:26px 0 46px;color:var(--muted);
+  font-size:13px;
+}
+footer .mono{font-size:12px}
+
+@media (max-width:560px){
+  .route{padding-left:20px}
+  .day::before{left:-19px;width:10px;height:10px}
+  summary{padding:14px}
+  .d-body{padding:0 14px 14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">Camper · Agosto · Grupo de amigos</div>
+    <h1>Barcelona <span class="ida">→</span> Dolomitas <span class="vuelta">→</span> Barcelona</h1>
+    <p class="hero-sub">Documento de ruta completo: ida por la Costa Azul y el Garda, dos días a fondo en los Dolomitas, y una vuelta de 8 días totalmente distinta — Brenta, Bérgamo, lagos piamonteses, Mont Blanc, Annecy y Occitania interior. Sin repetir nada de la ida.</p>
+    <div class="hero-stats">
+      <span class="stat"><b>~3.100 km</b> totales</span>
+      <span class="stat"><b>8 días</b> de vuelta</span>
+      <span class="stat"><b>≤300 km/día</b> (salvo el último)</span>
+      <span class="stat"><b>3 países</b> ES · FR · IT</span>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="ida" role="tab" aria-selected="true">Ida</button>
+      <button class="tab" data-tab="dolo" role="tab" aria-selected="false">Dolomitas</button>
+      <button class="tab" data-tab="vuelta" role="tab" aria-selected="false">Vuelta · 8 días</button>
+      <button class="tab" data-tab="tips" role="tab" aria-selected="false">Consejos</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= IDA ================= -->
+<section id="ida" class="visible">
+  <div class="wrap">
+    <div class="leg-head">
+      <span class="leg-tag">Ida · 4 días + viernes tarde</span>
+      <h2>Costa Azul → Garda → Val Gardena</h2>
+      <p class="leg-desc">La ida ya la teníamos cerrada: se sale el viernes por la tarde para dormir avanzado y hacer la Costa Azul con calma el sábado. Ningún día pasa de 500 km.</p>
+    </div>
+
+    <div class="route">
+
+      <div class="day"><details>
+        <summary><span class="d-num">Vie · tarde</span><span class="d-title">Barcelona → Narbona</span><span class="d-km">~300 km · 2h45</span></summary>
+        <div class="d-body">
+          <p>Salida ~15h. Solo tránsito: AP-7 y A9 hasta Narbona para dormir avanzado y llegar frescos a Mónaco al día siguiente.</p>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir / parking</h4><p><b>Aire Camping-Car Park Narbonne (Croix Sud)</b> — barrera automática, luz y servicios, ~13 €/noche. Alternativa gratuita: área de Sigean. Verificar en park4night.</p></div>
+            <div class="cell"><h4>🍽 Comida</h4><p>Cena rápida en la camper o pizzería en el centro de Narbona si llegáis pronto. Comprad desayuno para el sábado.</p></div>
+            <div class="cell"><h4>🌡 Temperatura</h4><p class="temp">Agosto: 19–31 °C · noche templada</p></div>
+          </div>
+          <div class="warn"><b>Ojo:</b> viernes de agosto = AP-7 cargada al salir de Barcelona. Salir antes de las 15h si podéis.</div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">Día 1 · Sáb</span><span class="d-title">Narbona → Mónaco → Menton</span><span class="d-km">~500 km · 5h</span></summary>
+        <div class="d-body">
+          <p>El día más largo del viaje. Madrugar, tirar por la A8 y llegar a Mónaco a mediodía: Casino, puerto Hércules, palacio y paseo por Monte-Carlo. A última hora, 15 min hasta Menton para dormir.</p>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir / parking</h4><p>En Mónaco NO se puede aparcar la camper por altura: usar el <b>parking des Écoles de Beausoleil</b> o aparcar en Menton y entrar en tren/bus. Noche: <b>Camping Saint-Michel (Menton)</b>, en terrazas sobre el mar. Verificar altura máxima.</p></div>
+            <div class="cell"><h4>🍽 Comida</h4><p>Picnic en los jardines de Mónaco (comer allí es carísimo). Cena en Menton: socca, barbajuans y algo con limón de Menton.</p></div>
+            <div class="cell"><h4>🌡 Temperatura</h4><p class="temp">26–30 °C · humedad de costa</p></div>
+          </div>
+          <div class="warn"><b>Ojo:</b> Mónaco tiene túneles y parkings con límite de altura 1,90–2 m. Con camper, ni intentarlo: aparcar fuera siempre.</div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">Día 2 · Dom</span><span class="d-title">Menton → Riva del Garda</span><span class="d-km">~320 km · 4h</span></summary>
+        <div class="d-body">
+          <p>Se cruza a Italia por Ventimiglia y se sube por la llanura del Po hasta la punta norte del lago de Garda. Tarde de baño, paseo por Riva y atardecer en el lago.</p>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir / parking</h4><p><b>Area sosta camper Brione (Riva del Garda)</b> — la clásica, a 15 min andando del centro, con servicios. En agosto se llena: llegar antes de las 17h.</p></div>
+            <div class="cell"><h4>🍽 Comida</h4><p>Carne salada con fagioli (plato trentino), pizza junto al lago, gelato en el paseo. Aperol spritz obligatorio.</p></div>
+            <div class="cell"><h4>🌡 Temperatura</h4><p class="temp">22–31 °C · agua del lago ~24 °C</p></div>
+          </div>
+          <div class="warn"><b>Ojo:</b> el viento Ora sopla fuerte por la tarde en Riva — cerrad bien claraboyas y toldos.</div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">Día 3 · Lun</span><span class="d-title">Riva del Garda → Bolzano → Val Gardena</span><span class="d-km">~170 km · 2h30</span></summary>
+        <div class="d-body">
+          <p>Mañana tranquila en Riva, parada en Bolzano para comer y comprar (último gran supermercado barato), y subida a Val Gardena a media tarde. Primer contacto con los Dolomitas.</p>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir / parking</h4><p>Base para 4 noches: <b>parking nocturno de Monte Pana (S. Cristina)</b> o <b>Camping Odles / camping de la zona Funes–Gardena</b> si queréis servicios completos. En agosto, reservar camping con antelación. Verificar pernocta permitida en park4night.</p></div>
+            <div class="cell"><h4>🍽 Comida</h4><p>En Bolzano: speck, canederli y strudel en el mercado de Piazza delle Erbe. Cena tirolesa en Ortisei.</p></div>
+            <div class="cell"><h4>🌡 Temperatura</h4><p class="temp">Bolzano 30 °C ↘ Val Gardena 10–23 °C</p></div>
+          </div>
+          <div class="warn"><b>Ojo:</b> en Alto Adige la pernocta libre está muy controlada. Usar solo áreas y parkings señalizados para camper.</div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">Día 4 · Mar</span><span class="d-title">Val Gardena — descanso y primer contacto</span><span class="d-km">0 km</span></summary>
+        <div class="d-body">
+          <p>Día suave para recuperar del viaje: paseo por Ortisei, telecabina a Alpe di Siusi (la pradera alpina más grande de Europa) y tarde de spa/piscina o vermut en la terraza.</p>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir / parking</h4><p>Misma base en Val Gardena.</p></div>
+            <div class="cell"><h4>🍽 Comida</h4><p>Comida en rifugio en Alpe di Siusi: kaiserschmarrn, polenta con setas. Son restaurantes de verdad, no chiringuitos.</p></div>
+            <div class="cell"><h4>🌡 Temperatura</h4><p class="temp">8–22 °C · a 2.000 m refresca rápido</p></div>
+          </div>
+        </div>
+      </details></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOLOMITAS ================= -->
+<section id="dolo">
+  <div class="wrap">
+    <div class="leg-head">
+      <span class="leg-tag">Dolomitas · 2 días</span>
+      <h2>Los dos días grandes</h2>
+      <p class="leg-desc">El corazón del viaje. Madrugar es la clave: en agosto los parkings de Braies y Tre Cime se llenan antes de las 8h.</p>
+    </div>
+
+    <div class="route">
+
+      <div class="day"><details>
+        <summary><span class="d-num">Día 5 · Mié</span><span class="d-title">Día épico: Seceda + Tre Cime di Lavaredo</span><span class="d-km">~90 km de valle</span></summary>
+        <div class="d-body">
+          <p>Mañana: telecabina Ortisei → Seceda (la cresta más fotogénica de los Dolomitas, primer viaje ~8:30). Bajar a mediodía y conducir hasta Misurina para subir a Tre Cime por la tarde, cuando baja la marea de gente. Vuelta con el circuito clásico del Rifugio Locatelli (~10 km, 3h30).</p>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir / parking</h4><p>Peaje-parking de Tre Cime (Rifugio Auronzo): ~45 € por camper y NO se puede pernoctar arriba. Dormir abajo: <b>parking camper del lago de Misurina</b> o volver a Val Gardena si preferís no mover el campamento.</p></div>
+            <div class="cell"><h4>🍽 Comida</h4><p>Bocadillos para el trail + cena caliente en rifugio o en Misurina: goulash, spätzle, strudel.</p></div>
+            <div class="cell"><h4>🌡 Temperatura</h4><p class="temp">6–20 °C · viento en las crestas</p></div>
+          </div>
+          <div class="warn"><b>Ojo:</b> tormentas de tarde casi diarias en agosto. Mirar el radar por la mañana y estar bajando de las crestas a las 16h.</div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">Día 6 · Jue</span><span class="d-title">Lago di Braies + Val Badia</span><span class="d-km">~80 km de valle</span></summary>
+        <div class="d-body">
+          <p>Braies a primerísima hora (en agosto la carretera cierra a vehículos privados ~9:30–16h si no tenéis reserva de parking: reservad online con días de antelación). Vuelta del lago a pie (1h15) o barca de madera. Tarde relajada por Val Badia: San Cassiano, Corvara.</p>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir / parking</h4><p>Parking P4 de Braies admite camper (reserva online obligatoria en verano). Noche: vuelta a la base de Val Gardena para salir hacia el oeste al día siguiente.</p></div>
+            <div class="cell"><h4>🍽 Comida</h4><p>Val Badia es zona gourmet: turtres y cajincí (pasta ladina) en cualquier gasthof de San Cassiano.</p></div>
+            <div class="cell"><h4>🌡 Temperatura</h4><p class="temp">8–22 °C · el agua de Braies, helada</p></div>
+          </div>
+        </div>
+      </details></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= VUELTA ================= -->
+<section id="vuelta">
+  <div class="wrap">
+    <div class="leg-head">
+      <span class="leg-tag">Vuelta · 8 días · ~1.560 km</span>
+      <h2>La propuesta nueva: volver por donde no hemos pasado</h2>
+      <p class="leg-desc">Nada de repetir Garda ni Costa Azul. La vuelta baja por el Brenta y Bérgamo, toca los lagos piamonteses pequeños, cruza los Alpes por el Mont Blanc y el Petit Saint-Bernard, y entra en Francia por Annecy y la Occitania interior (Pont du Gard, Carcassonne). Media de ~195 km/día.</p>
+    </div>
+
+    <div class="route">
+
+      <div class="day"><details open>
+        <summary><span class="d-num">Día 1</span><span class="d-title">Val Gardena → Trento → Lago di Molveno</span><span class="d-km">~150 km · 2h30</span></summary>
+        <div class="d-body">
+          <p>Salida sin prisa. Parada en Trento para pasear por Piazza Duomo y el castillo del Buonconsiglio (1h30 basta), y subida al lago de Molveno, a los pies de las Dolomitas de Brenta — el "otro" grupo dolomítico que no habéis visto. Tarde de baño: el agua es de las más limpias de Italia y no tiene nada que ver con el ambientazo del Garda.</p>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir / parking</h4><p><b>Área camper / parking del lido de Molveno</b>, junto al lago y al camping Spiaggia. De pago, con vistas al Brenta. En agosto, llegar antes de las 16h. Verificar en park4night.</p></div>
+            <div class="cell"><h4>🍽 Comida</h4><p>Comida en Trento (canederli, vino Teroldego). Cena en Molveno: trucha del lago o polenta carbonera.</p></div>
+            <div class="cell"><h4>🌡 Temperatura</h4><p class="temp">14–27 °C · agua del lago ~21 °C</p></div>
+          </div>
+          <div class="warn"><b>Ojo:</b> Trento tiene ZTL en el casco antiguo — aparcar en el parking Zuffo (gratuito, bus al centro) y no meterse con la camper.</div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">Día 2</span><span class="d-title">Molveno → Bérgamo Città Alta</span><span class="d-km">~190 km · 2h45</span></summary>
+        <div class="d-body">
+          <p>Mañana de sendero fácil junto al lago o telecabina Pradel para ver el Brenta de cerca. Después, autopista hasta Bérgamo. La Città Alta amurallada (Patrimonio UNESCO) es de las ciudades más bonitas del norte de Italia y casi nadie la mete en ruta: Piazza Vecchia, la basílica, las murallas venecianas al atardecer.</p>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir / parking</h4><p><b>Área de sosta camper de Bérgamo</b> (zona baja, con servicios) y subir a la Città Alta en el funicular histórico — la mejor manera de entrar. Verificar en park4night; alternativa: parking vigilado de la estación.</p></div>
+            <div class="cell"><h4>🍽 Comida</h4><p>Bérgamo es capital gastronómica: casoncelli alla bergamasca, polenta taragna y de postre la "polenta e osei" dulce. Stracciatella: el helado se inventó aquí, en Piazza Vecchia.</p></div>
+            <div class="cell"><h4>🌡 Temperatura</h4><p class="temp">20–31 °C · calor de llanura padana</p></div>
+          </div>
+          <div class="warn"><b>Ojo:</b> a la Città Alta NO se sube en camper (ZTL + calles imposibles). Funicular o bus siempre.</div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">Día 3</span><span class="d-title">Bérgamo → Lago d'Orta</span><span class="d-km">~150 km · 2h</span></summary>
+        <div class="d-body">
+          <p>Rodeáis Milán por el norte hasta el lago d'Orta, el secreto mejor guardado del Piamonte: pequeño, sin masificar, con Orta San Giulio (uno de los "borghi più belli d'Italia") y la isla de San Giulio a 5 min en barca. Tarde de callejear, baño y atardecer desde el Sacro Monte.</p>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir / parking</h4><p><b>Área camper de Omegna</b> (punta norte del lago, junto al agua) o parking Prarondo sobre Orta San Giulio. Omegna tiene servicios completos y paseo lacustre. Verificar en park4night.</p></div>
+            <div class="cell"><h4>🍽 Comida</h4><p>Risotto al vino de la zona, agnolotti piamonteses y tapas de gorgonzola (Novara está al lado, es su cuna). Aperitivo frente a la isla.</p></div>
+            <div class="cell"><h4>🌡 Temperatura</h4><p class="temp">18–29 °C · brisas del lago</p></div>
+          </div>
+          <div class="warn"><b>Ojo:</b> el centro de Orta San Giulio es peatonal total; la camper se queda arriba sí o sí.</div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">Día 4</span><span class="d-title">Orta → Aosta → Courmayeur</span><span class="d-km">~190 km · 2h30</span></summary>
+        <div class="d-body">
+          <p>Autopista hasta el Valle de Aosta. Parada de 2h en Aosta para comer y ver el teatro romano, el Arco de Augusto y la Porta Praetoria ("la Roma de los Alpes"). Última media hora de subida hasta Courmayeur, a los pies del Mont Blanc.</p>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir / parking</h4><p><b>Área camper de Courmayeur</b> (junto a la telecabina de Dolonne) — base perfecta para el Skyway al día siguiente. Verificar plazas en park4night; alternativa: área de Pré-Saint-Didier a 5 min.</p></div>
+            <div class="cell"><h4>🍽 Comida</h4><p>Valdostano a tope: fontina, polenta concia, carbonada. Y un café "à la valdôtaine" en la grolla compartida.</p></div>
+            <div class="cell"><h4>🌡 Temperatura</h4><p class="temp">Aosta 28 °C ↘ Courmayeur 9–24 °C</p></div>
+          </div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">Día 5</span><span class="d-title">Courmayeur — Skyway Monte Bianco + Val Ferret</span><span class="d-km">0 km</span></summary>
+        <div class="d-body">
+          <p>Día sin conducir. Por la mañana, el <b>Skyway Monte Bianco</b>: telecabina giratoria de 360° hasta Punta Helbronner (3.466 m), con el Mont Blanc encima de la cabeza. Es caro (~55–60 €) pero es LA experiencia de la vuelta. Tarde en Val Ferret: pradera glaciar, paseo llano y cervezas en el Rifugio Bertone o junto al río.</p>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir / parking</h4><p>Misma área de Courmayeur. Para Val Ferret hay bus lanzadera en verano (el acceso en vehículo se restringe en agosto).</p></div>
+            <div class="cell"><h4>🍽 Comida</h4><p>Picnic arriba o comida en La Palud. Cena de despedida de Italia en Courmayeur: pizza + génépi de chupito.</p></div>
+            <div class="cell"><h4>🌡 Temperatura</h4><p class="temp">A 3.466 m: 0–5 °C incluso en agosto. Abrigo y gafas de sol.</p></div>
+          </div>
+          <div class="warn"><b>Ojo:</b> subir al Skyway a primera hora — a mediodía las nubes tapan la cima casi siempre. Comprar entrada online la noche antes.</div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">Día 6</span><span class="d-title">Courmayeur → Col du Petit Saint-Bernard → Annecy</span><span class="d-km">~170 km · 3h</span></summary>
+        <div class="d-body">
+          <p>Cruce de los Alpes por el <b>Col du Petit Saint-Bernard (2.188 m)</b>: puerto panorámico, gratuito y perfectamente apto para camper — os ahorráis los ~60–75 € del túnel del Mont Blanc y encima es más bonito. Bajada por la Tarentaise hasta Annecy, la "Venecia de los Alpes". Tarde de canales, casco antiguo y baño en el lago (agua turquesa, playas públicas).</p>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir / parking</h4><p><b>Aire Camping-Car Park de Sevrier</b> (orilla oeste, con la ciclovía que lleva al centro en 20 min de bici) o camping municipal Le Belvédère. En agosto Annecy revienta: llegar pronto o reservar. Verificar en park4night.</p></div>
+            <div class="cell"><h4>🍽 Comida</h4><p>Tartiflette, reblochon, filets de perche del lago. Y crêpes en el Palais de l'Île.</p></div>
+            <div class="cell"><h4>🌡 Temperatura</h4><p class="temp">15–28 °C · agua del lago ~24 °C</p></div>
+          </div>
+          <div class="warn"><b>Ojo:</b> el Petit Saint-Bernard son ~30 km de curvas; frenar con marchas en la bajada. Si hay niebla cerrada, alternativa: túnel del Mont Blanc (caro pero rápido).</div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">Día 7</span><span class="d-title">Annecy → Pont du Gard / Uzès</span><span class="d-km">~300 km · 3h15</span></summary>
+        <div class="d-body">
+          <p>El día de más autopista de la vuelta (A41 + A7 esquivando Lyon). Llegada a media tarde al <b>Pont du Gard</b>, el acueducto romano más impresionante que existe: baño en el río Gardon debajo del puente (sí, se puede) y luz dorada del atardecer. Uzès, a 15 min, es un pueblo ducal precioso para la cena.</p>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir / parking</h4><p><b>Aire de Remoulins</b> (a 5 min del Pont du Gard) o área municipal de Uzès. El parking oficial del Pont du Gard cierra de noche — no se pernocta dentro. Verificar en park4night.</p></div>
+            <div class="cell"><h4>🍽 Comida</h4><p>Ya estáis en el sur: brandade de Nîmes, tapenade, picholines y un rosado fresquito de la zona.</p></div>
+            <div class="cell"><h4>🌡 Temperatura</h4><p class="temp">18–33 °C · el día más caluroso de la vuelta</p></div>
+          </div>
+          <div class="warn"><b>Ojo:</b> sábado de agosto en la A7 ("Bison Futé" negro) puede ser un infierno. Si el día 7 cae en sábado, salid de Annecy a las 7h.</div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">Día 8</span><span class="d-title">Pont du Gard → Carcassonne → Barcelona</span><span class="d-km">~450 km · 4h45 + visita</span></summary>
+        <div class="d-body">
+          <p>Último día, partido en dos con una parada de lujo a mitad de camino: la <b>Cité de Carcassonne</b> (2h de visita + comida). Es la fortaleza medieval más grande de Europa y en la ida solo pasasteis de largo por Narbona. Después, 2h50 finales hasta Barcelona, llegando a media tarde/noche.</p>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir / parking</h4><p>Parking de día: <b>Aire Camping-Car Park de Carcassonne</b>, a 10 min a pie de la Cité — admite estacionamiento diurno. Noche: en casa 🎉</p></div>
+            <div class="cell"><h4>🍽 Comida</h4><p>Comida de cierre: cassoulet en la Cité (el de verdad, con confit de pato). Llegaréis a Barcelona sin hambre para una semana.</p></div>
+            <div class="cell"><h4>🌡 Temperatura</h4><p class="temp">Carcassonne 32 °C · Barcelona 29 °C</p></div>
+          </div>
+          <div class="warn"><b>Ojo:</b> domingos de agosto la AP-7 se carga en sentido Barcelona a partir de las 18h. Salir de Carcassonne antes de las 16h.</div>
+        </div>
+      </details></div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONSEJOS ================= -->
+<section id="tips">
+  <div class="wrap">
+    <div class="leg-head">
+      <span class="leg-tag" style="background:#E4E7E3;color:var(--ink)">Consejos generales</span>
+      <h2>Lo que hay que tener en cuenta</h2>
+    </div>
+    <div class="tips-grid">
+      <div class="tip"><h3>💶 Peajes y presupuesto de ruta</h3>
+        <ul>
+          <li>Francia (A9/A8/A7/A41): las camper suelen tarificar como Clase 2 → contad ~90–130 € en peajes franceses en total.</li>
+          <li>Italia: autostrada más barata, ~40–60 € en total.</li>
+          <li>Petit Saint-Bernard: <b>gratis</b> (vs. ~60–75 € del túnel del Mont Blanc).</li>
+          <li>Gasoil: Italia y Francia más caros que España — llenad en la frontera al salir y al entrar.</li>
+        </ul>
+      </div>
+      <div class="tip"><h3>🚫 ZTL: la multa italiana clásica</h3>
+        <p>Trento, Bérgamo, Aosta y casi cualquier centro histórico italiano tienen Zona a Traffico Limitato con cámaras. Con la camper: parking de la periferia + andar/funicular/bus, siempre. La multa llega a casa meses después.</p>
+      </div>
+      <div class="tip"><h3>🅿️ Apps imprescindibles</h3>
+        <ul>
+          <li><b>park4night</b> — áreas, pernoctas y opiniones recientes (verificad siempre los comentarios del último mes).</li>
+          <li><b>CamperContact / Campercontact</b> — áreas oficiales con servicios.</li>
+          <li><b>Waze/Google con perfil de altura</b> — configurad la altura de la camper para evitar túneles y parkings bajos.</li>
+        </ul>
+      </div>
+      <div class="tip"><h3>💧 Agua, gris y químico</h3>
+        <p>Vaciad y llenad en cada área de pago que uséis (Narbona, Riva, Bérgamo, Sevrier, Carcassonne tienen servicios). Regla de oro en agosto: no dejar el depósito de agua a menos de la mitad, hay olas de calor.</p>
+      </div>
+      <div class="tip"><h3>🌦 Clima de agosto, en resumen</h3>
+        <ul>
+          <li>Costa y llanura del Po: 28–33 °C, calor serio en la camper → buscar sombra al aparcar.</li>
+          <li>Dolomitas y Courmayeur: 8–23 °C, <b>tormentas casi cada tarde a partir de las 16h</b>.</li>
+          <li>En cotas altas (Seceda, Tre Cime, Skyway): 0–10 °C. Forro, cortavientos y gorro aunque sea agosto.</li>
+        </ul>
+      </div>
+      <div class="tip"><h3>📅 Reservas que NO pueden esperar</h3>
+        <ul>
+          <li>Parking del Lago di Braies (online, obligatorio en verano).</li>
+          <li>Skyway Monte Bianco (online la noche antes, franja de mañana).</li>
+          <li>Camping de Menton y área de Annecy si viajáis en pleno agosto.</li>
+        </ul>
+      </div>
+      <div class="tip"><h3>🚐 Conducción de montaña</h3>
+        <p>Petit Saint-Bernard y las carreteras de los Dolomitas (Gardena, Sella) son puertos largos: bajar con marchas cortas, no con freno. Ceder paso a los miles de ciclistas y motos de agosto. Gasolineras escasas en los valles: repostar abajo.</p>
+      </div>
+      <div class="tip"><h3>📄 Papeles y varios</h3>
+        <ul>
+          <li>Chaleco + triángulos (Francia exige chaleco por ocupante a mano).</li>
+          <li>En Francia: etiqueta Crit'Air si entráis en ciudades grandes (Lyon se esquiva, así que no hace falta).</li>
+          <li>Tarjeta sanitaria europea para todos.</li>
+          <li>Los precios y horarios de áreas cambian: <b>verificad todo en park4night la semana antes.</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Ruta camper Barcelona ⇄ Dolomitas · agosto · Ida por la costa, vuelta por los Alpes y el interior.</p>
+    <p class="mono" style="margin-top:6px">km y tiempos orientativos · precios de áreas sujetos a cambio · verificar pernoctas en park4night</p>
+  </div>
+</footer>
+
+<script>
+const tabs = document.querySelectorAll('.tab');
+const sections = document.querySelectorAll('section');
+tabs.forEach(t => t.addEventListener('click', () => {
+  tabs.forEach(x => { x.classList.remove('active'); x.setAttribute('aria-selected','false'); });
+  t.classList.add('active'); t.setAttribute('aria-selected','true');
+  sections.forEach(s => s.classList.remove('visible'));
+  document.getElementById(t.dataset.tab).classList.add('visible');
+  window.scrollTo({top:0});
+}));
+</script>
+</body>
+</html>
