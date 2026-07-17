@@ -10,37 +10,45 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#F1F3EF; --card:#FBFCFA; --ink:#1B2925; --ink-2:#33413C; --muted:#5C6963;
-  --line:#D9DED8; --line-2:#EAEEE9;
-  --pine:#2F6F63; --pine-soft:#E3EEEA;
-  --amber:#AE7118; --amber-soft:#F6EAD3;
-  --rose:#A94E63; --rose-soft:#F4E3E7;
-  --slate:#3C5872; --slate-soft:#E3EAF1;
-  --radius:14px;
+  --paper:#EEF1EC; --card:#FBFCFA; --ink:#182420; --ink-2:#33413C; --muted:#5C6963;
+  --line:#D6DCD4; --line-2:#E7ECE4;
+  --pine:#2F6F63; --pine-soft:#E1EDE8;
+  --amber:#A96A12; --amber-soft:#F6E7CD;
+  --rose:#A94E63; --rose-soft:#F3E1E6;
+  --slate:#3C5872; --slate-soft:#E1E9F1;
+  --radius:14px; --radius-sm:10px;
+  --shadow:0 10px 30px rgba(24,36,32,.10);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:'Instrument Sans',system-ui,-apple-system,sans-serif;font-size:15.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body{background:var(--paper);color:var(--ink);font-family:'Instrument Sans',system-ui,-apple-system,sans-serif;font-size:15.5px;line-height:1.58;-webkit-font-smoothing:antialiased}
 .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
-.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
 a{color:var(--pine);text-underline-offset:2px}
 a:hover{color:var(--ink)}
+::selection{background:var(--pine-soft)}
 
-header{padding:56px 0 34px;border-bottom:1px solid var(--line);background:linear-gradient(160deg,rgba(47,111,99,.09),rgba(174,113,24,.05) 45%,rgba(169,78,99,.07))}
+header{padding:56px 0 30px;border-bottom:1px solid var(--line);background:linear-gradient(160deg,rgba(47,111,99,.10),rgba(169,106,18,.05) 45%,rgba(169,78,99,.08))}
 .kicker{font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
 h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(30px,5.2vw,54px);line-height:1.03;letter-spacing:-.025em}
 h1 .g1{color:var(--pine)} h1 .g3{color:var(--rose)}
-.hero-sub{margin-top:14px;color:var(--muted);max-width:60ch}
+.hero-sub{margin-top:14px;color:var(--ink-2);max-width:62ch}
 .hero-stats{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 15px;font-size:12.5px;color:var(--muted)}
 .stat b{color:var(--ink);font-weight:600}
-.hero-note{margin-top:18px;font-size:12.5px;color:var(--muted);border-left:2px solid var(--amber);padding-left:11px;max-width:64ch}
+.hero-note{margin-top:18px;font-size:12.5px;color:var(--muted);background:var(--card);border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:11px 14px;max-width:66ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted)}
+.legend-item i{width:14px;height:14px;border-radius:4px;flex-shrink:0;display:inline-block}
+.lg-warn{background:var(--amber-soft);border:1px solid #E4D3AC}
+.lg-tip{background:var(--pine-soft);border:1px solid #C6DCD5}
+.lg-unver{background:transparent;border:1px dashed var(--muted)}
 
-nav{position:sticky;top:0;z-index:60;background:rgba(241,243,239,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.tabs{display:flex;gap:4px;padding:10px 0;overflow-x:auto;scrollbar-width:none}
+nav{position:sticky;top:0;z-index:60;background:rgba(238,241,236,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:5px;padding:11px 0;overflow-x:auto;scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
-.tab{border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:999px;padding:7px 16px;font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap;font-family:inherit;transition:all .15s}
-.tab:hover{color:var(--ink);border-color:var(--muted)}
+.tab{border:1px solid var(--line);background:var(--card);color:var(--muted);border-radius:999px;padding:8px 17px;font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap;font-family:inherit;transition:all .15s}
+.tab:hover{color:var(--ink);border-color:var(--muted);background:#fff}
 .tab.active[data-tab="ida"]{background:var(--pine);border-color:var(--pine);color:#fff}
 .tab.active[data-tab="vuelta"]{background:var(--rose);border-color:var(--rose);color:#fff}
 .tab.active[data-tab="costes"]{background:var(--slate);border-color:var(--slate);color:#fff}
@@ -48,10 +56,10 @@ nav{position:sticky;top:0;z-index:60;background:rgba(241,243,239,.93);backdrop-f
 .tab.active[data-tab="tips"]{background:var(--ink);border-color:var(--ink);color:#fff}
 .tab:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 
-section{display:none;padding:32px 0 64px;animation:fade .2s ease}
+section{display:none;padding:30px 0 72px;animation:fade .2s ease}
 section.visible{display:block}
 @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
-.leg-head{margin-bottom:24px}
+.leg-head{margin-bottom:18px}
 .leg-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;padding:4px 11px;border-radius:5px;margin-bottom:10px}
 #ida .leg-tag{background:var(--pine-soft);color:var(--pine)}
 #vuelta .leg-tag{background:var(--rose-soft);color:var(--rose)}
@@ -61,33 +69,48 @@ section.visible{display:block}
 h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(23px,4vw,33px);letter-spacing:-.015em}
 .leg-desc{color:var(--muted);margin-top:8px;max-width:66ch}
 
+.leg-controls{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+.ctrl-btn{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:7px 14px;cursor:pointer;transition:all .15s}
+.ctrl-btn:hover{color:var(--ink);border-color:var(--muted);background:#fff}
+.ctrl-btn:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
 .route{position:relative;padding-left:26px}
 .route::before{content:"";position:absolute;left:7px;top:10px;bottom:10px;width:2px;border-radius:2px}
 #ida .route::before{background:linear-gradient(var(--pine),var(--line))}
 #vuelta .route::before{background:linear-gradient(var(--rose),var(--line))}
-.day{position:relative;margin-bottom:14px}
-.day::before{content:"";position:absolute;left:-25px;top:23px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:3px solid var(--muted)}
+.day{position:relative;margin-bottom:12px}
+.day::before{content:"";position:absolute;left:-24.5px;top:24px;width:11px;height:11px;border-radius:50%;background:var(--paper);border:3px solid var(--muted);z-index:1}
 #ida .day::before{border-color:var(--pine)}
 #vuelta .day::before{border-color:var(--rose)}
 .day.pivot::before{border-color:var(--amber);background:var(--amber)}
 
-details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:box-shadow .15s}
-details[open]{box-shadow:0 8px 28px rgba(27,41,37,.08)}
+details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:box-shadow .15s,border-color .15s}
+details[open]{box-shadow:var(--shadow)}
+details:hover{border-color:var(--muted)}
 .day.pivot details{border-color:var(--amber);border-width:1.5px}
-summary{list-style:none;cursor:pointer;padding:15px 18px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 13px}
+summary{position:relative;list-style:none;cursor:pointer;padding:15px 44px 15px 18px;display:flex;flex-wrap:wrap;align-items:center;gap:5px 12px}
 summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:18px;top:20px;width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg)}
 summary:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
-summary:hover .d-title{color:var(--muted)}
-.d-num{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);min-width:52px}
-.d-title{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:17.5px;flex:1 1 240px;transition:color .15s}
+summary:hover .d-title{color:var(--pine)}
+#vuelta summary:hover .d-title{color:var(--rose)}
+.d-num{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);background:var(--line-2);border-radius:6px;padding:4px 9px}
+#ida .d-num{background:var(--pine-soft);color:var(--pine)}
+#vuelta .d-num{background:var(--rose-soft);color:var(--rose)}
+.day.pivot .d-num{background:var(--amber-soft);color:var(--amber)}
+.d-title{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:17.5px;flex:1 1 200px;transition:color .15s}
 .d-km{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:3px 9px;white-space:nowrap}
-.d-body{padding:0 18px 18px;border-top:1px dashed var(--line)}
+.d-tag{flex-basis:100%;font-size:13px;color:var(--muted);margin-top:1px}
+.d-body{padding:2px 18px 18px;border-top:1px dashed var(--line)}
 .d-body > p{margin:13px 0 0;color:var(--ink-2)}
-.plan{margin-top:13px;background:var(--paper);border:1px solid var(--line-2);border-radius:10px;padding:11px 14px}
-.plan h4{font-size:10.5px;font-family:'IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.plan{margin-top:13px;background:linear-gradient(var(--pine-soft),var(--paper) 60%);border:1px solid var(--line-2);border-radius:10px;padding:12px 15px}
+#vuelta .plan{background:linear-gradient(var(--rose-soft),var(--paper) 60%)}
+.plan h4{font-size:10.5px;font-family:'IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
 .plan ul{list-style:none}
 .plan li{font-size:14px;color:var(--ink-2);padding:3px 0;display:flex;gap:10px}
-.plan li b{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);min-width:50px;padding-top:2px;flex-shrink:0}
+.plan li + li{border-top:1px dashed var(--line-2)}
+.plan li b{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink);font-weight:600;min-width:50px;padding-top:3px;flex-shrink:0}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:11px;margin-top:13px}
 .cell{background:var(--paper);border:1px solid var(--line-2);border-radius:10px;padding:12px 14px}
 .cell h4{font-size:10.5px;font-family:'IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
@@ -144,16 +167,22 @@ p.sub-note{font-size:13.5px;color:var(--muted);margin-top:4px}
 footer{border-top:1px solid var(--line);padding:26px 0 48px;color:var(--muted);font-size:13px}
 footer .mono{font-size:11.5px;margin-top:6px;display:block}
 
+.backtop{position:fixed;right:18px;bottom:18px;z-index:70;width:46px;height:46px;border-radius:50%;background:var(--ink);color:#fff;border:none;cursor:pointer;font-size:19px;line-height:1;box-shadow:var(--shadow);opacity:0;pointer-events:none;transform:translateY(10px);transition:opacity .2s,transform .2s,background .15s}
+.backtop.show{opacity:1;pointer-events:auto;transform:none}
+.backtop:hover{background:var(--pine)}
+.backtop:focus-visible{outline:2px solid var(--pine);outline-offset:2px}
+
 @media (max-width:560px){
-  header{padding:40px 0 28px}
+  header{padding:40px 0 26px}
   .route{padding-left:19px}
-  .day::before{left:-18px;width:10px;height:10px;top:21px}
-  summary{padding:14px}
-  .d-body{padding:0 14px 14px}
-  .d-num{min-width:auto}
+  .day::before{left:-18px;width:10px;height:10px;top:22px}
+  summary{padding:14px 40px 14px 14px}
+  summary::after{right:15px}
+  .d-body{padding:2px 14px 14px}
+  .d-title{font-size:16.5px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-@media print{nav{display:none}section{display:block!important;page-break-before:always}details{break-inside:avoid}.d-body{display:block!important}}
+@media print{nav,.leg-controls,.backtop{display:none!important}section{display:block!important;page-break-before:always}details{break-inside:avoid}.d-body{display:block!important}}
 </style>
 </head>
 <body>
@@ -171,17 +200,23 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       <span class="stat"><b>Seceda</b> a pie · <b>Sorapis</b> a pie</span>
     </div>
     <p class="hero-note"><b>Ojo con las fechas.</b> Vuestro PDF está fechado en <b>mayo de 2025</b>, pero todo lo que hay aquí está calculado para <b>agosto de 2026</b>. No es un detalle menor: la tasa de acceso de Venecia, la temporada del Skyway y los precios cambian según el mes. Si las fechas reales son otras, decídmelo y lo recalculo.</p>
+    <div class="legend">
+      <span class="legend-item"><i class="lg-warn"></i>Aviso importante</span>
+      <span class="legend-item"><i class="lg-tip"></i>Consejo / nota positiva</span>
+      <span class="legend-item"><i class="lg-unver"></i>Dato sin confirmar (marcado <span class="unver" style="margin-left:2px">verificar</span>)</span>
+      <span class="legend-item">👉 Toca cada día para desplegar su plan completo</span>
+    </div>
   </div>
 </header>
 
 <nav>
   <div class="wrap">
     <div class="tabs" role="tablist">
-      <button class="tab active" data-tab="ida" role="tab" aria-selected="true">Ida · 9 días</button>
-      <button class="tab" data-tab="vuelta" role="tab" aria-selected="false">Vuelta · 8 días</button>
-      <button class="tab" data-tab="costes" role="tab" aria-selected="false">Costes</button>
-      <button class="tab" data-tab="reservas" role="tab" aria-selected="false">Reservas</button>
-      <button class="tab" data-tab="tips" role="tab" aria-selected="false">Consejos</button>
+      <button class="tab active" data-tab="ida" role="tab" aria-selected="true">🚐 Ida · 9 días</button>
+      <button class="tab" data-tab="vuelta" role="tab" aria-selected="false">🏔 Vuelta · 8 días</button>
+      <button class="tab" data-tab="costes" role="tab" aria-selected="false">💶 Costes</button>
+      <button class="tab" data-tab="reservas" role="tab" aria-selected="false">✅ Reservas</button>
+      <button class="tab" data-tab="tips" role="tab" aria-selected="false">💡 Consejos</button>
     </div>
   </div>
 </nav>
@@ -195,10 +230,15 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       <p class="leg-desc">Esta es la ida tal y como la tenéis en el PDF, con notas prácticas de camper añadidas encima. <b>Cambio confirmado: Braies queda fuera</b>, así que el día 8 es solo Sorapis y respira muchísimo. Los kilómetros del documento original se quedan cortos en algunos tramos: aquí están los reales.</p>
     </div>
 
+    <div class="leg-controls">
+      <button class="ctrl-btn" data-act="open">▸ Abrir todos los días</button>
+      <button class="ctrl-btn" data-act="close">▾ Cerrar todos</button>
+    </div>
+
     <div class="route">
 
-      <div class="day"><details open>
-        <summary><span class="d-num">Día 1</span><span class="d-title">Barcelona → Narbona</span><span class="d-km">~310 km · 2h50</span></summary>
+      <div class="day"><details>
+        <summary><span class="d-num">Día 1</span><span class="d-title">Barcelona → Narbona</span><span class="d-km">~310 km · 2h50</span><span class="d-tag">Tránsito nocturno. A dormir a pie de playa.</span></summary>
         <div class="d-body">
           <p>Salida nocturna a las 21:00 por AP-7/A9. Solo tránsito: dormir avanzado para arrancar el día 2 en Francia.</p>
           <div class="warn"><b>Corrección al PDF:</b> pone 200 km, pero Barcelona-Narbona son <b>~310 km</b>. Con salida a las 21:00 llegaréis sobre las 23:45-00:00. Contad con eso al reservar el área.</div>
@@ -238,7 +278,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 2</span><span class="d-title">Narbona → Nimes → Gorges du Verdon</span><span class="d-km">~380 km · 4h</span></summary>
+        <summary><span class="d-num">Día 2</span><span class="d-title">Narbona → Nimes → Gorges du Verdon</span><span class="d-km">~380 km · 4h</span><span class="d-tag">Nimes romana de día, noche en el cañón del Verdon.</span></summary>
         <div class="d-body">
           <p>Día completo en Nimes (arenas romanas, Maison Carrée, Jardins de la Fontaine) y desplazamiento nocturno al Verdon.</p>
           <div class="plan"><h4>Plan del día</h4><ul>
@@ -276,7 +316,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 3</span><span class="d-title">Gorges du Verdon → Mónaco</span><span class="d-km">~200 km · 3h</span></summary>
+        <summary><span class="d-num">Día 3</span><span class="d-title">Gorges du Verdon → Mónaco</span><span class="d-km">~200 km · 3h</span><span class="d-tag">Agua turquesa: senderismo, kayak y baño.</span></summary>
         <div class="d-body">
           <p>El cañón más grande de Europa, con el agua turquesa que ya conocéis de las fotos. Senderismo por el Sentier Martel o el mirador de la Mescla, y opción de kayak en el lago de Sainte-Croix.</p>
           <div class="plan"><h4>Plan del día</h4><ul>
@@ -319,7 +359,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 4</span><span class="d-title">Mónaco → Génova</span><span class="d-km">~200 km · 2h30</span></summary>
+        <summary><span class="d-num">Día 4</span><span class="d-title">Mónaco → Génova</span><span class="d-km">~200 km · 2h30</span><span class="d-tag">Montecarlo a pie y pesto genovés al atardecer.</span></summary>
         <div class="d-body">
           <p>Mañana en Mónaco (Casino de Montecarlo, Palacio del Príncipe, Puerto Hércules, circuito de F1) y tarde por la costa hasta Génova.</p>
           <div class="plan"><h4>Plan del día</h4><ul>
@@ -368,7 +408,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 5</span><span class="d-title">Génova → Alessandria</span><span class="d-km">~90 km · 1h</span></summary>
+        <summary><span class="d-num">Día 5</span><span class="d-title">Génova → Alessandria</span><span class="d-km">~90 km · 1h</span><span class="d-tag">Génova con calma; etapa corta de enlace.</span></summary>
         <div class="d-body">
           <p>Mañana en Génova: Via Garibaldi (Patrimonio UNESCO), catedral de San Lorenzo, los <i>carruggi</i> (callejones medievales) y el Acuario, uno de los mayores de Europa. Comida de pesto genovés y traslado corto a Alessandria.</p>
           <div class="plan"><h4>Plan del día</h4><ul>
@@ -408,7 +448,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 6</span><span class="d-title">Alessandria → Sirmione (Garda) → Dolomitas</span><span class="d-km">~430 km · 4h30</span></summary>
+        <summary><span class="d-num">Día 6</span><span class="d-title">Alessandria → Sirmione (Garda) → Dolomitas</span><span class="d-km">~430 km · 4h30</span><span class="d-tag">Baño en el Garda y primeras cumbres dolomíticas.</span></summary>
         <div class="d-body">
           <p>El día largo de la ida. Sirmione a mediodía (Castello Scaligero, Grotte di Catullo, baño en el Garda) y subida a Val Gardena para llegar con las primeras vistas de los Dolomitas al atardecer.</p>
           <div class="plan"><h4>Plan del día</h4><ul>
@@ -454,7 +494,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 7</span><span class="d-title">Seceda a pie desde Cristauta</span><span class="d-km">12,3 km · 900 m D+</span></summary>
+        <summary><span class="d-num">Día 7</span><span class="d-title">Seceda a pie desde Cristauta</span><span class="d-km">12,3 km · 900 m D+</span><span class="d-tag">La cresta más fotografiada, subiendo a pie.</span></summary>
         <div class="d-body">
           <p>Día completo de montaña. La cresta de Seceda es <i>la</i> foto de los Dolomitas, con el grupo delle Odle enfrente. Y subís andando: además de ahorraros el dineral del remonte, <b>el torniquete panorámico de la cima es gratis para quien llega a pie por este lado</b>.</p>
           <div class="plan"><h4>Plan del día</h4><ul>
@@ -519,7 +559,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 8</span><span class="d-title">Lago di Sorapis → Venecia</span><span class="d-km">Ruta 11 km + ~160 km · 3h</span></summary>
+        <summary><span class="d-num">Día 8</span><span class="d-title">Lago di Sorapis → Venecia</span><span class="d-km">Ruta 11 km + ~160 km · 3h</span><span class="d-tag">Lago turquesa al amanecer y llegada a Venecia.</span></summary>
         <div class="d-body">
           <p>Sin Braies, el día respira. Dormís la noche anterior <b>junto al sendero</b>, madrugáis para tener el lago turquesa casi para vosotros, y por la tarde bajáis a la laguna. Llegada a Venecia con luz.</p>
           <div class="tip-in"><b>Quitar Braies fue buena idea.</b> Con Braies el día eran ~14 h encadenando dos madrugones y 4h30 de carretera. Ahora es un día perfectamente humano: una ruta buena por la mañana y 3h de autopista por la tarde.</div>
@@ -593,7 +633,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       </details></div>
 
       <div class="day pivot"><details>
-        <summary><span class="d-num">Día 9</span><span class="d-title">Venecia — día completo</span><span class="d-km">0 km · pivote del viaje</span></summary>
+        <summary><span class="d-num">Día 9</span><span class="d-title">Venecia — día completo</span><span class="d-km">0 km · pivote del viaje</span><span class="d-tag">Día completo en la Serenissima. El pivote del viaje.</span></summary>
         <div class="d-body">
           <p>La Serenissima. Vaporetto por el Gran Canal, San Marcos, Rialto, Dorsoduro y las Gallerie dell'Accademia. Aperol Spritz al atardecer.</p>
           <div class="plan"><h4>Plan del día</h4><ul>
@@ -668,10 +708,15 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       <p class="leg-desc">La ida agota el corredor sur (Nimes, Verdon, Mónaco, Génova) y el Garda. Así que la vuelta sube por el norte: Dolomitas de Brenta, Bérgamo veneciana, lagos piamonteses, el Mont Blanc por arriba, Annecy y la Occitania interior. Ni una sola parada se repite. Solo dos días pasan de 300 km, y van partidos con visitas.</p>
     </div>
 
+    <div class="leg-controls">
+      <button class="ctrl-btn" data-act="open">▸ Abrir todos los días</button>
+      <button class="ctrl-btn" data-act="close">▾ Cerrar todos</button>
+    </div>
+
     <div class="route">
 
-      <div class="day"><details open>
-        <summary><span class="d-num">Día 1</span><span class="d-title">Venecia → Verona → Lago di Molveno</span><span class="d-km">~270 km · 3h15</span></summary>
+      <div class="day"><details>
+        <summary><span class="d-num">Día 1</span><span class="d-title">Venecia → Verona → Lago di Molveno</span><span class="d-km">~270 km · 3h15</span><span class="d-tag">Verona y el lago más bonito de Italia.</span></summary>
         <div class="d-body">
           <p>Se sale de la laguna y se sube al <b>Brenta</b>: el otro grupo dolomítico, el que no visteis desde Val Gardena. Parada en Verona a mediodía (arena romana, Piazza delle Erbe, la casa de Julieta si os va el postureo) y noche en un lago alpino de agua limpísima, con las paredes del Brenta enfrente.</p>
           <div class="plan"><h4>Plan del día</h4><ul>
@@ -717,7 +762,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 2</span><span class="d-title">Molveno → Bérgamo Città Alta</span><span class="d-km">~190 km · 2h45</span></summary>
+        <summary><span class="d-num">Día 2</span><span class="d-title">Molveno → Bérgamo Città Alta</span><span class="d-km">~190 km · 2h45</span><span class="d-tag">Brenta de mañana, Città Alta veneciana de tarde.</span></summary>
         <div class="d-body">
           <p>Mañana de Brenta y tarde en una de las ciudades más bonitas del norte de Italia que casi nadie mete en ruta: <b>Bérgamo Alta</b>, amurallada, veneciana y Patrimonio UNESCO. Se sube en funicular histórico, que ya es media visita.</p>
           <div class="plan"><h4>Plan del día</h4><ul>
@@ -769,7 +814,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 3</span><span class="d-title">Bérgamo → Lago d'Orta</span><span class="d-km">~150 km · 2h</span></summary>
+        <summary><span class="d-num">Día 3</span><span class="d-title">Bérgamo → Lago d'Orta</span><span class="d-km">~150 km · 2h</span><span class="d-tag">El lago secreto del Piamonte y su isla de leyenda.</span></summary>
         <div class="d-body">
           <p>Se rodea Milán por el norte hasta el <b>lago d'Orta</b>: el secreto mejor guardado del Piamonte. Pequeño, sin la masificación de Como, con Orta San Giulio (uno de los "borghi più belli d'Italia") y una isla monástica a cinco minutos en barca.</p>
           <div class="plan"><h4>Plan del día</h4><ul>
@@ -811,7 +856,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 4</span><span class="d-title">Orta → Aosta → Courmayeur</span><span class="d-km">~190 km · 2h30</span></summary>
+        <summary><span class="d-num">Día 4</span><span class="d-title">Orta → Aosta → Courmayeur</span><span class="d-km">~190 km · 2h30</span><span class="d-tag">La 'Roma de los Alpes' camino del Mont Blanc.</span></summary>
         <div class="d-body">
           <p>Autopista hasta el Valle de Aosta. Parada en <b>Aosta</b>, "la Roma de los Alpes", y última subida hasta Courmayeur, a los pies del Mont Blanc. Mañana no se conduce nada.</p>
           <div class="plan"><h4>Plan del día</h4><ul>
@@ -857,7 +902,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 5</span><span class="d-title">Courmayeur · Skyway Monte Bianco + Val Ferret</span><span class="d-km">0 km de camper</span></summary>
+        <summary><span class="d-num">Día 5</span><span class="d-title">Courmayeur · Skyway Monte Bianco + Val Ferret</span><span class="d-km">0 km de camper</span><span class="d-tag">3.466 m en cabina giratoria. Día sin conducir.</span></summary>
         <div class="d-body">
           <p>Día sin conducir y probablemente el mejor de la vuelta. Por la mañana, el <b>Skyway Monte Bianco</b>: cabinas giratorias de 360° hasta los 3.466 m, con el Mont Blanc encima de la cabeza. Por la tarde, la Val Ferret: pradera glaciar, paseo llano y cervezas.</p>
           <div class="plan"><h4>Plan del día</h4><ul>
@@ -911,7 +956,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 6</span><span class="d-title">Courmayeur → Col du Petit-Saint-Bernard → Annecy</span><span class="d-km">~200 km · 3h15</span></summary>
+        <summary><span class="d-num">Día 6</span><span class="d-title">Courmayeur → Col du Petit-Saint-Bernard → Annecy</span><span class="d-km">~200 km · 3h15</span><span class="d-tag">Cruce alpino gratis y la 'Venecia de los Alpes'.</span></summary>
         <div class="d-body">
           <p>Cruce de los Alpes por el <b>Col du Petit-Saint-Bernard (2.188 m)</b>: panorámico, gratuito y apto para camper. Os ahorra el túnel del Mont Blanc, que para un camper de más de 3 m son <b>204,80 € solo de ida</b>. Bajada por la Tarentaise hasta Annecy, la "Venecia de los Alpes" — con la Venecia de verdad todavía fresca en la memoria, la comparación tiene su gracia.</p>
           <div class="plan"><h4>Plan del día</h4><ul>
@@ -970,7 +1015,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 7</span><span class="d-title">Annecy → Pont du Gard → Uzès / Avignon</span><span class="d-km">~400 km · 4h</span></summary>
+        <summary><span class="d-num">Día 7</span><span class="d-title">Annecy → Pont du Gard → Uzès / Avignon</span><span class="d-km">~400 km · 4h</span><span class="d-tag">Baño bajo un acueducto romano. Etapa larga.</span></summary>
         <div class="d-body">
           <p>El día de más autopista de la vuelta (A41/A43/A7/A9, esquivando Lyon). Recompensa: llegar a media tarde al <b>Pont du Gard</b> y bañarse en el Gardon justo debajo del acueducto.</p>
           <div class="plan"><h4>Plan del día</h4><ul>
@@ -1031,7 +1076,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 8</span><span class="d-title">Uzès → Carcassonne → Barcelona</span><span class="d-km">~430 km · 4h30 + visita</span></summary>
+        <summary><span class="d-num">Día 8</span><span class="d-title">Uzès → Carcassonne → Barcelona</span><span class="d-km">~430 km · 4h30 + visita</span><span class="d-tag">Fortaleza medieval, cassoulet y a casa. 🎉</span></summary>
         <div class="d-body">
           <p>Último día, partido en dos con una parada de lujo: la <b>Cité de Carcassonne</b>, la fortaleza medieval más grande de Europa. En la ida solo dormisteis en Narbona de paso, así que no se repite nada. Después, tramo final a casa.</p>
           <div class="plan"><h4>Plan del día</h4><ul>
@@ -1141,6 +1186,22 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
 
     <h3 class="sub">Peajes en Italia · Classe B</h3>
     <p class="sub-note">Los campers con más de 1,30 m de altura en el eje delantero entran en <b>clase B</b>. No hay tarifas oficiales por tramo fácilmente verificables: usad los simuladores de <span class="mono">autostrade.it</span>, <span class="mono">autobrennero.it</span> (A22) y <span class="mono">ravspa.it</span> (A5), o pagad con Telepass. Tramos de esta ruta: A10 (Ventimiglia-Génova), A26, A4 (Milán-Bérgamo-Verona-Venecia), A22 del Brennero, A5 (Aosta-Courmayeur).</p>
+
+    <h3 class="sub">Peaje vs sin peaje: dónde compensa evitarlo</h3>
+    <p class="sub-note">Comparativa tramo a tramo (ViaMichelin, Mappy, Telepass, Autostrade.it) entre ir por autopista/autostrada y la alternativa gratuita. Conclusión general: <b>casi todo el peaje de esta ruta es kilometraje real</b>, no comodidad de sobra — solo hay un ahorro claro y uno dudoso.</p>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Tramo</th><th>Por peaje</th><th>Sin peaje</th><th>Diferencia</th><th>¿Merece la pena evitarlo?</th></tr></thead>
+      <tbody>
+        <tr><td><b>Narbona → Carcassonne</b> (A61, vuelta día 8, ~60 km)</td><td class="num">~40 min · 11-14 €</td><td class="num">~50-53 min</td><td class="num">~10-13 min</td><td><b>Sí.</b> Por la D6113/N113 (Capendu, Comigne, Floure): ancha, poca curva, ahorráis ~13 € por solo un cuarto de hora más.</td></tr>
+        <tr><td><b>Orta → Aosta</b> (tramo A5, vuelta día 4, ~100 km)</td><td class="num">~1h05</td><td class="num">+30-40 min</td><td class="num">~20 € de ahorro</td><td><b>Depende.</b> Dato de un tramo comparable (Torino-Aosta). Si esa tarde vais justos para el Skyway del día siguiente, mantened el peaje; si vais con margen, compensa.</td></tr>
+        <tr><td>Venecia → Verona (A4, vuelta día 1)</td><td class="num">1h08 · 8,70 €</td><td class="num">~3h40 (SS11)</td><td class="num">+2,5 h</td><td><b>No.</b> Por 9 € de ahorro no vale la pena.</td></tr>
+        <tr><td>Ventimiglia → Génova (A10 "dei Fiori", ida día 4)</td><td class="num">rápida</td><td class="num">SS1 Aurelia: mucho más lenta</td><td class="num">horas, tráfico de costa</td><td><b>No.</b> La A10 existe porque el terreno no deja alternativa razonable.</td></tr>
+        <tr><td>Verona → Bolzano (A22 Brennero, ida día 6)</td><td class="num">1h40 · ~12,80 €</td><td class="num">SS12: mucho más lenta, cruza todos los pueblos del valle</td><td class="num">horas</td><td><b>No.</b> La Val Gardena os espera al final del día.</td></tr>
+        <tr><td>Annecy → Pont du Gard/Uzès (A41+A43+A7+A9, vuelta día 7)</td><td class="num">~3h45 · 53-70 €</td><td class="num">varias horas más por nacionales</td><td class="num">horas</td><td><b>No.</b> Es el día más largo de la vuelta (~400 km): evitar el peaje aquí os mete de madrugada.</td></tr>
+        <tr><td>Le Perthus → Narbona (A9, ida día 1)</td><td class="num">~55-65 min · 20-23 €</td><td class="num">la antigua N9 está degradada a departamentales, cruza Perpiñán</td><td class="num">no cuantificado, pero de noche no es tramo para experimentar</td><td><b>No.</b> Vais de noche y cansados: no toca improvisar carretera secundaria.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="tip-in" style="margin-top:12px"><b>En resumen:</b> de los ~10 tramos de autopista/autostrada de toda la ruta, 9 están para algo — cruzan llanuras o zonas de montaña donde la alternativa añade entre 1 y 3 horas por ahorrar 10-40 €. El único ahorro "gratis" de verdad es <b>Narbona-Carcassonne</b>; el de Orta-Aosta es opcional según cómo vayáis de tiempo ese día. Los demás tramos del itinerario (Verdon, Génova-Alessandria, Bérgamo-Molveno, Petit-Saint-Bernard) ya van por carretera normal en el plan original: no hay peaje que evitar ahí.</div>
 
     <h3 class="sub">Combustible · verano 2026</h3>
     <p class="sub-note">Datos del Osservatorio prezzi italiano al 13 de julio de 2026. La subida viene del fin del descuento de accisas, que expiró el 3 de julio y no se prorrogó (un lleno subió ~3 €).</p>
@@ -1407,6 +1468,8 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
   </div>
 </footer>
 
+<button class="backtop" aria-label="Volver arriba" title="Volver arriba">↑</button>
+
 <script>
 (function(){
   var tabs = document.querySelectorAll('.tab');
@@ -1426,6 +1489,23 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       cb.closest('.check').classList.toggle('done', cb.checked);
     });
   });
+  // Abrir / cerrar todos los días de un tramo
+  document.querySelectorAll('.ctrl-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var sec = btn.closest('section');
+      if (!sec) return;
+      var open = btn.dataset.act === 'open';
+      sec.querySelectorAll('details').forEach(function(d){ d.open = open; });
+    });
+  });
+  // Botón volver arriba
+  var backtop = document.querySelector('.backtop');
+  if (backtop){
+    var onScroll = function(){ backtop.classList.toggle('show', window.scrollY > 600); };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+    backtop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+  }
 })();
 </script>
 </body>
