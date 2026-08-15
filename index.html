@@ -125,6 +125,27 @@ summary:hover .d-title{color:var(--pine)}
 .warn + .warn{margin-top:8px}
 .tip-in{margin-top:12px;background:var(--pine-soft);border:1px solid #C6DCD5;border-radius:10px;padding:10px 13px;font-size:13.5px;color:#1F4E45}
 .tip-in b{color:#123B33}
+
+.road{margin-top:13px;border:1px solid;border-radius:10px;padding:11px 14px}
+.road h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;margin-bottom:8px;display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.road .rd-lvl{font-size:9.5px;letter-spacing:.09em;padding:2px 8px;border-radius:4px;font-weight:600}
+.road ul{list-style:none;margin:0}
+.road li{font-size:13.5px;line-height:1.5;padding:5px 0;display:flex;gap:9px}
+.road li + li{border-top:1px dashed rgba(24,36,32,.11)}
+.road li i{font-style:normal;flex-shrink:0;width:16px;text-align:center;line-height:1.5}
+.road li b{font-weight:600}
+.road .rd-hd{font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600}
+.road-crit{background:#FBEDEA;border-color:#E8C9C1;color:#6E2E22}
+.road-crit .rd-lvl{background:#8A3B2E;color:#fff}
+.road-crit b{color:#57221A}
+.road-mid{background:#FBF3E2;border-color:#E7D8B4;color:#6B531E}
+.road-mid .rd-lvl{background:var(--amber);color:#fff}
+.road-mid b{color:#57410E}
+.road-ok{background:var(--pine-soft);border-color:#C6DCD5;color:#1F4E45}
+.road-ok .rd-lvl{background:var(--pine);color:#fff}
+.road-ok b{color:#123B33}
+.lg-road{background:#FBEDEA;border:1px solid #E8C9C1}
+
 .unver{font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--muted);border:1px dashed var(--line);border-radius:4px;padding:1px 6px;white-space:nowrap}
 .links{margin-top:13px;background:#F4F7F9;border:1px solid #DCE5EB;border-radius:10px;padding:12px 14px}
 .links h4{font-size:10.5px;font-family:'IBM Plex Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:var(--slate);margin-bottom:8px}
@@ -200,9 +221,11 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       <span class="stat"><b>Seceda</b> a pie · <b>Sorapis</b> a pie</span>
     </div>
     <p class="hero-note"><b>Ojo con las fechas.</b> Vuestro PDF está fechado en <b>mayo de 2025</b>, pero todo lo que hay aquí está calculado para <b>agosto de 2026</b>. No es un detalle menor: la tasa de acceso de Venecia, la temporada del Skyway y los precios cambian según el mes. Si las fechas reales son otras, decídmelo y lo recalculo.</p>
+    <p class="hero-note" style="border-left-color:#8A3B2E"><b>Gálibo: cada día lleva su bloque «Ruta segura camper».</b> Como no tengo las medidas exactas del vehículo, los avisos van por umbrales: <b>altura</b> ≤2,60 m (furgo alta) · 2,60-3,20 m (perfilada) · &gt;3,20 m (capuchina); <b>largo</b> ≤6 m · 6-7 m · &gt;7 m. Buscad vuestro umbral en cada tramo. Decidme largo y alto reales y afino los tres puntos donde de verdad cambia la decisión: <b>Route des Crêtes del Verdon</b>, <b>Sacro Monte de Orta</b> y <b>túnel del Mont Blanc vs Petit-Saint-Bernard</b>.</p>
     <div class="legend">
       <span class="legend-item"><i class="lg-warn"></i>Aviso importante</span>
       <span class="legend-item"><i class="lg-tip"></i>Consejo / nota positiva</span>
+      <span class="legend-item"><i class="lg-road"></i>Ruta segura camper: carreteras concretas, gálibos y qué NO coger</span>
       <span class="legend-item"><i class="lg-unver"></i>Dato sin confirmar (marcado <span class="unver" style="margin-left:2px">verificar</span>)</span>
       <span class="legend-item">👉 Toca cada día para desplegar su plan completo</span>
     </div>
@@ -241,6 +264,13 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 1</span><span class="d-title">Barcelona → Narbona</span><span class="d-km">~310 km · 2h50</span><span class="d-tag">Tránsito nocturno. A dormir a pie de playa.</span></summary>
         <div class="d-body">
           <p>Salida nocturna a las 21:00 por AP-7/A9. Solo tránsito: dormir avanzado para arrancar el día 2 en Francia.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad</span></h4><ul>
+            <li><i>✅</i><b>Meted esto en el GPS:</b> AP-7 → La Jonquera / Le Perthus → <b>A9 "La Catalane"</b> → salida 37 <b>Narbonne-Est</b> → D168 hasta Narbonne-Plage. Autopista de llanura todo el rato, tres carriles, sin puertos ni túneles con límite.</li>
+            <li><i>⛔</i><b>Rechazad</b> cualquier alternativa "sin peaje" que os baje a la <b>N-II / D900 por Perpiñán</b>: rotondas, semáforos, travesías de pueblo y de noche. Aquí el peaje se paga y punto.</li>
+            <li><i>📐</i><b>Gálibo:</b> ninguno relevante. Cualquier medida pasa.</li>
+            <li><i>🅿️</i><b>Al llegar:</b> el área de Narbonne-Plage no tiene barrera de altura y admite hasta <b>8 m de largo</b>. La D168 de acceso es ancha y llana incluso de noche.</li>
+            <li><i>🔒</i><b>Nunca:</b> dormir en área de servicio de la A9. Robos habituales.</li>
+          </ul></div>
           <div class="warn"><b>Corrección al PDF:</b> pone 200 km, pero Barcelona-Narbona son <b>~310 km</b>. Con salida a las 21:00 llegaréis sobre las 23:45-00:00. Contad con eso al reservar el área.</div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>Tarde</b> Última revisión de la camper: agua llena, gas cerrado en marcha, calzos y triángulos accesibles, Crit'Air pegada.</li>
@@ -281,6 +311,14 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 2</span><span class="d-title">Narbona → Nimes → Gorges du Verdon</span><span class="d-km">~380 km · 4h</span><span class="d-tag">Nimes romana de día, noche en el cañón del Verdon.</span></summary>
         <div class="d-body">
           <p>Día completo en Nimes (arenas romanas, Maison Carrée, Jardins de la Fontaine) y desplazamiento nocturno al Verdon.</p>
+          <div class="road road-crit"><h4>🛣 Ruta segura camper <span class="rd-lvl">Crítico · llegada de noche</span></h4><ul>
+            <li><i>✅</i><b>Narbona → Nimes:</b> A9 directa, salida 25 <b>Nîmes-Ouest</b>. Aparcad <b>fuera del centro</b>: el casco de Nimes tiene calles de 3 m y arcos. Parking <b>Jean Jaurès</b> es subterráneo (gálibo ~1,90 m, <b>NO</b>): buscad superficie en la periferia o el <b>P+R Parnasse / A54</b> y entrad en bus.</li>
+            <li><i>✅</i><b>Nimes → Verdon (la buena):</b> A54 → A7 → <b>A8 dirección Aix</b> → salida 34 <b>Saint-Maximin-la-Sainte-Baume</b> → D560 → D71 → <b>D952 vía Riez</b> → <b>Moustiers-Sainte-Marie</b>. Entrada por la <b>meseta oeste</b>: departamentales anchas, dos carriles de verdad, curvas abiertas y sin acantilado.</li>
+            <li><i>⛔</i><b>NO entréis por Castellane.</b> La <b>D952 Castellane → Point Sublime</b> tiene tramos de un solo carril colgados sobre el cañón, sin iluminación y con desprendimientos. De noche y con camper es el peor error posible del viaje.</li>
+            <li><i>⛔</i><b>NO</b> la <b>D23 Route des Crêtes</b> a ninguna hora de hoy: es de sentido único y de día (ver día 3).</li>
+            <li><i>📐</i><b>Gálibo hasta Moustiers:</b> sin límite. <b>Largo:</b> el aparcamiento del centro de Moustiers no admite &gt;7 m — id directos al área de camper reservada.</li>
+            <li><i>⏰</i><b>Cambio de horario recomendado:</b> salid de Nimes a las <b>16:30-17:00</b>, no a las 18:00. En agosto anochece hacia las 20:45 en Provenza: así hacéis toda la aproximación al cañón <b>con luz</b>. Es el ajuste más rentable del plan entero.</li>
+          </ul></div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>09:00</b> Desayuno y salida de Narbona.</li>
             <li><b>11:00</b> Nimes. Anfiteatro romano, Maison Carrée, Jardins de la Fontaine.</li>
@@ -319,6 +357,14 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 3</span><span class="d-title">Gorges du Verdon → Mónaco</span><span class="d-km">~200 km · 3h</span><span class="d-tag">Agua turquesa: senderismo, kayak y baño.</span></summary>
         <div class="d-body">
           <p>El cañón más grande de Europa, con el agua turquesa que ya conocéis de las fotos. Senderismo por el Sentier Martel o el mirador de la Mescla, y opción de kayak en el lago de Sainte-Croix.</p>
+          <div class="road road-crit"><h4>🛣 Ruta segura camper <span class="rd-lvl">Crítico · el tramo nº1 del viaje</span></h4><ul>
+            <li><i>⛔</i><b>Route des Crêtes (D23/D71), 24 km:</b> sentido único obligatorio (antihorario desde La Palud-sur-Verdon), calzada de ~4 m, sin arcén y con quitamiedos testimoniales. Túneles de <b>4,30 m en el centro pero 3,60 m en los laterales</b> <span class="unver">verificar in situ</span>. <b>Altura &gt;3,20 m o largo &gt;7 m: descartada sin discusión.</b> Con 2,60-3,20 m y ≤6 m es "posible pero desagradable" — y en agosto os cruzáis autobuses.</li>
+            <li><i>✅</i><b>La alternativa que sí funciona:</b> dejad la camper aparcada en <b>La Palud-sur-Verdon</b>, <b>Moustiers</b> o <b>Aiguines</b> y ved el cañón desde miradores accesibles por carretera principal: <b>Belvédère de la Mescla</b> y <b>Balcons de la Mescla</b> (D71 <i>Corniche Sublime</i>, orilla sur, doble sentido) y <b>Point Sublime</b> desde el aparcamiento bajo, andando 15 min.</li>
+            <li><i>⚠️</i><b>D71 Corniche Sublime:</b> doble sentido y más ancha que la D23, pero el <b>Pont de l'Artuby</b> y sus curvas piden ir despacio. Aceptable hasta <b>7 m de largo</b>; por encima, no.</li>
+            <li><i>✅</i><b>Plan óptimo del día:</b> camper quieta + agua a pie. Kayak en el lago de Sainte-Croix desde la playa de <b>Bauduen</b> o <b>Les Salles-sur-Verdon</b> (accesos anchos y aparcamiento grande) en vez de tour panorámico rodando.</li>
+            <li><i>✅</i><b>Salida hacia la costa:</b> D957 → Aups → D22/D560 → <b>A8 en Le Muy (salida 36)</b>. Bajada suave por la meseta. Nunca por Castellane y la N85 Route Napoléon.</li>
+            <li><i>📐</i><b>Resumen de umbrales:</b> ≤2,60 m alto y ≤6 m largo → todo abierto salvo prudencia. 2,60-3,20 m → sin Route des Crêtes. &gt;3,20 m o &gt;7 m → solo D952/D957 y miradores bajos.</li>
+          </ul></div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>08:30</b> Salida desde la zona del Verdon hacia los miradores de la Route des Crêtes o directos a un punto de baño/kayak, según fuerzas del día anterior.</li>
             <li><b>09:30</b> Mirador de la Mescla y/o tramo corto del Sentier Martel (o la ruta completa si el grupo quiere un día de trekking en vez de coche).</li>
@@ -362,6 +408,14 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 4</span><span class="d-title">Mónaco → Génova</span><span class="d-km">~200 km · 2h30</span><span class="d-tag">Montecarlo a pie y pesto genovés al atardecer.</span></summary>
         <div class="d-body">
           <p>Mañana en Mónaco (Casino de Montecarlo, Palacio del Príncipe, Puerto Hércules, circuito de F1) y tarde por la costa hasta Génova.</p>
+          <div class="road road-crit"><h4>🛣 Ruta segura camper <span class="rd-lvl">Crítico · trampa de navegador</span></h4><ul>
+            <li><i>✅</i><b>Regla del día, sin excepciones:</b> <b>A8 hasta la salida 59 Menton</b> → aparcar en Menton → tren a Mónaco → volver a la A8 → frontera de Ventimiglia → <b>A10 "dei Fiori"</b> hasta Génova. <b>No salgáis de la autopista en todo el tramo</b> salvo para dormir o repostar.</li>
+            <li><i>⛔</i><b>Las tres Corniches, prohibidas:</b> <b>D2564 Grande Corniche</b>, <b>D6007 Moyenne Corniche</b> y <b>D6098 Basse Corniche</b>. Curvas colgadas del acantilado, túneles antiguos, cero margen y en agosto atasco permanente. Google las propone como "ruta más corta" a Mónaco: rechazadlo siempre.</li>
+            <li><i>⛔</i><b>SS1 Aurelia</b> (Ventimiglia → Génova): cruza todos los pueblos de la Riviera con calles de un carril y aparcamiento en batería. Horas de más y roces garantizados.</li>
+            <li><i>⛔</i><b>No entréis en Mónaco con la camper.</b> Los aparcamientos del Principado son subterráneos con barreras de <b>1,90-2,20 m</b> y las rampas del circuito no perdonan. La solución ya está en el plan: tren desde Menton.</li>
+            <li><i>📐</i><b>Gálibo A8/A10:</b> más de 4 m en todos los túneles — cualquier camper pasa. La A10 es literalmente un viaducto continuo: viento lateral, sujetad el volante y no adelantéis a camiones con ráfagas.</li>
+            <li><i>🅿️</i><b>Génova:</b> ZTL en todo el centro histórico. Aparcad en <b>Marina Porto Antico</b> o en la periferia y entrad andando. Los <i>carruggi</i> son de 2 m de ancho: ni acercarse.</li>
+          </ul></div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>08:00</b> Salida de la zona del Verdon/costa hacia Menton o Beausoleil.</li>
             <li><b>10:30</b> Aparcar fuera de Mónaco y entrar en tren (Menton) o a pie (Beausoleil).</li>
@@ -411,6 +465,12 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 5</span><span class="d-title">Génova → Alessandria</span><span class="d-km">~90 km · 1h</span><span class="d-tag">Génova con calma; etapa corta de enlace.</span></summary>
         <div class="d-body">
           <p>Mañana en Génova: Via Garibaldi (Patrimonio UNESCO), catedral de San Lorenzo, los <i>carruggi</i> (callejones medievales) y el Acuario, uno de los mayores de Europa. Comida de pesto genovés y traslado corto a Alessandria.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad</span></h4><ul>
+            <li><i>✅</i><b>Ruta:</b> salir por <b>Genova Voltri</b> → <b>A26 dei Trafori</b> dirección Alessandria → salida <b>Alessandria Sud</b>. Autostrada de montaña pero con carriles anchos, túneles altos y pendiente constante suave. Una hora tranquila.</li>
+            <li><i>⛔</i><b>No cojáis la SS35 dei Giovi</b> ni el <b>Passo della Bocchetta (SP4)</b> para "ahorrar peaje": son los pasos históricos de los Apeninos, estrechos, con lazadas cerradas y llenos de camiones. El peaje de la A26 es de los baratos del viaje.</li>
+            <li><i>📐</i><b>Gálibo:</b> túneles de la A26 sin restricción para camper. Ningún límite en todo el día.</li>
+            <li><i>🅿️</i><b>Salir de Génova:</b> seguid indicaciones a la autostrada desde el aparcamiento periférico. <b>No</b> pidáis al GPS "salida más corta": os mete en la ZTL del centro.</li>
+          </ul></div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>09:30</b> Via Garibaldi y los Palazzi dei Rolli (UNESCO).</li>
             <li><b>11:00</b> Carruggi y catedral de San Lorenzo.</li>
@@ -451,6 +511,14 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 6</span><span class="d-title">Alessandria → Sirmione (Garda) → Dolomitas</span><span class="d-km">~430 km · 4h30</span><span class="d-tag">Baño en el Garda y primeras cumbres dolomíticas.</span></summary>
         <div class="d-body">
           <p>El día largo de la ida. Sirmione a mediodía (Castello Scaligero, Grotte di Catullo, baño en el Garda) y subida a Val Gardena para llegar con las primeras vistas de los Dolomitas al atardecer.</p>
+          <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Precaución al final</span></h4><ul>
+            <li><i>✅</i><b>Alessandria → Sirmione:</b> A21 dirección Piacenza-Brescia → <b>A4</b> → salida <b>Sirmione</b>. Llanura del Po entera, cero dificultad.</li>
+            <li><i>✅</i><b>Sirmione → Val Gardena:</b> A4 → <b>A22 del Brennero</b> dirección norte → salida <b>Chiusa/Klausen</b> → <b>SS242</b> por Ortisei hasta Santa Cristina/Pontives. La SS242 es carretera de valle ancha, con dos carriles y pendiente cómoda: apta para cualquier camper.</li>
+            <li><i>⛔</i><b>Ni se os ocurra dejar que el GPS "atajé" por los pasos:</b> <b>Passo Sella</b> (SS242 arriba de Selva), <b>Passo Gardena</b> (SS243), <b>Passo Pordoi</b>, <b>Passo Costalunga</b> (SS241) o <b>Passo Pinei/Panider</b>. Lazadas de radio cortísimo, un carril efectivo y en agosto miles de motos. Si la ruta propuesta dice "Passo" algo, rehacedla.</li>
+            <li><i>⛔</i><b>Sirmione:</b> el centro histórico y el puente del castillo son ZTL y físicamente imposibles con camper. Aparcad en el <b>Parcheggio Monte Baldo</b> (fuera de la península, admite vehículos largos) y entrad andando, 10 min.</li>
+            <li><i>📐</i><b>Gálibo:</b> A22 y SS242 sin límite. Ojo con las <b>marquesinas de gasolinera</b> del valle: varias tienen 3,20-3,50 m. Repostad en autostrada si medís más de 3 m.</li>
+            <li><i>⏰</i><b>Timing:</b> subid a Val Gardena <b>antes del anochecer</b>. La SS242 no es peligrosa, pero la última media hora con curvas y tras 430 km cansa; salid de Sirmione a las 15:00 como marca el plan y no más tarde.</li>
+          </ul></div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>07:30</b> Salida temprano de Alessandria (~230 km hasta Sirmione, 2h30).</li>
             <li><b>10:30</b> Aparcar fuera del centro de Sirmione y entrar andando.</li>
@@ -497,6 +565,14 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 7</span><span class="d-title">Seceda a pie desde Cristauta</span><span class="d-km">12,3 km · 900 m D+</span><span class="d-tag">La cresta más fotografiada, subiendo a pie.</span></summary>
         <div class="d-body">
           <p>Día completo de montaña. La cresta de Seceda es <i>la</i> foto de los Dolomitas, con el grupo delle Odle enfrente. Y subís andando: además de ahorraros el dineral del remonte, <b>el torniquete panorámico de la cima es gratis para quien llega a pie por este lado</b>.</p>
+          <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Precaución · traslado de la tarde</span></h4><ul>
+            <li><i>✅</i><b>Por la mañana casi no se conduce:</b> de Pontives al parking <b>Cristauta-Praplan</b> son minutos por la carretera del fondo de valle. Si medís &gt;7 m, dejad la camper en el área de Pontives y subid en el <b>bus de línea 350/351</b>: el parking del trailhead es pequeño y maniobrar allí a las 8 de la mañana en agosto es un problema.</li>
+            <li><i>⛔</i><b>Centro de Ortisei:</b> ZTL con cámaras. Rodead siempre por la SS242.</li>
+            <li><i>⛔</i><b>Carretera del Alpe di Siusi</b> (Siusi → Compatsch): <b>cerrada al tráfico privado de 09:00 a 17:00</b> con multa automática <span class="unver">verificar horario 2026</span>. No es vuestra ruta, pero algún navegador la propone como enlace.</li>
+            <li><i>✅</i><b>Traslado de la tarde a Passo Tre Croci</b> (para dormir junto al sendero de Sorapis) — <b>la ruta ancha, toda por valle y sin ningún puerto</b>: SS242 → <b>A22 dirección norte</b> → salida <b>Bressanone/Brixen</b> → <b>SS49 Val Pusteria</b> → Dobbiaco/Toblach → <b>SS51 Alemagna</b> → Cortina → <b>SR48 Passo Tre Croci</b>. Son ~2h15 pero es carretera nacional de dos carriles todo el camino.</li>
+            <li><i>⛔</i><b>La ruta "corta" que hay que rechazar:</b> SS242 → Passo Sella → Passo Pordoi → Passo Falzarego. Es media hora menos sobre el papel y cuatro puertos de lazadas con camper. También descartad el <b>Passo Giau (SP638)</b> y el <b>Passo Fedaia</b>.</li>
+            <li><i>📐</i><b>Gálibo:</b> SS49 Pusteria y SS51 sin límite. La <b>SR48 Cortina → Passo Tre Croci</b> es carretera turística mantenida, ancha para su cota: apta hasta 8 m sin problema.</li>
+          </ul></div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>07:30</b> Camper al <b>parking Cristauta-Praplan</b> (Str. Plesdinaz, Santa Cristina, ~1.750 m). Pago con EasyPark.</li>
             <li><b>08:00</b> Sendero <b>nº 4</b>, el "sentiero degli scoiattoli" (camino de las ardillas). Se entra por una portezuela de madera: hay vacas con terneros pastando, cerradla al pasar.</li>
@@ -562,6 +638,13 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 8</span><span class="d-title">Lago di Sorapis → Venecia</span><span class="d-km">Ruta 11 km + ~160 km · 3h</span><span class="d-tag">Lago turquesa al amanecer y llegada a Venecia.</span></summary>
         <div class="d-body">
           <p>Sin Braies, el día respira. Dormís la noche anterior <b>junto al sendero</b>, madrugáis para tener el lago turquesa casi para vosotros, y por la tarde bajáis a la laguna. Llegada a Venecia con luz.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad</span></h4><ul>
+            <li><i>✅</i><b>Ruta:</b> Passo Tre Croci → <b>SR48</b> → Cortina → <b>SS51 Alemagna</b> dirección sur → Pieve di Cadore → Longarone → Belluno → <b>A27</b> → Mestre → <b>SS309/Fusina</b>. Bajada larga pero de trazado moderno, con túneles amplios y carriles de adelantamiento.</li>
+            <li><i>⛔</i><b>No cojáis la SP251 Val Zoldana</b> ni el <b>Passo Duran</b> como "alternativa panorámica": estrechas, con tramos de un carril y sin sitio para cruzarse.</li>
+            <li><i>📐</i><b>Gálibo:</b> los túneles de la SS51 y la A27 pasan de 4 m. Sin restricciones.</li>
+            <li><i>⚠️</i><b>Bajada de Tre Croci a Cortina:</b> ~7 km de pendiente sostenida. <b>Marcha corta y freno motor</b>, nada de pedal continuo — con la camper cargada y los frenos calientes se pierde eficacia rápido.</li>
+            <li><i>🅿️</i><b>Venecia:</b> el camper se queda en <b>Fusina</b> y se entra en vaporetto. <b>No cruceis el Ponte della Libertà</b> hacia Tronchetto/Piazzale Roma: es caro, los aparcamientos tienen gálibos bajos y para nada lo necesitáis.</li>
+          </ul></div>
           <div class="tip-in"><b>Quitar Braies fue buena idea.</b> Con Braies el día eran ~14 h encadenando dos madrugones y 4h30 de carretera. Ahora es un día perfectamente humano: una ruta buena por la mañana y 3h de autopista por la tarde.</div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>07:00</b> Salida a pie desde el parking. <b>A las 8 ya no hay sitio</b> para aparcar en el trailhead: por eso dormís allí.</li>
@@ -636,6 +719,11 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 9</span><span class="d-title">Venecia — día completo</span><span class="d-km">0 km · pivote del viaje</span><span class="d-tag">Día completo en la Serenissima. El pivote del viaje.</span></summary>
         <div class="d-body">
           <p>La Serenissima. Vaporetto por el Gran Canal, San Marcos, Rialto, Dorsoduro y las Gallerie dell'Accademia. Aperol Spritz al atardecer.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">0 km · camper aparcada</span></h4><ul>
+            <li><i>✅</i><b>Hoy no se conduce.</b> La camper se queda en Fusina todo el día y se entra en <b>vaporetto línea 16</b>. Es la mejor decisión posible: en Venecia el vehículo no sirve para nada y todo aparcamiento en la isla es caro y con gálibo bajo.</li>
+            <li><i>🔧</i><b>Aprovechad el día parado</b> para lo que no toca hacer en marcha: presión de neumáticos (incluida la de repuesto), nivel de aceite y refrigerante, y una revisión de frenos antes de los Alpes de la vuelta. Es el punto medio exacto del viaje y el único día con la camper quieta y con servicios al lado.</li>
+            <li><i>💧</i><b>Fusina tiene servicios:</b> llenad agua y vaciad grises y químico hoy, no mañana con prisa.</li>
+          </ul></div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>08:30</b> Ferry desde Fusina a Zattere (20 min). Entrar temprano es la única forma de ver Venecia sin agobio.</li>
             <li><b>09:00</b> Dorsoduro y Gallerie dell'Accademia (el barrio con más vida y menos turismo de masas).</li>
@@ -719,6 +807,13 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 1</span><span class="d-title">Venecia → Verona → Lago di Molveno</span><span class="d-km">~270 km · 3h15</span><span class="d-tag">Verona y el lago más bonito de Italia.</span></summary>
         <div class="d-body">
           <p>Se sale de la laguna y se sube al <b>Brenta</b>: el otro grupo dolomítico, el que no visteis desde Val Gardena. Parada en Verona a mediodía (arena romana, Piazza delle Erbe, la casa de Julieta si os va el postureo) y noche en un lago alpino de agua limpísima, con las paredes del Brenta enfrente.</p>
+          <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Precaución en la subida final</span></h4><ul>
+            <li><i>✅</i><b>Fusina → Verona:</b> SS309 → <b>A4</b> → salida Verona Sud. Aparcad en el <b>Parcheggio Centro (Via Città di Nimes)</b> o en la periferia: todo el casco de Verona es ZTL con cámaras y multa por matrícula.</li>
+            <li><i>✅</i><b>Verona → Molveno (la opción normal):</b> <b>A22 dirección norte</b> → salida <b>San Michele all'Adige/Mezzocorona</b> → SS43 → <b>SS421</b> por Fai della Paganella y Andalo. La SS421 es regional en buen estado, pero tiene un par de lazadas cerradas y tramos algo justos en la subida. <b>Hasta 7 m: factible con precaución.</b></li>
+            <li><i>✅</i><b>Alternativa más ancha si medís &gt;7 m o vais cansados:</b> A22 → salida <b>Trento Centro</b> → <b>SS45bis</b> → Sarche → <b>SS237</b> → Ponte Arche → SS421 subiendo desde el sur. Añade ~25 min y es notablemente más cómoda.</li>
+            <li><i>⛔</i><b>La trampa del Garda:</b> si el GPS os propone rodear por la <b>SS45bis Gardesana Occidentale</b> (orilla oeste, Limone-Gargnano), rechazadlo. Son <b>galerías excavadas en roca sin iluminar, estrechas y con gálibos bajos</b>, de lo peor que hay en Italia para un vehículo grande.</li>
+            <li><i>📐</i><b>Gálibo:</b> A4/A22 sin límite. En la SS421 el problema no es la altura, es el <b>ancho y el radio de giro</b>.</li>
+          </ul></div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>09:00</b> Salida de Fusina.</li>
             <li><b>10:30</b> Verona (~120 km). Aparcar fuera de la ZTL.</li>
@@ -765,6 +860,12 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 2</span><span class="d-title">Molveno → Bérgamo Città Alta</span><span class="d-km">~190 km · 2h45</span><span class="d-tag">Brenta de mañana, Città Alta veneciana de tarde.</span></summary>
         <div class="d-body">
           <p>Mañana de Brenta y tarde en una de las ciudades más bonitas del norte de Italia que casi nadie mete en ruta: <b>Bérgamo Alta</b>, amurallada, veneciana y Patrimonio UNESCO. Se sube en funicular histórico, que ya es media visita.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad</span></h4><ul>
+            <li><i>✅</i><b>Ruta:</b> bajada por la <b>SS421</b> a Mezzolombardo (misma que la de subida, ahora de día y descansados) → <b>A22 sur</b> → <b>A4 dirección Milán</b> → salida <b>Bergamo</b>. Autopista de llanura casi todo el trayecto.</li>
+            <li><i>⛔</i><b>No aceptéis la "ruta escénica" por la SS42 del Tonale ni por el Passo del Ballino / Val di Ledro</b>: puertos con lazadas y firme irregular, dos horas más y sin ninguna ganancia.</li>
+            <li><i>⛔</i><b>Città Alta:</b> ZTL total, calles de un carril y rampas del 15%. <b>La camper no sube</b>. Aparcad abajo (<b>Parcheggio della Malpensata</b> o <b>Ex Ospedale</b>, ambos admiten vehículos largos) y usad el <b>funicular</b>, que además es parte de la visita.</li>
+            <li><i>📐</i><b>Gálibo:</b> ninguno relevante en todo el día.</li>
+          </ul></div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>08:00</b> Telecabina Pradel (opcional pero muy recomendable) o paseo por el lago.</li>
             <li><b>11:00</b> Salida hacia Bérgamo por la A4.</li>
@@ -817,6 +918,13 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 3</span><span class="d-title">Bérgamo → Lago d'Orta</span><span class="d-km">~150 km · 2h</span><span class="d-tag">El lago secreto del Piamonte y su isla de leyenda.</span></summary>
         <div class="d-body">
           <p>Se rodea Milán por el norte hasta el <b>lago d'Orta</b>: el secreto mejor guardado del Piamonte. Pequeño, sin la masificación de Como, con Orta San Giulio (uno de los "borghi più belli d'Italia") y una isla monástica a cinco minutos en barca.</p>
+          <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Precaución · largo del vehículo</span></h4><ul>
+            <li><i>✅</i><b>Ruta:</b> <b>A4 dirección Turín</b> → enlace con la <b>A26</b> a la altura de Novara → A26 norte → salida <b>Arona</b> o <b>Borgomanero</b> → <b>SS229</b> hasta Omegna/Orta. Todo autopista y nacional ancha.</li>
+            <li><i>🚨</i><b>Sacro Monte de Orta — aquí está el punto negro del día.</b> La carretera de subida son lazadas estrechas de radio corto. <b>&gt;7 m: no subáis, punto.</b> Hay curvas donde una camper de 7,5 m sencillamente no gira y no hay dónde dar la vuelta. Entre 6 y 7 m, solo si vais sobrados de pericia y en horario de poco tráfico.</li>
+            <li><i>✅</i><b>La solución limpia:</b> camper en el <b>área de Omegna</b> o en el parking bajo de <b>Orta Miasino</b>, y subid al Sacro Monte <b>andando</b> (~20 min desde el pueblo) o en el bus lanzadera. La visita son 20 capillas y es gratis: no se pierde nada.</li>
+            <li><i>⛔</i><b>Orta San Giulio pueblo:</b> peatonal y ZTL, calles de 2,5 m. Se entra a pie desde el aparcamiento de arriba, siempre.</li>
+            <li><i>📐</i><b>Gálibo:</b> sin límites de altura en la ruta. El problema de hoy es <b>exclusivamente la longitud</b>.</li>
+          </ul></div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>09:30</b> Salida por A4/A26.</li>
             <li><b>12:00</b> Llegada a Omegna u Orta. Check-in.</li>
@@ -859,6 +967,13 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 4</span><span class="d-title">Orta → Aosta → Courmayeur</span><span class="d-km">~190 km · 2h30</span><span class="d-tag">La 'Roma de los Alpes' camino del Mont Blanc.</span></summary>
         <div class="d-body">
           <p>Autopista hasta el Valle de Aosta. Parada en <b>Aosta</b>, "la Roma de los Alpes", y última subida hasta Courmayeur, a los pies del Mont Blanc. Mañana no se conduce nada.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad</span></h4><ul>
+            <li><i>✅</i><b>Ruta:</b> SS229 → <b>A26 sur</b> → <b>A4</b> → <b>A5 Torino-Aosta</b> → Aosta → A5 hasta <b>Morgex/Courmayeur</b>. La A5 remonta el valle con viaductos y túneles amplios: es de las autopistas alpinas más cómodas que existen.</li>
+            <li><i>✅</i><b>Opción sin peaje (~20 € menos):</b> la <b>SS26</b> paralela por el fondo del valle. Es carretera nacional ancha y perfectamente apta para camper; suma 30-40 min. Si no vais justos de hora, compensa.</li>
+            <li><i>⛔</i><b>No cojáis el Colle del Gran San Bernardo (SS27)</b> aunque el navegador lo proponga: no está en vuestra ruta y son lazadas largas de alta montaña.</li>
+            <li><i>⛔</i><b>Aosta:</b> ZTL controlada por matrícula. Aparcad en el <b>área de Via Caduti del Lavoro</b> (5 min andando al centro romano) y no os acerquéis al casco.</li>
+            <li><i>📐</i><b>Gálibo:</b> túneles de la A5 sin restricción. <b>Repostad en Morgex o Aosta</b>: arriba, en Courmayeur, hay poca gasolinera y algunas con marquesina baja.</li>
+          </ul></div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>09:30</b> Salida por A26/A4/A5.</li>
             <li><b>12:00</b> Aosta. Aparcar en el área de Via Caduti del Lavoro y entrar andando (5 min).</li>
@@ -905,6 +1020,12 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 5</span><span class="d-title">Courmayeur · Skyway Monte Bianco + Val Ferret</span><span class="d-km">0 km de camper</span><span class="d-tag">3.466 m en cabina giratoria. Día sin conducir.</span></summary>
         <div class="d-body">
           <p>Día sin conducir y probablemente el mejor de la vuelta. Por la mañana, el <b>Skyway Monte Bianco</b>: cabinas giratorias de 360° hasta los 3.466 m, con el Mont Blanc encima de la cabeza. Por la tarde, la Val Ferret: pradera glaciar, paseo llano y cervezas.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">0 km · camper aparcada</span></h4><ul>
+            <li><i>✅</i><b>Camper quieta todo el día</b> en el aparcamiento del <b>Skyway en Pontal d'Entrèves</b>, que es grande, llano y admite vehículos largos. Del parking a la estación se va andando.</li>
+            <li><i>⛔</i><b>Val Ferret:</b> en verano la carretera <b>Planpincieux → Arnouvaz está restringida al tráfico privado en horario diurno</b> <span class="unver">verificar horas y fechas 2026</span>. Se sube en <b>bus lanzadera</b> desde Courmayeur/Entrèves. Ni lo intentéis con la camper: además de la restricción, es estrecha y sin apartaderos.</li>
+            <li><i>⛔</i><b>Centro de Courmayeur:</b> peatonal. Nada de acercarse.</li>
+            <li><i>🔧</i><b>Día perfecto para preparar el puerto de mañana:</b> revisad líquido de frenos y presión, y dejad el depósito lleno hoy en Morgex — mañana bajáis 30 km de curvas hasta Bourg-Saint-Maurice y conviene llegar sin prisas de repostaje.</li>
+          </ul></div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>08:30</b> Primera franja del Skyway. Bus urbano desde el centro (12-15 min) o parking cubierto en la base.</li>
             <li><b>09:15</b> Punta Helbronner (3.466 m). Máximo 1h30 arriba.</li>
@@ -959,6 +1080,14 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 6</span><span class="d-title">Courmayeur → Col du Petit-Saint-Bernard → Annecy</span><span class="d-km">~200 km · 3h15</span><span class="d-tag">Cruce alpino gratis y la 'Venecia de los Alpes'.</span></summary>
         <div class="d-body">
           <p>Cruce de los Alpes por el <b>Col du Petit-Saint-Bernard (2.188 m)</b>: panorámico, gratuito y apto para camper. Os ahorra el túnel del Mont Blanc, que para un camper de más de 3 m son <b>204,80 € solo de ida</b>. Bajada por la Tarentaise hasta Annecy, la "Venecia de los Alpes" — con la Venecia de verdad todavía fresca en la memoria, la comparación tiene su gracia.</p>
+          <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Precaución · puerto alpino</span></h4><ul>
+            <li><i>✅</i><b>Ruta:</b> <b>SS26</b> Courmayeur → Pré-Saint-Didier → La Thuile → <b>Colle del Piccolo San Bernardo (2.188 m)</b> → <b>D1090</b> → La Rosière → <b>Bourg-Saint-Maurice</b> → <b>N90</b> → <b>A430</b> → <b>A43</b> → <b>A41</b> → Annecy.</li>
+            <li><i>📐</i><b>Gálibo:</b> <b>ninguno</b> — el puerto no tiene túneles ni límite de altura o longitud, lo cruzan autocares y camiones. Es la gran ventaja frente al túnel del Mont Blanc: con &gt;3 m de altura os ahorráis <b>204,80 €</b> de una tacada.</li>
+            <li><i>⚠️</i><b>Obras 2026:</b> paso alternado por semáforo (~90 m de muro, sector des Zittieux). Con camper y cola, la espera se alarga. <b>Salid a las 07:00-07:30 de Courmayeur</b>, no a las 08:00: cruzáis el puerto antes de que salgan las motos y los autocares.</li>
+            <li><i>⛔</i><b>La trampa seria de hoy: el Cormet de Roselend (D902).</b> Algunos navegadores lo proponen como atajo hacia Beaufort/Albertville en vez de bajar por la N90. Es una carretera de <b>3,5-4 m de ancho en tramos, sin quitamiedos y con paso de un solo vehículo</b>. Con camper grande es directamente inviable. Bajad SIEMPRE por Bourg-Saint-Maurice y la N90.</li>
+            <li><i>⚠️</i><b>La bajada francesa:</b> ~30 km de curvas continuas. <b>Segunda o tercera marcha y freno motor</b>, parada de 10 min a media bajada para dejar enfriar frenos si oléis a caliente. Y ojo a las motos que adelantan en curva: en agosto la D1090 es un circuito.</li>
+            <li><i>🅿️</i><b>Annecy:</b> muchas áreas del lago (Albigny, Veyrier) tienen <b>barreras de 1,90-2,20 m</b> en los aparcamientos públicos. Id directos al área de camper reservada y no improviséis.</li>
+          </ul></div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>08:00</b> Salida temprano: menos tráfico en el puerto y en el paso alternado de obras.</li>
             <li><b>09:00</b> Col du Petit-Saint-Bernard. Parada de fotos en la cima.</li>
@@ -1018,6 +1147,13 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 7</span><span class="d-title">Annecy → Pont du Gard → Uzès / Avignon</span><span class="d-km">~400 km · 4h</span><span class="d-tag">Baño bajo un acueducto romano. Etapa larga.</span></summary>
         <div class="d-body">
           <p>El día de más autopista de la vuelta (A41/A43/A7/A9, esquivando Lyon). Recompensa: llegar a media tarde al <b>Pont du Gard</b> y bañarse en el Gardon justo debajo del acueducto.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad · día largo</span></h4><ul>
+            <li><i>✅</i><b>Ruta:</b> <b>A41 sur</b> → <b>A43</b> → <b>A46 Est</b> (circunvalación de Lyon) → <b>A7</b> valle del Ródano → Orange → <b>A9</b> → salida <b>23 Remoulins</b> → Pont du Gard. Autopista de principio a fin.</li>
+            <li><i>⛔</i><b>No atraveséis Lyon.</b> Ni por el centro ni por el <b>túnel de Fourvière</b> (embudo permanente y con episodios de restricción). Coged la <b>A46 Est</b> aunque el GPS diga que es un minuto más: en agosto son 40 min de diferencia real.</li>
+            <li><i>⛔</i><b>Nada de "evitar peajes" hoy.</b> Son 400 km: por nacionales llegáis de madrugada. Es el día donde el peaje está mejor gastado de todo el viaje.</li>
+            <li><i>📐</i><b>Pont du Gard:</b> los aparcamientos de las dos orillas tienen <b>barreras de altura ~2 m</b> para turismos. Hay zona específica de autocares y campers <span class="unver">verificar al llegar</span> — <b>preguntad en la caseta de entrada antes de meteros</b> en la rampa, que dar marcha atrás allí con cola detrás es un mal rato.</li>
+            <li><i>⏰</i><b>Si cae en sábado de agosto</b>, salir a las 07:30 no es opcional: el valle del Ródano es el punto negro nº1 de Francia en agosto (Bison Futé "noir").</li>
+          </ul></div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>07:30</b> Salida temprano — si cae en sábado, no es negociable.</li>
             <li><b>12:30</b> Parada de comida en ruta.</li>
@@ -1079,6 +1215,12 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <summary><span class="d-num">Día 8</span><span class="d-title">Uzès → Carcassonne → Barcelona</span><span class="d-km">~430 km · 4h30 + visita</span><span class="d-tag">Fortaleza medieval, cassoulet y a casa. 🎉</span></summary>
         <div class="d-body">
           <p>Último día, partido en dos con una parada de lujo: la <b>Cité de Carcassonne</b>, la fortaleza medieval más grande de Europa. En la ida solo dormisteis en Narbona de paso, así que no se repite nada. Después, tramo final a casa.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad</span></h4><ul>
+            <li><i>✅</i><b>Ruta:</b> Uzès → Remoulins → <b>A9 sur</b> → Narbona → <b>A61</b> (o la <b>D6113 sin peaje</b> vía Capendu/Floure: ancha, poca curva, ~13 min más y 13 € menos) → Carcassonne → vuelta por <b>A61 → A9 → AP-7</b>.</li>
+            <li><i>⛔</i><b>No subáis a la Cité con la camper.</b> Las calles intramuros son medievales y el acceso rodado está restringido. Aparcad en el <b>área de camping-cars junto al Camping de la Cité</b> o en el <b>P1 Délestage</b> (dimensionado para autobús, así que cualquier camper cabe) y subid andando 10-20 min.</li>
+            <li><i>📐</i><b>Gálibo:</b> ninguno en toda la etapa. Único día de la vuelta sin una sola restricción.</li>
+            <li><i>⏰</i><b>Salid de Carcassonne antes de las 16 h:</b> la AP-7 en sentido Barcelona se satura los domingos de agosto a partir de las 18 h. Es el último tramo y el más tonto para perder dos horas.</li>
+          </ul></div>
           <div class="plan"><h4>Plan del día</h4><ul>
             <li><b>09:00</b> Salida hacia Carcassonne por A9/A61 (~230 km).</li>
             <li><b>11:30</b> Aparcar y subir a la Cité. Murallas, basílica Saint-Nazaire, callejeo.</li>
@@ -1396,11 +1538,49 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <p>El Verdon (ida), el Petit-Saint-Bernard, Val Gardena y la subida al Sacro Monte de Orta son carreteras de lazadas.</p>
         <ul>
           <li>Bajad con marchas cortas y freno motor, no con el pedal.</li>
-          <li>Comprobad el gálibo antes de la Route des Crêtes del Verdon.</li>
+          <li>Comprobad el gálibo antes de la Route des Crêtes del Verdon (túneles laterales de <b>3,60 m</b>).</li>
+          <li><b>Cada día tiene su bloque «Ruta segura camper»</b> con las carreteras exactas a seguir y las que hay que rechazar. Leedlo la noche antes, no en marcha.</li>
           <li>Ceded paso a los ciclistas y motos de agosto.</li>
           <li>Gasolineras escasas en los valles: repostad abajo (Morgex, Bourg-Saint-Maurice).</li>
           <li>Llevad calzos: Albigny y Veyrier tienen hasta 5° de pendiente.</li>
         </ul>
+      </div>
+
+      <div class="tip"><h3>📐 Configurar el navegador antes de salir</h3>
+        <p>Es la medida que evita el 90% de los sustos. <b>Google Maps estándar no filtra por gálibo ni por peso</b>: es exactamente lo que os mete en los túneles del Verdon o en un puerto dolomítico.</p>
+        <ul>
+          <li>En <b>Google Maps</b>: Ajustes → Ajustes de navegación → vehículo. Introducid <b>altura y largo reales</b> (con claraboyas, portabicis y antena incluidos: medid, no estiméis).</li>
+          <li>Mejor todavía: <b>Waze en modo camper</b>, <b>CoPilot RV</b> o <b>Sygic Truck</b>. Son los únicos que rutan de verdad por gálibo.</li>
+          <li><b>Regla de oro:</b> si la ruta propuesta contiene la palabra <i>Passo</i>, <i>Col</i>, <i>Corniche</i>, <i>Crêtes</i> o <i>Cormet</i> y no está en el plan de ese día, <b>rehacedla</b>.</li>
+          <li>Antes de meteros en una carretera dudosa, mirad las reseñas recientes de <b>park4night</b> de la zona: los camperistas dejan avisos del tipo "acceso OK para 7 m" o "no entrar con más de 6 m".</li>
+        </ul>
+      </div>
+
+      <div class="tip" style="grid-column:1/-1;border-color:#E8C9C1;background:#FDF6F4"><h3>⛔ Lista negra: carreteras que NO debéis coger en todo el viaje</h3>
+        <p>Todas son rutas que un navegador sin gálibo os puede proponer como "más corta" o "más bonita". Si alguna aparece en pantalla, recalculad.</p>
+        <div class="grid" style="margin-top:11px">
+          <div class="cell" style="background:#fff"><h4>🇫🇷 Francia</h4><ul>
+            <li><b>D23 Route des Crêtes</b> (Verdon) — túneles de 3,60 m, sentido único, acantilado. <i>Día 3 ida.</i></li>
+            <li><b>D952 Castellane → Point Sublime</b> — un carril sobre el cañón, letal de noche. <i>Día 2 ida.</i></li>
+            <li><b>D2564 / D6007 / D6098</b>, las tres Corniches de la Costa Azul. <i>Día 4 ida.</i></li>
+            <li><b>D902 Cormet de Roselend</b> — 3,5 m de ancho, sin quitamiedos. <i>Día 6 vuelta.</i></li>
+            <li><b>N-II / D900 por Perpiñán</b> de noche. <i>Día 1 ida.</i></li>
+            <li><b>Túnel de Fourvière</b> y centro de Lyon. <i>Día 7 vuelta.</i></li>
+          </ul></div>
+          <div class="cell" style="background:#fff"><h4>🇮🇹 Italia</h4><ul>
+            <li><b>SS1 Aurelia</b> Ventimiglia-Génova. <i>Día 4 ida.</i></li>
+            <li><b>SS35 dei Giovi</b> y <b>Passo della Bocchetta</b>. <i>Día 5 ida.</i></li>
+            <li><b>Passo Sella, Gardena, Pordoi, Giau, Fedaia, Costalunga</b>. <i>Días 6-8 ida.</i></li>
+            <li><b>SP251 Val Zoldana</b> y <b>Passo Duran</b>. <i>Día 8 ida.</i></li>
+            <li><b>SS45bis Gardesana Occidentale</b> — galerías sin iluminar con gálibo bajo. <i>Día 1 vuelta.</i></li>
+            <li><b>Subida al Sacro Monte de Orta</b> con &gt;7 m. <i>Día 3 vuelta.</i></li>
+            <li><b>Carretera del Alpe di Siusi</b> 09:00-17:00 y <b>Val Ferret</b> en horario diurno: restringidas por normativa, con multa.</li>
+          </ul></div>
+          <div class="cell" style="background:#fff"><h4>🏙 Centros históricos = ZTL</h4><ul>
+            <li>Nimes, Mónaco, Génova, Sirmione, Ortisei, Venecia, Verona, <b>Bérgamo Città Alta</b>, Orta San Giulio, Aosta, Courmayeur, la Cité de Carcassonne.</li>
+            <li><b>En todos, la misma jugada:</b> parking periférico + andar, bus o funicular. Sin excepciones.</li>
+          </ul></div>
+        </div>
       </div>
 
       <div class="tip"><h3>📱 Apps imprescindibles</h3>
