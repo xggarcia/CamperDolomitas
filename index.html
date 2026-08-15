@@ -101,7 +101,13 @@ summary:hover .d-title{color:var(--pine)}
 .day.pivot .d-num{background:var(--amber-soft);color:var(--amber)}
 .d-title{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:17.5px;flex:1 1 200px;transition:color .15s}
 .d-km{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:3px 9px;white-space:nowrap}
+.d-toll{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);background:var(--slate-soft);border:1px solid #CFDCE8;border-radius:6px;padding:3px 9px;white-space:nowrap;font-weight:500}
+.d-toll.free{color:var(--pine);background:var(--pine-soft);border-color:#C6DCD5}
 .d-tag{flex-basis:100%;font-size:13px;color:var(--muted);margin-top:1px}
+.legtot{margin-top:18px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--slate);border-radius:0 var(--radius) var(--radius) 0;padding:14px 17px}
+.legtot h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.legtot .big{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;color:var(--slate);letter-spacing:-.02em}
+.legtot p{font-size:13.3px;color:var(--ink-2);margin-top:5px}
 .d-body{padding:2px 18px 18px;border-top:1px dashed var(--line)}
 .d-body > p{margin:13px 0 0;color:var(--ink-2)}
 .plan{margin-top:13px;background:linear-gradient(var(--pine-soft),var(--paper) 60%);border:1px solid var(--line-2);border-radius:10px;padding:12px 15px}
@@ -151,6 +157,39 @@ summary:hover .d-title{color:var(--pine)}
 .road .rd-maps-row{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
 .road .rd-cost{font-family:'IBM Plex Mono',monospace;font-size:10.5px;opacity:.78}
 .road .rd-diff{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:12px;background:rgba(255,255,255,.75);border-radius:5px;padding:1px 7px;margin-right:2px}
+.imp{font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:600;padding:2px 6px;border-radius:4px;flex-shrink:0;min-width:27px;text-align:center;letter-spacing:.03em;line-height:1.5}
+.imp-5{background:#8A3B2E;color:#fff}
+.imp-4{background:var(--amber);color:#fff}
+.imp-3{background:var(--slate);color:#fff}
+.imp-2{background:var(--line-2);color:var(--muted)}
+.imp-1{background:transparent;color:var(--muted);border:1px dashed var(--line)}
+
+.pack{margin-top:13px;background:#F8F5EF;border:1px solid #E6DFD1;border-radius:10px;padding:12px 15px}
+.pack h4{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:#7A5A20;margin-bottom:8px}
+.pack ul{list-style:none;margin:0}
+.pack li{font-size:13.6px;line-height:1.5;padding:5px 0;display:flex;gap:9px;color:var(--ink-2);align-items:flex-start}
+.pack li + li{border-top:1px dashed #E6DFD1}
+.pack li b{color:var(--ink);font-weight:600}
+
+#maleta .leg-tag{background:#EFE7DA;color:#7A5A20}
+.tab.active[data-tab="maleta"]{background:#7A5A20;border-color:#7A5A20;color:#fff}
+.pk-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--line);border-left:3px solid #7A5A20;border-radius:0 var(--radius) var(--radius) 0;padding:13px 16px;margin-top:18px;position:sticky;top:52px;z-index:40}
+.pk-bar .pk-count{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted)}
+.pk-bar .pk-count b{color:#7A5A20;font-size:17px}
+.pk-legend{display:flex;flex-wrap:wrap;gap:6px 10px;font-size:11.5px;color:var(--muted);align-items:center}
+.pk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:12px;margin-top:14px}
+.pk-cat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:15px 17px}
+.pk-cat h3{font-family:'Bricolage Grotesque',sans-serif;font-size:16px;font-weight:600;margin-bottom:3px}
+.pk-cat .pk-sub{font-size:12.3px;color:var(--muted);margin-bottom:9px;padding-bottom:8px;border-bottom:1px solid var(--line-2)}
+.pk-item{display:flex;gap:9px;align-items:flex-start;padding:6px 0;font-size:13.5px}
+.pk-item + .pk-item{border-top:1px dashed var(--line-2)}
+.pk-item input{margin-top:3px;width:15px;height:15px;accent-color:#7A5A20;flex-shrink:0;cursor:pointer}
+.pk-item .n{flex:1;line-height:1.45}
+.pk-item .n b{font-weight:600;color:var(--ink)}
+.pk-item .n em{display:block;font-style:normal;font-size:12.2px;color:var(--muted);margin-top:1px}
+.pk-item.done{opacity:.42}
+.pk-item.done .n b{text-decoration:line-through}
+@media (max-width:560px){.pk-bar{position:static}}
 .lg-road{background:#FBEDEA;border:1px solid #E8C9C1}
 
 .unver{font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--muted);border:1px dashed var(--line);border-radius:4px;padding:1px 6px;white-space:nowrap}
@@ -247,6 +286,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       <button class="tab" data-tab="vuelta" role="tab" aria-selected="false">🏔 Vuelta · 8 días</button>
       <button class="tab" data-tab="costes" role="tab" aria-selected="false">💶 Costes</button>
       <button class="tab" data-tab="reservas" role="tab" aria-selected="false">✅ Reservas</button>
+      <button class="tab" data-tab="maleta" role="tab" aria-selected="false">🎒 Maleta</button>
       <button class="tab" data-tab="tips" role="tab" aria-selected="false">💡 Consejos</button>
     </div>
   </div>
@@ -269,7 +309,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
     <div class="route">
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 1</span><span class="d-title">Barcelona → Narbona</span><span class="d-km">~310 km · 2h50</span><span class="d-tag">Tránsito nocturno. A dormir a pie de playa.</span></summary>
+        <summary><span class="d-num">Día 1</span><span class="d-title">Barcelona → Narbona</span><span class="d-km">~310 km · 2h50</span><span class="d-toll">💶 20-23 €</span><span class="d-tag">Tránsito nocturno. A dormir a pie de playa.</span></summary>
         <div class="d-body">
           <p>Salida nocturna a las 21:00 por AP-7/A9. Solo tránsito: dormir avanzado para arrancar el día 2 en Francia.</p>
           <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad</span></h4><ul>
@@ -314,11 +354,20 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://www.prix-carburant.eu/">prix-carburant.eu</a> <span class="lt">— gasolineras baratas</span></li>
             <li><a href="https://certificat-air.gouv.fr/">certificat-air.gouv.fr</a> <span class="lt">— Crit'Air oficial, 3,81 €</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Ida · Día 1 · llegada nocturna</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Chalecos reflectantes accesibles desde dentro</b> — obligatorio en Francia por ocupante, y hoy conducís de noche. No en el maletero: en la cabina.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Crit'Air ya pegada en el parabrisas</b> — se pide online y tarda. Si salís sin ella, no hay solución en ruta.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Pegatina con la altura de la camper en el salpicadero</b> + <b>cinta métrica</b> — medid hoy, antes de salir. Es lo que os salvará en el Verdon y en los parkings.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Monedas de 1 € y 2 €</b> — el agua y la electricidad del área de Narbonne-Plage van por fichas.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Aislantes térmicos del parabrisas</b> — llegáis pasada medianoche a un área con 117 plazas: privacidad inmediata.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Frontal o linterna</b> — conectar la manguera y nivelar a oscuras sin despertar a nadie.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Calzos de nivelación</b> a mano, no enterrados en el garaje.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 2</span><span class="d-title">Narbona → Nimes → Gorges du Verdon</span><span class="d-km">~380 km · 4h</span><span class="d-tag">Nimes romana de día, noche en el cañón del Verdon.</span></summary>
+        <summary><span class="d-num">Día 2</span><span class="d-title">Narbona → Nimes → Gorges du Verdon</span><span class="d-km">~380 km · 4h</span><span class="d-toll">💶 48-53 €</span><span class="d-tag">Nimes romana de día, noche en el cañón del Verdon.</span></summary>
         <div class="d-body">
           <p>Día completo en Nimes (arenas romanas, Maison Carrée, Jardins de la Fontaine) y desplazamiento nocturno al Verdon.</p>
           <div class="road road-crit"><h4>🛣 Ruta segura camper <span class="rd-lvl">Crítico · llegada de noche</span></h4><ul>
@@ -363,11 +412,19 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://www.lesgorgesduverdon.fr/">lesgorgesduverdon.fr</a> <span class="lt">— rutas y actividades</span></li>
             <li><a href="https://park4night.com/es/search">park4night</a> <span class="lt">— áreas en Castellane / Aiguines</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Ida · Día 2 · Nimes al sol + montaña de noche</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Gorra, gafas de sol y crema 50+</b> — el anfiteatro de Nimes no tiene sombra y estaréis a ~32 °C.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Botella reutilizable por persona</b> — Nimes está llena de fuentes públicas.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Frontal</b> otra vez a mano: aunque adelantéis la salida, la última hora hacia Moustiers puede pillaros con poca luz.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Biodramina</b> — la subida a la meseta del Verdon marea a quien sea propenso.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Bolsa de tela plegable</b> — para el picnic de Les Halles de Nîmes.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Zapatillas cómodas de ciudad</b> — Nimes se ve entero andando.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 3</span><span class="d-title">Gorges du Verdon → Mónaco</span><span class="d-km">~200 km · 3h</span><span class="d-tag">Agua turquesa: senderismo, kayak y baño.</span></summary>
+        <summary><span class="d-num">Día 3</span><span class="d-title">Gorges du Verdon → Mónaco</span><span class="d-km">~200 km · 3h</span><span class="d-toll">💶 22-27 €</span><span class="d-tag">Agua turquesa: senderismo, kayak y baño.</span></summary>
         <div class="d-body">
           <p>El cañón más grande de Europa, con el agua turquesa que ya conocéis de las fotos. Senderismo por el Sentier Martel o el mirador de la Mescla, y opción de kayak en el lago de Sainte-Croix.</p>
           <div class="road road-crit"><h4>🛣 Ruta segura camper <span class="rd-lvl">Crítico · el tramo nº1 del viaje</span></h4><ul>
@@ -417,11 +474,20 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://www.castellane-verdontourisme.com/">Castellane turismo</a></li>
             <li><a href="https://www.visitmonaco.com/">visitmonaco.com</a> <span class="lt">— para preparar mañana</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Ida · Día 3 · día de agua en el Verdon</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Bañador ×2 por persona</b> — uno puesto y otro secando. Hoy empieza la cadena de baños del viaje.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Toalla de secado rápido</b> — ocupa nada y estará mojada casi cada día.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Escarpines o calzado de agua</b> — las orillas del Sainte-Croix son de piedra y canto rodado, no de arena.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Bolsa estanca para el móvil</b> — si hacéis kayak hasta la entrada del cañón, es la diferencia entre fotos y un móvil muerto.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Crema solar resistente al agua</b> — el reflejo del lago quema el doble.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Nevera o placas de frío</b> — picnic junto al lago con 33 °C.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Gafas de sol categoría 3</b> — reverbero fuerte sobre el agua turquesa.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 4</span><span class="d-title">Mónaco → Génova</span><span class="d-km">~200 km · 2h30</span><span class="d-tag">Montecarlo a pie y pesto genovés al atardecer.</span></summary>
+        <summary><span class="d-num">Día 4</span><span class="d-title">Mónaco → Génova</span><span class="d-km">~200 km · 2h30</span><span class="d-toll">💶 22-27 €</span><span class="d-tag">Montecarlo a pie y pesto genovés al atardecer.</span></summary>
         <div class="d-body">
           <p>Mañana en Mónaco (Casino de Montecarlo, Palacio del Príncipe, Puerto Hércules, circuito de F1) y tarde por la costa hasta Génova.</p>
           <div class="road road-crit"><h4>🛣 Ruta segura camper <span class="rd-lvl">Crítico · trampa de navegador</span></h4><ul>
@@ -476,11 +542,19 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://www.tourisme-menton.fr/">tourisme-menton.fr</a> <span class="lt">— Menton, dónde comer</span></li>
             <li><a href="https://www.visitgenoa.it/">visitgenoa.it</a> <span class="lt">— para preparar mañana</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Ida · Día 4 · Mónaco y Génova a pie</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Riñonera antirrobo bajo la ropa</b> — Génova y sus carruggi, y el tren de Menton a Mónaco lleno.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Ropa que cubra hombros y rodillas</b> — la catedral de Mónaco y San Lorenzo de Génova aplican el código de vestimenta de verdad.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Zapatillas cómodas</b> — Mónaco es todo cuesta y escaleras.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Tarjeta contactless</b> — el TER de Menton se paga sin efectivo y se ahorra cola.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Mochila pequeña plegable</b> — dejáis la camper lejos y pasáis el día fuera.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Powerbank</b> — día largo fuera del vehículo con el móvil de guía.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 5</span><span class="d-title">Génova → Alessandria</span><span class="d-km">~90 km · 1h</span><span class="d-tag">Génova con calma; etapa corta de enlace.</span></summary>
+        <summary><span class="d-num">Día 5</span><span class="d-title">Génova → Alessandria</span><span class="d-km">~90 km · 1h</span><span class="d-toll">💶 8-10 €</span><span class="d-tag">Génova con calma; etapa corta de enlace.</span></summary>
         <div class="d-body">
           <p>Mañana en Génova: Via Garibaldi (Patrimonio UNESCO), catedral de San Lorenzo, los <i>carruggi</i> (callejones medievales) y el Acuario, uno de los mayores de Europa. Comida de pesto genovés y traslado corto a Alessandria.</p>
           <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad</span></h4><ul>
@@ -524,11 +598,18 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://www.comune.genova.it/">comune.genova.it</a> <span class="lt">— ZTL y aparcamiento</span></li>
             <li><a href="https://www.camperonline.it/sosta-camper/">CamperOnLine</a> <span class="lt">— áreas de sosta en Italia</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Ida · Día 5 · etapa corta = día de mantenimiento</h4><ul>
+            <li><span class="imp imp-4">4/5</span><span><b>Detergente de viaje o cápsulas</b> — es el primer día con tiempo muerto. Lavandería en Alessandria.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Tuppers</b> — comprad pesto y focaccia buenos en Génova para los días de montaña.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Cuerda tendedero y pinzas</b> — con 30 °C la ropa seca en dos horas.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Bolsa de ropa sucia</b> separada, o a los tres días la camper huele.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Herramientas y compresor</b> — aprovechad la tarde libre para revisar presiones antes de los Dolomitas.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 6</span><span class="d-title">Alessandria → Sirmione (Garda) → Dolomitas</span><span class="d-km">~430 km · 4h30</span><span class="d-tag">Baño en el Garda y primeras cumbres dolomíticas.</span></summary>
+        <summary><span class="d-num">Día 6</span><span class="d-title">Alessandria → Sirmione (Garda) → Dolomitas</span><span class="d-km">~430 km · 4h30</span><span class="d-toll">💶 42-48 €</span><span class="d-tag">Baño en el Garda y primeras cumbres dolomíticas.</span></summary>
         <div class="d-body">
           <p>El día largo de la ida. Sirmione a mediodía (Castello Scaligero, Grotte di Catullo, baño en el Garda) y subida a Val Gardena para llegar con las primeras vistas de los Dolomitas al atardecer.</p>
           <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Precaución al final</span></h4><ul>
@@ -581,11 +662,19 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://www.bolzano-bozen.it/">bolzano-bozen.it</a> <span class="lt">— turismo de Bolzano y ZTL</span></li>
             <li><a href="https://www.camperonline.it/sosta-camper/aree-di-sosta/selva-di-val-gardena/2385">CamperOnLine — áreas Val Gardena</a></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Ida · Día 6 · de 33 °C a 12 °C en un solo día</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Forro polar y pantalón largo AL ALCANCE, no en el fondo</b> — coméis en bañador en el Garda y dormís a 1.200 m en Val Gardena la misma noche. Es el mayor salto térmico del viaje.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Bañador y toalla otra vez arriba del todo</b> — baño en Sirmione a mediodía.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Saco de dormir ligero o manta extra</b> — primera noche de montaña de verdad.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Despensa llena antes de subir</b> — en el valle todo cuesta el doble y cierra pronto.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Chanclas</b> — para el lago y para las duchas del área.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Almohada cervical</b> — son 430 km, el día más largo de la ida.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 7</span><span class="d-title">Seceda a pie desde Cristauta</span><span class="d-km">12,3 km · 900 m D+</span><span class="d-tag">La cresta más fotografiada, subiendo a pie.</span></summary>
+        <summary><span class="d-num">Día 7</span><span class="d-title">Seceda a pie desde Cristauta</span><span class="d-km">12,3 km · 900 m D+</span><span class="d-toll free">💶 0 €</span><span class="d-tag">La cresta más fotografiada, subiendo a pie.</span></summary>
         <div class="d-body">
           <p>Día completo de montaña. La cresta de Seceda es <i>la</i> foto de los Dolomitas, con el grupo delle Odle enfrente. Y subís andando: además de ahorraros el dineral del remonte, <b>el torniquete panorámico de la cima es gratis para quien llega a pie por este lado</b>.</p>
           <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Precaución · traslado de la tarde</span></h4><ul>
@@ -656,11 +745,23 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://girovagandointrentino.it/escursioni/escursione-a-cima-seceda/">Girovagando in Trentino</a> <span class="lt">— track GPX y todas las baite</span></li>
             <li><a href="https://www.viaggiacorrisogna.it/escursione-monte-seceda-senza-funivia/">Seceda sin funivia</a> <span class="lt">— tarifas del parking</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Ida · Día 7 · Seceda, 12,3 km y 900 m de desnivel</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Botas de trekking YA RODADAS</b> — estrenar botas hoy es garantizar ampollas para el día 8, que también es de montaña.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Mochila de 20-30 L por persona</b> — no vale una bolsa de tela: son 4h30 con peso.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>2 litros de agua por persona</b> — la subida está <b>toda al sol</b> y no hay fuente hasta arriba.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Crema 50+, gorra y gafas</b> — exposición total durante 900 m de desnivel.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Apósitos para ampollas (Compeed)</b> — el objeto más barato que puede salvar los dos días de montaña.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Bastones de trekking</b> — sobre todo para la bajada, que es la que destroza rodillas.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Cortavientos impermeable</b> — en la cresta hace viento y la tormenta entra a partir de las 15 h.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Barritas y frutos secos</b> — 900 m de desnivel se pagan en calorías.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Calcetines técnicos</b> (nada de algodón) y un par seco de repuesto en la mochila.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Mapa offline descargado</b> — sin cobertura fiable en la cresta.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 8</span><span class="d-title">Lago di Sorapis → Venecia</span><span class="d-km">Ruta 11 km + ~160 km · 3h</span><span class="d-tag">Lago turquesa al amanecer y llegada a Venecia.</span></summary>
+        <summary><span class="d-num">Día 8</span><span class="d-title">Lago di Sorapis → Venecia</span><span class="d-km">Ruta 11 km + ~160 km · 3h</span><span class="d-toll">💶 8-10 €</span><span class="d-tag">Lago turquesa al amanecer y llegada a Venecia.</span></summary>
         <div class="d-body">
           <p>Sin Braies, el día respira. Dormís la noche anterior <b>junto al sendero</b>, madrugáis para tener el lago turquesa casi para vosotros, y por la tarde bajáis a la laguna. Llegada a Venecia con luz.</p>
           <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad</span></h4><ul>
@@ -739,11 +840,21 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://viaggiocontigo.com/2023/07/28/lago-di-sorapis-il-sentiero-215-e-come-arrivare/">Viaggio ConTigo</a> <span class="lt">— guía completa del 215</span></li>
             <li><a href="https://www.cortinadolomiti.eu/">cortinadolomiti.eu</a> <span class="lt">— turismo de Cortina</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Ida · Día 8 · Sorapis al amanecer + laguna de noche</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Frontal por persona</b> — salís a pie a las 07:00 y parte del bosque va aún en penumbra.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Guantes finos de agarre</b> — el último tramo tiene <b>cuerdas, cables y escaleras metálicas</b>. Con las manos frías a esa hora se agradecen mucho.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Venda elástica o tobillera</b> — los pasos expuestos del final son donde se tuercen los tobillos.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Manta térmica</b> en la mochila: pesa 40 g y es el seguro de montaña.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Mosquiteras de ventana y puerta</b> — esta noche dormís en Fusina, junto a la laguna: mosquitos garantizados.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Repelente fuerte</b> — mismo motivo.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Ventilador USB 12V</b> — Venecia en agosto es 31 °C y muy húmedo.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Bolsa para la basura propia</b> — en el sendero de Sorapis no hay papeleras.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
       <div class="day pivot"><details>
-        <summary><span class="d-num">Día 9</span><span class="d-title">Venecia — día completo</span><span class="d-km">0 km · pivote del viaje</span><span class="d-tag">Día completo en la Serenissima. El pivote del viaje.</span></summary>
+        <summary><span class="d-num">Día 9</span><span class="d-title">Venecia — día completo</span><span class="d-km">0 km · pivote del viaje</span><span class="d-toll free">💶 0 €</span><span class="d-tag">Día completo en la Serenissima. El pivote del viaje.</span></summary>
         <div class="d-body">
           <p>La Serenissima. Vaporetto por el Gran Canal, San Marcos, Rialto, Dorsoduro y las Gallerie dell'Accademia. Aperol Spritz al atardecer.</p>
           <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">0 km · camper aparcada</span></h4><ul>
@@ -808,9 +919,26 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://www.camperonline.it/sosta-camper/aree-di-sosta/venezia/274">CamperOnLine — áreas Venecia</a></li>
             <li><a href="https://www.veneziatoday.it/attualita/quando-si-paga-ticket-accesso-2026.html">VeneziaToday</a> <span class="lt">— calendario de la tasa 2026</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Ida · Día 9 · Venecia a pie todo el día</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Riñonera antirrobo bajo la ropa</b> — San Marcos y Rialto son el mejor sitio de Italia para que te vacíen un bolsillo.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Zapatillas cómodas ya usadas</b> — Venecia son kilómetros de piedra y cientos de escalones de puente.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Ropa que cubra hombros y rodillas</b> — en San Marcos el control es estricto y te dan la vuelta en la puerta.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Botella reutilizable</b> — Venecia tiene fuentes públicas potables por toda la ciudad y el agua embotellada allí es carísima.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Powerbank cargado</b> — día entero fuera con el móvil haciendo de mapa y de cámara.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Repelente</b> — la laguna al atardecer.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Gorra o paraguas pequeño</b> — sombra cero en las plazas.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Herramientas y nivel de aceite</b> — la camper está parada todo el día: es el momento de la revisión de media ruta.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
+    </div>
+
+    <div class="legtot">
+      <h4>💶 Total de peajes · ida (9 días)</h4>
+      <div class="big">~170 - 198 €</div>
+      <p>Reparto: <b>~92-106 € en Francia</b> (A9, A54/A51, A8) y <b>~78-92 € en Italia</b> (A10, A26, A21/A4, A22, A27). Un solo día sale a cero: el <b>día 7</b>, porque el traslado por Val Pusteria esquiva el único peaje del tramo.</p>
+      <p>El día más caro es el <b>2 (48-53 €)</b>: son 380 km cruzando el Languedoc y la Provenza enteros por autopista.</p>
     </div>
   </div>
 </section>
@@ -832,7 +960,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
     <div class="route">
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 1</span><span class="d-title">Venecia → Verona → Lago di Molveno</span><span class="d-km">~270 km · 3h15</span><span class="d-tag">Verona y el lago más bonito de Italia.</span></summary>
+        <summary><span class="d-num">Día 1</span><span class="d-title">Venecia → Verona → Lago di Molveno</span><span class="d-km">~270 km · 3h15</span><span class="d-toll">💶 17-18 €</span><span class="d-tag">Verona y el lago más bonito de Italia.</span></summary>
         <div class="d-body">
           <p>Se sale de la laguna y se sube al <b>Brenta</b>: el otro grupo dolomítico, el que no visteis desde Val Gardena. Parada en Verona a mediodía (arena romana, Piazza delle Erbe, la casa de Julieta si os va el postureo) y noche en un lago alpino de agua limpísima, con las paredes del Brenta enfrente.</p>
           <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Precaución en la subida final</span></h4><ul>
@@ -885,11 +1013,19 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://www.visitmolveno.it/">visitmolveno.it</a> <span class="lt">— lago, actividades, área de sosta</span></li>
             <li><a href="https://www.visittrentino.info/">visittrentino.info</a> <span class="lt">— Trentino y Guest Card</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Vuelta · Día 1 · Verona y primera noche de Brenta</h4><ul>
+            <li><span class="imp imp-4">4/5</span><span><b>Ropa de hombros y rodillas cubiertos</b> — la Arena y las iglesias de Verona.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Forro polar y ropa de dormir de abrigo</b> — Molveno está a 860 m y la noche baja bastante.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Bañador</b> — el lago de Molveno tiene agua limpísima, aunque fría.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Calzos</b> — las áreas del lago tienen pendiente.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Saco de dormir ligero</b> otra vez a mano tras la llanura.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Zapatillas cómodas</b> — Verona se ve andando desde el parking periférico.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 2</span><span class="d-title">Molveno → Bérgamo Città Alta</span><span class="d-km">~255 km · 3h05</span><span class="d-tag">Brenta de mañana, Città Alta veneciana de tarde.</span></summary>
+        <summary><span class="d-num">Día 2</span><span class="d-title">Molveno → Bérgamo Città Alta</span><span class="d-km">~255 km · 3h05</span><span class="d-toll">💶 20-23 €</span><span class="d-tag">Brenta de mañana, Città Alta veneciana de tarde.</span></summary>
         <div class="d-body">
           <p>Mañana de Brenta y tarde en una de las ciudades más bonitas del norte de Italia que casi nadie mete en ruta: <b>Bérgamo Alta</b>, amurallada, veneciana y Patrimonio UNESCO. Se sube en funicular histórico, que ya es media visita.</p>
           <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad</span></h4><ul>
@@ -946,11 +1082,18 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://www.comune.bergamo.it/">comune.bergamo.it</a> <span class="lt">— horarios exactos de la ZTL</span></li>
             <li><a href="https://www.camperonline.it/sosta-camper/">CamperOnLine</a> <span class="lt">— áreas en Bérgamo Bassa</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Vuelta · Día 2 · telecabina y Città Alta</h4><ul>
+            <li><span class="imp imp-4">4/5</span><span><b>Cortavientos</b> — la telecabina del Pradel a primera hora es fresca aunque abajo haga calor.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Zapatillas de suela buena</b> — la Città Alta es empedrado en cuesta.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Tarjeta contactless o monedas</b> — funicular de Bérgamo (1,70 €).</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Riñonera antirrobo</b> — Bérgamo Alta en agosto está llena.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Mochila pequeña plegable</b> — dejáis la camper en la ciudad baja.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 3</span><span class="d-title">Bérgamo → Lago d'Orta</span><span class="d-km">~150 km · 2h</span><span class="d-tag">El lago secreto del Piamonte y su isla de leyenda.</span></summary>
+        <summary><span class="d-num">Día 3</span><span class="d-title">Bérgamo → Lago d'Orta</span><span class="d-km">~150 km · 2h</span><span class="d-toll">💶 17-20 €</span><span class="d-tag">El lago secreto del Piamonte y su isla de leyenda.</span></summary>
         <div class="d-body">
           <p>Se rodea Milán por el norte hasta el <b>lago d'Orta</b>: el secreto mejor guardado del Piamonte. Pequeño, sin la masificación de Como, con Orta San Giulio (uno de los "borghi più belli d'Italia") y una isla monástica a cinco minutos en barca.</p>
           <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Precaución · largo del vehículo</span></h4><ul>
@@ -997,11 +1140,18 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://www.comune.omegna.vb.it/">Omegna</a> <span class="lt">— área camper y lido</span></li>
             <li><a href="https://park4night.com/es/search">park4night</a> <span class="lt">— sosta libre en el Sacro Monte</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Vuelta · Día 3 · Orta y el Sacro Monte a pie</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Zapatillas cómodas</b> — la camper se queda abajo y al Sacro Monte se sube andando (~20 min en cuesta).</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Efectivo suelto</b> — la barca a la Isola San Giulio (~3-4 €) y muchos parkings de lago no aceptan tarjeta.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Repelente</b> — atardecer junto a un lago: mosquitos asegurados.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Sillas plegables</b> — el área de Omegna es de las pocas donde de verdad apetece sentarse fuera.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Gorra y agua</b> — la subida al Sacro Monte es al sol.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 4</span><span class="d-title">Orta → Aosta → Courmayeur</span><span class="d-km">~190 km · 2h30</span><span class="d-tag">La 'Roma de los Alpes' camino del Mont Blanc.</span></summary>
+        <summary><span class="d-num">Día 4</span><span class="d-title">Orta → Aosta → Courmayeur</span><span class="d-km">~190 km · 2h30</span><span class="d-toll">💶 20-24 € · o 0 €</span><span class="d-tag">La 'Roma de los Alpes' camino del Mont Blanc.</span></summary>
         <div class="d-body">
           <p>Autopista hasta el Valle de Aosta. Parada en <b>Aosta</b>, "la Roma de los Alpes", y última subida hasta Courmayeur, a los pies del Mont Blanc. Mañana no se conduce nada.</p>
           <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad</span></h4><ul>
@@ -1054,11 +1204,19 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://www.comune.aosta.it/">comune.aosta.it</a> <span class="lt">— ZTL y áreas</span></li>
             <li><a href="https://www.termedipre.it/">Terme di Pré-Saint-Didier</a> <span class="lt">— si os apetece spa</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Vuelta · Día 4 · Aosta romana y subida al Mont Blanc</h4><ul>
+            <li><span class="imp imp-4">4/5</span><span><b>Forro polar y pantalón largo arriba del todo</b> — Courmayeur está a 1.224 m: por la noche se nota.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Saco de dormir o manta extra</b> — dormís dos noches en alta montaña.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Compra grande hecha abajo</b> — en Courmayeur todo es de precio de estación de esquí.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Botella reutilizable</b> — Aosta tiene fuentes por todo el centro romano.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Zapatillas cómodas</b> — Aosta se ve entera a pie en 90 min.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Depósito lleno en Morgex</b> (no es maleta, pero se olvida igual).</span></li>
+          </ul></div>
         </div>
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 5</span><span class="d-title">Courmayeur · Skyway Monte Bianco + Val Ferret</span><span class="d-km">0 km de camper</span><span class="d-tag">3.466 m en cabina giratoria. Día sin conducir.</span></summary>
+        <summary><span class="d-num">Día 5</span><span class="d-title">Courmayeur · Skyway Monte Bianco + Val Ferret</span><span class="d-km">0 km de camper</span><span class="d-toll free">💶 0 €</span><span class="d-tag">3.466 m en cabina giratoria. Día sin conducir.</span></summary>
         <div class="d-body">
           <p>Día sin conducir y probablemente el mejor de la vuelta. Por la mañana, el <b>Skyway Monte Bianco</b>: cabinas giratorias de 360° hasta los 3.466 m, con el Mont Blanc encima de la cabeza. Por la tarde, la Val Ferret: pradera glaciar, paseo llano y cervezas.</p>
           <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">0 km · camper aparcada</span></h4><ul>
@@ -1115,11 +1273,21 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://www.giardinosaussurea.net/">Giardino Saussurea</a> <span class="lt">— el jardín botánico más alto de Europa</span></li>
             <li><a href="https://www.rifugiobonatti.it/">Rifugio Bonatti</a> <span class="lt">— la parada de Val Ferret</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Vuelta · Día 5 · Skyway a 3.466 m · EL DÍA MÁS FRÍO DEL VIAJE</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Forro polar + cortavientos + gorro + guantes</b> — en Punta Helbronner podéis tener <b>de 0 a 5 °C</b> y viento, en pleno agosto. Es el día que más gente subestima.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Gafas de sol categoría 3-4</b> — nieve permanente a 3.466 m: sin gafas hay riesgo real de daño ocular.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Crema solar 50+ en cara y orejas</b> — a esa altitud la radiación es brutal aunque haga frío.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Reserva del Skyway en el móvil y en papel</b> — es online obligatorio y con franja horaria asignada.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Cacao labial con protección</b> — frío, viento y altura parten los labios en una mañana.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Baterías de cámara cargadas y en un bolsillo interior</b> — el frío las agota en minutos.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Pantalón largo</b> — nada de subir en shorts.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Biodramina</b> — la cabina gira 360° durante la subida.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 6</span><span class="d-title">Courmayeur → Col du Petit-Saint-Bernard → Annecy</span><span class="d-km">~200 km · 3h15</span><span class="d-tag">Cruce alpino gratis y la 'Venecia de los Alpes'.</span></summary>
+        <summary><span class="d-num">Día 6</span><span class="d-title">Courmayeur → Col du Petit-Saint-Bernard → Annecy</span><span class="d-km">~200 km · 3h15</span><span class="d-toll free">💶 0 €</span><span class="d-tag">Cruce alpino gratis y la 'Venecia de los Alpes'.</span></summary>
         <div class="d-body">
           <p>Cruce de los Alpes por el <b>Col du Petit-Saint-Bernard (2.188 m)</b>: panorámico, gratuito y apto para camper. Os ahorra el túnel del Mont Blanc, que para un camper de más de 3 m son <b>204,80 € solo de ida</b>. Bajada por la Tarentaise hasta Annecy, la "Venecia de los Alpes" — con la Venecia de verdad todavía fresca en la memoria, la comparación tiene su gracia.</p>
           <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Precaución · puerto alpino</span></h4><ul>
@@ -1184,11 +1352,19 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://camping-municipal.annecy.fr/">Camping municipal de Annecy</a> <span class="lt">— mín. 3 noches en agosto</span></li>
             <li><a href="https://www.velonecy.com/">velonecy.com</a> <span class="lt">— alquiler de bici para la vía verde</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Vuelta · Día 6 · puerto alpino y lago de Annecy</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Biodramina tomada ANTES de salir</b> — 30 km de curvas continuas bajando a Bourg-Saint-Maurice. Tomada después ya no sirve.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Bolsas por si alguien se marea</b> y agua fresca a mano en cabina.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Calzos de nivelación</b> — las áreas de Annecy (Albigny, Veyrier) llegan a <b>5° de pendiente</b>.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Bañador y toalla</b> — el lago de Annecy es de los mejores baños del viaje.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Casco de bici</b> — si lleváis bicis, la vía verde del lago son ~40 km.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Chaqueta</b> para la parada de fotos en el puerto: a 2.188 m sopla.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 7</span><span class="d-title">Annecy → Pont du Gard → Uzès / Avignon</span><span class="d-km">~400 km · 4h</span><span class="d-tag">Baño bajo un acueducto romano. Etapa larga.</span></summary>
+        <summary><span class="d-num">Día 7</span><span class="d-title">Annecy → Pont du Gard → Uzès / Avignon</span><span class="d-km">~400 km · 4h</span><span class="d-toll">💶 53-70 €</span><span class="d-tag">Baño bajo un acueducto romano. Etapa larga.</span></summary>
         <div class="d-body">
           <p>El día de más autopista de la vuelta (A41/A43/A7/A9, esquivando Lyon). Recompensa: llegar a media tarde al <b>Pont du Gard</b> y bañarse en el Gardon justo debajo del acueducto.</p>
           <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad · día largo</span></h4><ul>
@@ -1254,11 +1430,20 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://www.bison-fute.gouv.fr/">Bison Futé</a> <span class="lt">— mirad este día antes de salir</span></li>
             <li><a href="https://www.parc-camargue.fr/">Camargue</a> <span class="lt">— la otra alternativa</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Vuelta · Día 7 · 400 km y baño romano</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Nevera cargada la noche antes</b> — 400 km por el valle del Ródano en agosto. Comer en autopista es caro y lento.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Termo de café</b> — salida a las 07:30 sin cafeterías abiertas.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Almohada cervical para los copilotos</b> — el día más largo de la vuelta.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Bañador y toalla accesibles, no en el garaje</b> — llegáis y os metéis directamente en el Gardon.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Escarpines</b> — el fondo del Gardon bajo el acueducto es de piedra.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Efectivo</b> — el parking del Pont du Gard son 9 € por vehículo.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Música y podcasts descargados offline</b> — hay tramos del Ródano sin cobertura decente.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
       <div class="day"><details>
-        <summary><span class="d-num">Día 8</span><span class="d-title">Uzès → Carcassonne → Barcelona</span><span class="d-km">~430 km · 4h30 + visita</span><span class="d-tag">Fortaleza medieval, cassoulet y a casa. 🎉</span></summary>
+        <summary><span class="d-num">Día 8</span><span class="d-title">Uzès → Carcassonne → Barcelona</span><span class="d-km">~430 km · 4h30 + visita</span><span class="d-toll">💶 53-56 €</span><span class="d-tag">Fortaleza medieval, cassoulet y a casa. 🎉</span></summary>
         <div class="d-body">
           <p>Último día, partido en dos con una parada de lujo: la <b>Cité de Carcassonne</b>, la fortaleza medieval más grande de Europa. En la ida solo dormisteis en Narbona de paso, así que no se repite nada. Después, tramo final a casa.</p>
           <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad</span></h4><ul>
@@ -1311,9 +1496,24 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
             <li><a href="https://www.campingdelacite.com/">Camping de la Cité</a> <span class="lt">— el área de camper está al lado</span></li>
             <li><a href="https://www.bison-fute.gouv.fr/">Bison Futé</a> <span class="lt">— último día, mirad la AP-7</span></li>
           </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Vuelta · Día 8 · Carcassonne y vuelta a casa</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>DNI o pasaporte de los menores de 26 EN LA MANO</b> — el Château Comtal es <b>gratis para ciudadanos UE de 18 a 25 años</b>. Sin documento, son 19 € por cabeza. El objeto más rentable de la maleta hoy.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Zapatillas cómodas</b> — las murallas de la Cité son empedrado irregular.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Bolsas de basura</b> — vaciad la camper antes de llegar a casa, no después.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Documentación a mano</b> — cruce de frontera de vuelta.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Bolsa de tela</b> — última compra de vino de Corbières y Minervois.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Gorra y agua</b> — la Cité a mediodía en agosto no perdona.</span></li>
+          </ul></div>
         </div>
       </details></div>
 
+    </div>
+
+    <div class="legtot" style="border-left-color:var(--rose)">
+      <h4>💶 Total de peajes · vuelta (8 días)</h4>
+      <div class="big" style="color:var(--rose)">~180 - 211 €</div>
+      <p>Reparto: <b>~106-126 € en Francia</b> (casi todo el día 7 y el día 8) y <b>~74-85 € en Italia</b>. <b>Tres días a cero:</b> el 5 (Courmayeur parado), el 6 (Petit-Saint-Bernard) y el 4 si cogéis la variante por la SS26.</p>
+      <p>El <b>día 6 es el gran ahorro del viaje</b>: cruzar los Alpes por el puerto en vez del túnel del Mont Blanc son <b>204,80 € que no pagáis</b> — más que el peaje de toda la vuelta junta.</p>
     </div>
   </div>
 </section>
@@ -1360,6 +1560,35 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
     </table></div>
     <div class="warn" style="margin-top:12px"><b>La decisión clave de la vuelta:</b> si vuestra camper mide más de 3 m, el túnel son <b>204,80 € solo de ida</b> y el Petit-Saint-Bernard os ahorra ese dinero entero. Si mide entre 2 y 3 m (clase 2), son 74,70 €. Truco conocido entre camperistas: las capuchinas que pasan poco de los 3 m a veces se clasifican como clase 2 (cuenta la altura del capó del Ducato base). Altura máxima del túnel: 4,70 m.</div>
 
+    <h3 class="sub">Peajes día a día · los 17 días</h3>
+    <p class="sub-note">Estimación para <b>camper clase 2 en Francia</b> (2-3 m de alto, ≤3,5 t) y <b>classe B en Italia</b> (más de 1,30 m en el eje delantero). Calculado sobre <b>las rutas seguras</b> que lleva cada día, no sobre la ruta más corta: en varios tramos el peaje es precisamente lo que se paga por no meterse en una carretera mala. <b>Si vuestra camper pasa de 3 m, en Francia sube a clase 3 y estas cifras se van entre un 40 y un 60% arriba</b> — el badge Ulys camping-car existe justo para evitarlo.</p>
+    <div class="tbl-wrap"><table>
+      <thead><tr><th>Día</th><th>Tramo</th><th>Peaje est.</th><th>Por qué</th></tr></thead>
+      <tbody>
+        <tr><td><b>Ida 1</b></td><td>Barcelona → Narbonne-Plage</td><td class="num">20-23 €</td><td>A9 francesa. La AP-7 catalana ya es gratuita.</td></tr>
+        <tr><td><b>Ida 2</b></td><td>Narbona → Nimes → Moustiers</td><td class="num">48-53 €</td><td><b>El día más caro de la ida.</b> A9 (~33 €) + A54/A7/A51 hasta Manosque.</td></tr>
+        <tr><td><b>Ida 3</b></td><td>Verdon → Menton</td><td class="num">22-27 €</td><td>A8 desde Le Muy. La aproximación al cañón es toda gratuita.</td></tr>
+        <tr><td><b>Ida 4</b></td><td>Menton → Génova</td><td class="num">22-27 €</td><td>A8 + A10 dei Fiori. Innegociable: la gratuita es la SS1 Aurelia.</td></tr>
+        <tr><td><b>Ida 5</b></td><td>Génova → Alessandria</td><td class="num">8-10 €</td><td>A26. La gratuita es el Passo dei Giovi.</td></tr>
+        <tr><td><b>Ida 6</b></td><td>Alessandria → Sirmione → Val Gardena</td><td class="num">42-48 €</td><td>A21 + A4 + A22 del Brennero. 430 km de autostrada.</td></tr>
+        <tr><td><b>Ida 7</b></td><td>Seceda + traslado a Tre Croci</td><td class="num">0 €</td><td><b>Gratis.</b> La ruta por Val Pusteria (SS12/SS49/SS51) esquiva el único peaje.</td></tr>
+        <tr><td><b>Ida 8</b></td><td>Sorapis → Venecia</td><td class="num">8-10 €</td><td>Solo A27 Belluno-Mestre.</td></tr>
+        <tr><td><b>Ida 9</b></td><td>Venecia, día completo</td><td class="num">0 €</td><td>Camper parada en Fusina.</td></tr>
+        <tr><td><b>Vta 1</b></td><td>Venecia → Verona → Molveno</td><td class="num">17-18 €</td><td>A4 (8,70 €) + A22 hasta San Michele all'Adige.</td></tr>
+        <tr><td><b>Vta 2</b></td><td>Molveno → Bérgamo</td><td class="num">20-23 €</td><td>A22 sur + A4. Sobre los <b>255 km reales</b>, no los 190 del plan viejo.</td></tr>
+        <tr><td><b>Vta 3</b></td><td>Bérgamo → Lago d'Orta</td><td class="num">17-20 €</td><td>A4 + A26 rodeando Milán por el norte.</td></tr>
+        <tr><td><b>Vta 4</b></td><td>Orta → Aosta → Courmayeur</td><td class="num">20-24 €<br><b>o 0 €</b></td><td>A26/A4/A5. <b>Por la SS26 sale gratis</b> y solo cuesta ~35 min. Aosta→Courmayeur ya va sin peaje.</td></tr>
+        <tr><td><b>Vta 5</b></td><td>Courmayeur · Skyway</td><td class="num">0 €</td><td>Sin conducir.</td></tr>
+        <tr><td><b>Vta 6</b></td><td>Courmayeur → Petit-Saint-Bernard → Annecy</td><td class="num">0 €</td><td><b>Gratis y sin túnel.</b> Puerto libre + N90/D1508. Aquí es donde os ahorráis los 204,80 € del Mont Blanc.</td></tr>
+        <tr><td><b>Vta 7</b></td><td>Annecy → Pont du Gard</td><td class="num">53-70 €</td><td><b>El día más caro del viaje.</b> A41+A43+A7+A9, 400 km. El único donde recomiendo pagar sin dudarlo.</td></tr>
+        <tr><td><b>Vta 8</b></td><td>Uzès → Carcassonne → Barcelona</td><td class="num">53-56 €</td><td>A9 ida y vuelta. <b>Narbona-Carcassonne va por la D6113 gratis</b> (−13 €). Si volvéis por la A61, sumad 11-14 €.</td></tr>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="2"><b>TOTAL de los 17 días · por camper</b></td><td class="num"><b>~350-410 €</b></td><td>Ida ~170-198 € + vuelta ~180-211 €</td></tr>
+      </tfoot>
+    </table></div>
+    <div class="tip-in" style="margin-top:12px"><b>Cómo leer este total:</b> son <b>~21-24 € por día de viaje</b>, y se concentra brutalmente: <b>cuatro días (ida 2 y 6, vuelta 7 y 8) se llevan casi la mitad de los 410 €</b>. Los otros trece salen baratos o gratis. Si el grupo va a medias, dividido entre 4 personas son unos <b>90-100 € por cabeza</b> en peajes de todo el viaje. Y no olvidéis lo que <b>no</b> aparece aquí porque ya está evitado: los <b>204,80 €</b> del túnel del Mont Blanc.</div>
+
     <h3 class="sub">Peajes en Francia · camper clase 2</h3>
     <p class="sub-note">Un camper de 2-3 m de altura y ≤3,5 t es clase 2: ~1,5× la tarifa de un turismo. Estimaciones — <b>confirmadlas en los simuladores oficiales</b> (autoroutes.fr, vinci-autoroutes.com, sanef.com, voyage.aprr.fr) seleccionando "Classe 2".</p>
     <div class="tbl-wrap"><table>
@@ -1372,7 +1601,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
         <tr><td>A41/A43 Chambéry → Annecy</td><td class="num">15-25 €</td><td>Vuelta · días 6-7</td></tr>
         <tr><td>A61 Narbona → Carcassonne (~60 km)</td><td class="num">11-14 €</td><td>Vuelta · día 8</td></tr>
       </tbody>
-      <tfoot><tr><td>Total francés orientativo (todo el viaje)</td><td class="num">~180-220 €</td><td>Por camper</td></tr></tfoot>
+      <tfoot><tr><td>Total francés orientativo (todo el viaje)</td><td class="num">~198-232 €</td><td>Por camper. Corregido al alza: la tabla de arriba no incluía los tramos Nimes→Manosque ni Moustiers→Menton.</td></tr></tfoot>
     </table></div>
     <div class="tip-in" style="margin-top:12px"><b>Truco:</b> el badge <b>Ulys camping-car</b> de Vinci garantiza que os cobren clase 2 y no clase 3. Si el peaje os clasifica mal, es dinero directo perdido.</div>
 
@@ -1514,6 +1743,305 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
     </div>
 
     <div class="warn" style="margin-top:20px"><b>Regla general:</b> si un parking está lleno, cambiad al transporte público: <b>Dolomiti Bus</b> hasta el Passo Tre Croci (a 150 m del sendero de Sorapis), <b>bus gratuito</b> para Val Ferret, <b>ferry</b> para Venecia, <b>funicular</b> para Bérgamo. Siempre hay una salida que no pasa por meter la camper donde no cabe.</div>
+  </div>
+</section>
+
+<!-- ===================== MALETA ===================== -->
+<section id="maleta">
+  <div class="wrap">
+    <div class="leg-head">
+      <span class="leg-tag">Maleta · 199 cosas · 17 días · camper</span>
+      <h2>Todo lo que hay que meter</h2>
+      <p class="leg-desc">Lista completa para un viaje de <b>17 días y ~3.400 km</b> que pasa de la playa de Narbona a los <b>3.466 m de Punta Helbronner</b>, con dos días de montaña a pie y ocho ciudades con ZTL. Cada cosa lleva su <b>importancia del 1 al 5</b>. Marcadlas según las metéis.</p>
+    </div>
+
+    <div class="pk-bar">
+      <div class="pk-count"><b id="pkDone">0</b> de <b id="pkTotal">199</b> cosas marcadas</div>
+      <div class="pk-legend">
+        <span class="imp imp-5">5/5</span> Sin esto no se sale
+        <span class="imp imp-4">4/5</span> Muy importante
+        <span class="imp imp-3">3/5</span> Se nota si falta
+        <span class="imp imp-2">2/5</span> Comodidad
+        <span class="imp imp-1">1/5</span> Opcional
+      </div>
+    </div>
+
+    <div class="pk-grid">
+      <div class="pk-cat">
+        <h3>📄 Documentación y papeles</h3>
+        <p class="pk-sub">Sin esto no se sale de casa. Llevad copia digital en la nube y copia en papel guardada en sitio distinto al original. · <b>17 cosas</b>, 8 imprescindibles</p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>DNI o pasaporte en vigor, de cada persona</b><em>Comprobad caducidades ahora, no la víspera.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Carnet de conducir de todos los que vayan a conducir</b><em>Repartid la conducción: hay días de 400 km.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Permiso de circulación de la camper</b><em>Original en el vehículo.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Ficha técnica con la ITV en vigor</b><em>ITV caducada en Francia o Italia = inmovilización del vehículo.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Póliza del seguro + teléfono de asistencia 24 h</b><em>Guardad el número también en papel: si el móvil muere, lo necesitáis.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Carta verde, si vuestra aseguradora la sigue exigiendo</b><em>Preguntadlo antes de salir; algunas ya no la emiten.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Tarjeta Sanitaria Europea de cada persona</b><em>Gratis, se pide online y tarda unos días. Cubre Francia e Italia.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Vignette Crit'Air pegada en el parabrisas</b><em>3,81 € en certificat-air.gouv.fr. Es el sitio oficial: los revendedores cobran el triple.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Tarjeta Camping-Car Park (CCP)</b><em>Necesaria para entrar en toda esa red de áreas francesas, entre ellas la alternativa de Narbona.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Tarjeta bancaria contactless principal</b><em>Casi todas las áreas y peajes van con tarjeta.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Segunda tarjeta de otro banco, guardada aparte</b><em>Si bloquean o pierden la primera, no os quedáis tirados en Italia.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Efectivo en euros (150-200 € por camper)</b><em>Barcas de lago, parkings de montaña y algunas áreas no aceptan tarjeta.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Monedas sueltas de 1 € y 2 €</b><em>Las fichas de agua y electricidad de las áreas francesas funcionan así.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Reservas impresas: áreas, Skyway, Venecia</b><em>El Skyway es franja horaria asignada; sin justificante no se discute.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Copia de todos los documentos en la nube y en el móvil</b><em>Fotografiadlo todo antes de salir. Cuesta 10 minutos.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Contactos de emergencia escritos en papel</b><em>Dentro de la guantera, no solo en el móvil.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-1">1/5</span><span class="n"><b>Permiso de conducir internacional</b><em>No hace ninguna falta dentro de la UE. Solo si alguien conduce con carnet extracomunitario.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>⚖️ Equipo legal obligatorio del vehículo</h3>
+        <p class="pk-sub">Lo que os pueden pedir en un control. Multas de entre 90 y 200 € por elemento que falte. · <b>10 cosas</b>, 4 imprescindibles</p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Dos triángulos de emergencia</b><em>Obligatorios en Francia e Italia.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Chaleco reflectante POR OCUPANTE</b><em>En Francia deben ser accesibles desde el interior, no desde el maletero. Es el fallo más multado.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Rueda de repuesto o kit antipinchazos + gato y llave</b><em>Comprobad que el gato aguanta el peso real de la camper cargada.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Botiquín completo</b><em>Obligatorio en Italia para vehículos de más de 3,5 t y recomendable siempre.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Detector de gas y de monóxido de carbono</b><em>Con instalación de gas y durmiendo dentro, esto no es opcional.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Panel V-20 / señal de carga sobresaliente</b><em>Si el portabicis tapa la matrícula o sobresale, en Italia es sancionable sin él.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Extintor pequeño</b><em>No obligatorio, pero con bombona a bordo es sentido común.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Bombillas de repuesto</b><em>Barato y en algunos controles lo piden.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Adhesivo de nacionalidad (E)</b><em>Solo si la matrícula no lleva ya la banda azul europea.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-1">1/5</span><span class="n"><b>Alcoholímetro desechable</b><em>En Francia ya no se sanciona su ausencia desde 2020.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>🔌 Camper: agua, luz, gas y nivelación</h3>
+        <p class="pk-sub">La categoría donde más viajes se estropean por una tontería de 5 €. · <b>19 cosas</b>, 7 imprescindibles</p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Manguera de agua potable, ~10 m (uso alimentario)</b><em>La normal de jardín da sabor al agua.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Juego de adaptadores de grifo con roscas variadas</b><em>EL objeto más olvidado del camperismo. Cada área francesa e italiana tiene una rosca distinta y sin adaptador no cargáis agua.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Alargador eléctrico de 25 m</b><em>En muchas áreas la columna te queda a 15 m de la plaza.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Adaptador CEE azul ↔ Schuko</b><em>Sin él no os enchufáis en media Europa.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Adaptador de enchufe italiano tipo L y francés tipo E</b><em>Los enchufes italianos de tres clavijas en línea no aceptan la clavija española.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Calzos de nivelación (mínimo 2, mejor 4)</b><em>Annecy, Molveno y varias áreas de montaña tienen pendientes de hasta 5°. Sin nivelar, la nevera de absorción deja de funcionar.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Cassette del WC + líquido químico</b><em>Comprad el líquido antes: en ruta es caro y no siempre lo hay.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Papel higiénico de disolución rápida</b><em>El normal atasca el cassette.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Guantes de nitrilo para el vaciado</b><em>Caja entera, se usan más de lo que parece.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Manguera de vaciado de aguas grises</b><em>Algunas áreas tienen el desagüe descentrado.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Bombona de gas con reserva + reductor de repuesto</b><em>Las bombonas españolas NO se rellenan en Francia ni en Italia. Salid con gas de sobra o llevad adaptador internacional.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Bidón de agua de reserva de 10-20 L</b><em>Para los dos días de montaña sin área con servicios.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Regleta con protección de sobretensión</b><em>La corriente de algunas áreas es sucia.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Nivel de burbuja</b><em>Muchos ya lo llevan en el salpicadero.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Sillas plegables</b><em>Ojo: sacarlas en Italia es campeggio libero, ilegal fuera de área o camping.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Mesa plegable</b><em>Misma advertencia.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Toldo con vientos y piquetas</b><em>Igual: solo en área o camping.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Alfombra de exterior</b><em>Evita que entre medio prado en la camper.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Cuerda de tendedero y pinzas</b><em>Con 30 °C la ropa seca en dos horas.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>🔧 Mantenimiento y averías</h3>
+        <p class="pk-sub">Sois 17 días y ~3.400 km, con dos cruces alpinos. Algo se moverá. · <b>13 cosas</b></p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Juego básico de herramientas</b><em>Destornilladores, llaves fijas, alicates, llave inglesa.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Cinta americana</b><em>Arregla temporalmente casi todo.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Compresor 12 V y medidor de presión</b><em>Presiones correctas = frenada y consumo. Revisadlas antes de cada puerto.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Cables de arranque o arrancador de litio</b><em>La batería del motor se descarga con más facilidad de la que creéis.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Aceite de motor de reserva (1 L del tipo correcto)</b><em>Tras dos puertos alpinos conviene comprobar nivel.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>AdBlue, si el motor lo usa</b><em>Quedarse sin AdBlue deja el vehículo en modo tortuga.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Fusibles de repuesto</b><em>Los de la instalación de 12 V saltan.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Líquido refrigerante y limpiaparabrisas</b><em>Insectos del valle del Po: consumiréis limpiaparabrisas.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Bridas de plástico de varios tamaños</b><em>Sujetan lo que la cinta no.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Trapos viejos y papel de taller</b><em>Ocupan nada.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Spray tipo WD-40</b><em>Portones y cerraduras con salitre de la costa.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Cinta autovulcanizante</b><em>Para fugas pequeñas de agua.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-1">1/5</span><span class="n"><b>Cadenas o textiles de nieve</b><em>En agosto, no. Solo si el parte da algo muy raro en cota alta.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>🍳 Cocina y despensa</h3>
+        <p class="pk-sub">Cocinar dentro es donde de verdad se ahorra: en Italia una cena fuera son 25-35 € por cabeza. · <b>18 cosas</b></p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Menaje irrompible: platos, vasos, cubiertos</b><em>Nada de cristal en un vehículo en movimiento.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Dos ollas y una sartén</b><em>Con tapa: ahorra gas.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Cuchillo de cocina bueno y tabla</b><em>El cuchillo malo es el que corta dedos.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Abrelatas, sacacorchos y abrebotellas</b><em>Clásico olvido que arruina una cena.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Jabón lavavajillas biodegradable</b><em>Los grises acaban en depuradoras de área.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Bolsas de basura + bolsas de reciclaje separadas</b><em>Italia y Francia multan por tirar mal.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Despensa de emergencia: pasta, conservas, legumbre cocida</b><em>Para los días que llegáis tarde y todo está cerrado.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Agua embotellada de reserva (6 L)</b><em>Independiente del depósito.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Botella reutilizable por persona</b><em>Venecia, Verona y Aosta están llenas de fuentes potables.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Nevera portátil o placas de frío</b><em>Para los picnics de lago.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Cafetera italiana</b><em>Estáis en Italia. No hagáis el ridículo con café soluble.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Tuppers apilables</b><em>Sobras y bocadillos de ruta.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Papel de aluminio, film y bolsas zip</b><em>Multiuso.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Sal, aceite y especias básicas</b><em>Comprar aceite en Italia y en Francia sale caro.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Rollo de papel de cocina</b><em>Se acaba siempre antes de lo previsto.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Bayetas y estropajos</b><em>Y un recambio.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Bolsa isotérmica para la compra</b><em>Del súper a la camper con 33 °C fuera.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Hervidor de agua o cazo pequeño</b><em>Infusiones y noches frías de montaña.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>🧥 Ropa · de 0 °C a 34 °C</h3>
+        <p class="pk-sub">El viaje pasa de la playa de Narbona a 3.466 m en Punta Helbronner. Todo por capas. · <b>18 cosas</b>, 7 imprescindibles</p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Forro polar o segunda capa térmica</b><em>Imprescindible. Skyway, cresta de Seceda y noches en Val Gardena y Courmayeur.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Chaqueta cortavientos e impermeable ligera</b><em>Tormentas de tarde casi diarias en los Dolomitas.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Ropa interior y calcetines para 5-7 días</b><em>Con una lavadora a mitad de viaje sobra.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Calcetines técnicos de trekking (2-3 pares)</b><em>Nada de algodón en Seceda y Sorapis: es la receta de la ampolla.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Gorra o sombrero</b><em>Los dos días de montaña son totalmente expuestos.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Bañador ×2 por persona</b><em>Verdon, Garda, Sainte-Croix, Molveno, Annecy y el Gardon. Casi un baño al día.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Toalla de secado rápido</b><em>Ocupa un puño y estará mojada constantemente.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Camisetas técnicas transpirables</b><em>Mejor que algodón para andar y para el calor húmedo de Venecia.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Pantalón largo de trekking (mejor desmontable)</b><em>Sirve para montaña, para iglesias y para las noches frías.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Gorro fino y guantes finos</b><em>Sí, en agosto. Punta Helbronner puede estar a 0 °C.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Ropa de dormir de abrigo</b><em>Cinco noches por encima de 800 m.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Chubasquero plegable de bolsillo</b><em>Para llevar siempre en la mochila de día.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Ropa que cubra hombros y rodillas</b><em>San Marcos, San Lorenzo, la catedral de Mónaco: código de vestimenta real, te dan la vuelta en la puerta.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Camisetas y pantalón corto de diario</b><em>La mitad del viaje son 30 °C.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Buff o braga de cuello</b><em>Multiuso: sol, viento y polvo.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Bolsa de ropa sucia estanca</b><em>A los tres días lo agradeceréis.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Detergente de viaje o cápsulas</b><em>Lavandería a mitad de ruta (Alessandria o Bérgamo).</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Una muda "de cenar"</b><em>Para las noches de Génova, Bérgamo o Annecy.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>👟 Calzado</h3>
+        <p class="pk-sub">Tres pares por persona. Ni uno menos. · <b>5 cosas</b>, 1 imprescindibles</p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Botas de trekking YA RODADAS</b><em>Seceda y Sorapis las exigen. Estrenarlas allí es garantizar ampollas los dos días seguidos.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Zapatillas cómodas de andar por ciudad</b><em>Venecia, Bérgamo, Carcassonne: kilómetros de empedrado.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Chanclas o crocs</b><em>Duchas de área y camping. No entréis descalzos.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Escarpines o calzado de agua</b><em>El Sainte-Croix y el Gardon tienen fondo de piedra y canto rodado.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Un par de calcetines secos en la mochila de montaña</b><em>Cambiar de calcetines a media ruta cambia el día.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>🥾 Montaña · Seceda y Sorapis</h3>
+        <p class="pk-sub">Dos días seguidos de ruta. Se preparan como lo que son: montaña de verdad. · <b>15 cosas</b>, 6 imprescindibles</p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Mochila de día de 20-30 L por persona</b><em>Con espalda ventilada y cinturón lumbar.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Depósito de agua de 1,5-2 L por persona</b><em>La subida a Seceda va toda al sol y sin fuente.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Apósitos para ampollas tipo Compeed</b><em>El objeto más barato que puede salvar los dos días grandes.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Crema solar 50+ y cacao labial con protección</b><em>A 2.500 m la radiación es muy superior.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Gafas de sol categoría 3 (4 para el Skyway)</b><em>Nieve y altitud.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Mapas offline descargados (Komoot, AllTrails o Maps.me)</b><em>No hay cobertura fiable en la cresta ni en el circo de Sorapis.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Frontal por persona</b><em>Salida a las 07:00 hacia Sorapis, y el bosque va en penumbra.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Bastones de trekking</b><em>Sobre todo para las bajadas: 900 m de desnivel castigan rodillas.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Guantes finos de agarre</b><em>El tramo final de Sorapis tiene cuerdas, cables y escaleras metálicas.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Barritas, frutos secos y fruta deshidratada</b><em>Comida de bolsillo para 4-5 horas.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Manta térmica de emergencia</b><em>Pesa 40 g. Es el seguro.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Venda elástica o tobillera</b><em>Los pasos expuestos de Sorapis son donde se tuercen tobillos.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Silbato</b><em>Va en muchas mochilas de serie.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Bolsa para bajar la propia basura</b><em>No hay papeleras en los senderos.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Navaja multiusos</b><em>En la mochila, nunca en el bolsillo si voláis.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>🏊 Agua, lago y playa</h3>
+        <p class="pk-sub">Hay baño previsto en seis de los diecisiete días. · <b>5 cosas</b></p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Bolsa estanca para el móvil</b><em>Kayak en Sainte-Croix y barca a la Isola San Giulio.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Toalla grande de playa</b><em>Además de la de secado rápido.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Gafas de buceo</b><em>El Sainte-Croix y el Garda tienen agua transparente.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Esterilla ligera</b><em>Orillas de piedra.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-1">1/5</span><span class="n"><b>Colchoneta hinchable pequeña</b><em>Capricho, pero en el Garda se disfruta.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>🧴 Higiene</h3>
+        <p class="pk-sub">Sumad que en área compartida la ducha se paga por fichas. · <b>10 cosas</b>, 2 imprescindibles</p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Neceser completo: cepillo, pasta, desodorante, gel, champú</b><em>En formato pequeño: el espacio manda.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Compresas, tampones o copa menstrual</b><em>No contéis con encontrar vuestra marca en un pueblo alpino.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Papel higiénico de reserva</b><em>Además del de disolución rápida del WC.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Toallitas húmedas</b><em>Los días sin ducha existen.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Gel hidroalcohólico</b><em>Para comer en ruta.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Bolsa de aseo colgante</b><em>En baños de área no hay dónde dejar nada.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Cortauñas y pinzas</b><em>Las pinzas también sirven para astillas y garrapatas.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Maquinilla y espuma</b><em>Opcional, sois de vacaciones.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Espejo pequeño</b><em>Si la camper no lleva uno decente.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-1">1/5</span><span class="n"><b>Secador</b><em>Consume muchísimo: solo funciona enchufados a 220 V.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>💊 Botiquín</h3>
+        <p class="pk-sub">Farmacia en el Valle de Aosta o en el Verdon significa desviarse y esperar. · <b>15 cosas</b>, 3 imprescindibles</p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Medicación personal + copia de las recetas</b><em>Con cantidad para todo el viaje y algo de margen.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Analgésicos: paracetamol e ibuprofeno</b><em>Base de todo.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Antiséptico, gasas, tiritas y esparadrapo</b><em>Rozaduras y cortes de montaña.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Biodramina o similar para el mareo</b><em>Petit-Saint-Bernard, SS421 y la cabina giratoria del Skyway. Se toma ANTES de salir.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Antidiarreico y sobres de suero oral</b><em>Cambio de agua y de comida durante 17 días.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Antihistamínico</b><em>Picaduras, polen alpino y reacciones raras.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Repelente de mosquitos fuerte</b><em>Lagos, llanura del Po y laguna de Venecia.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Vendas elásticas</b><em>Tobillos y rodillas en los dos días de ruta.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Crema antiinflamatoria</b><em>Después de 900 m de desnivel.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Aftersun y crema para picaduras</b><em>Va a hacer falta.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Protector gástrico</b><em>Cassoulet, focaccia y pesto en 17 días.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Tapones para los oídos</b><em>Dormir en área con vecinos y con la autopista cerca.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Pinzas para garrapatas</b><em>Prados de los Dolomitas y del Brenta.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Termómetro</b><em>Digital, pequeño.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Colirio</b><em>Aire acondicionado, viento y sol.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>🔋 Electrónica y navegación</h3>
+        <p class="pk-sub">El móvil es vuestro GPS, vuestra guía y vuestro justificante de reserva. Tratadlo como material crítico. · <b>15 cosas</b>, 4 imprescindibles</p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Cargador de 12 V con varias salidas USB</b><em>Para cargar en marcha sin gastar la batería de servicio.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Powerbank grande (20.000 mAh) cargado</b><em>Venecia y los días de montaña son jornadas enteras fuera.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Mapas offline de Francia e Italia descargados</b><em>Sin cobertura en la Val Pusteria, en el Verdon y en cotas altas.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Navegador con gálibo configurado (Waze camper, Sygic Truck o CoPilot)</b><em>Google Maps estándar no filtra por altura: es lo que os mete en un túnel bajo.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Cables USB-C y Lightning de sobra</b><em>Se rompen justo cuando no toca.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Soporte de móvil para el salpicadero</b><em>Llevar el GPS en la mano es multa y es peligroso.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Adaptadores de enchufe francés e italiano</b><em>También para cargar dentro de un camping.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Linterna de camping o tira LED USB</b><em>Luz de mesa exterior sin gastar la de servicio.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Inversor 12 V → 220 V</b><em>Para cargar portátiles o cámaras cuando no hay columna.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Ventilador USB de 12 V</b><em>Venecia son 31 °C con humedad alta.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Cámara con baterías y tarjetas de repuesto</b><em>El frío del Skyway agota las baterías rápido.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Auriculares</b><em>Para los 400 km del día 7.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Altavoz bluetooth pequeño</b><em>Con criterio: en las áreas se oye todo.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-1">1/5</span><span class="n"><b>Trípode pequeño o gorillapod</b><em>Solo si os interesa la foto nocturna: los Dolomitas tienen cielos brutales.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-1">1/5</span><span class="n"><b>Libro electrónico</b><em>Tardes de tormenta en Val Gardena.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>🛏 Dormir y confort térmico</h3>
+        <p class="pk-sub">Cinco noches por encima de 800 m y cuatro con calor húmedo. Los dos extremos. · <b>9 cosas</b>, 2 imprescindibles</p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Sábanas o saco nórdico para cada plaza</b><em>Lo básico.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Aislantes térmicos para el parabrisas y ventanas de cabina</b><em>Doble función: calor fuera y privacidad total al llegar de noche.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Saco de dormir ligero o manta extra por persona</b><em>Val Gardena, Passo Tre Croci, Molveno y Courmayeur.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Almohada de cada uno</b><em>Dormir mal 16 noches se paga.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Mosquiteras para ventanas y puerta</b><em>Fusina, los lagos y la llanura del Po.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Antifaz</b><em>Amanece a las 6 y las claraboyas no siempre son opacas.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Cortinas o ventosas opacas de repuesto</b><em>Si las de serie dejan pasar luz.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Almohada cervical para copilotos</b><em>Días de 400 y 430 km.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Absorbe-humedad</b><em>La condensación en montaña es real.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>🔒 Seguridad y antirrobo</h3>
+        <p class="pk-sub">El sur de Francia y las ciudades italianas concentran el riesgo. · <b>6 cosas</b>, 1 imprescindibles</p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Copia de las llaves de la camper, repartida entre dos personas</b><em>Perder la única llave a 1.800 m arruina el viaje entero.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Riñonera antirrobo bajo la ropa</b><em>Venecia, Génova y Bérgamo en agosto.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Candado o barra de seguridad para la puerta</b><em>Sobre todo para las noches en Francia.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Cable antirrobo largo</b><em>Para bicis, sillas y todo lo que quede fuera.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Escondite o caja pequeña para documentos y efectivo</b><em>Nunca todo en el mismo sitio.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Alarma de movimiento pequeña</b><em>Tranquilidad barata.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>🏛 Ciudad y visitas</h3>
+        <p class="pk-sub">Ocho de los diecisiete días incluyen ciudad con ZTL y camper aparcada lejos. · <b>6 cosas</b>, 1 imprescindibles</p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Mochila pequeña plegable de día</b><em>La camper se queda siempre en la periferia.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Ropa de hombros y rodillas cubiertos</b><em>Ya listada en ropa, pero es aquí donde se usa.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>DNI de los menores de 26 años a mano</b><em>Entrada GRATIS al Château Comtal de Carcassonne para ciudadanos UE de 18 a 25. Son 19 € por cabeza si no lo lleváis.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Bolsa de tela para la compra</b><em>En Francia e Italia las bolsas se pagan.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Paraguas plegable pequeño</b><em>Tormenta de tarde en agosto.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Candado pequeño de taquilla</b><em>Consignas de estación y museos.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>🎲 Ocio y tiempo muerto</h3>
+        <p class="pk-sub">Hay dos días de 0 km y varias tardes de tormenta en los Dolomitas. · <b>7 cosas</b></p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Casco de bici por persona</b><em>Solo si lleváis bicis: la vía verde de Annecy son 40 km.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Bicis y portabicis</b><em>Annecy y el lago de Molveno son ideales. Ojo al panel V-20 si tapa la matrícula.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Baraja de cartas o juego de mesa pequeño</b><em>La mejor inversión para una tarde de tormenta en Val Gardena.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Prismáticos</b><em>Dolomitas y Mont Blanc.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Libro en papel</b><em>Sin batería.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-1">1/5</span><span class="n"><b>Pelota o frisbee</b><em>Playas y praderas.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-1">1/5</span><span class="n"><b>Hamaca</b><em>Val Ferret y el lago d'Orta piden una.</em></span></label>
+      </div>
+      <div class="pk-cat">
+        <h3>🧠 Lo que SIEMPRE se olvida</h3>
+        <p class="pk-sub">Objetos de dos euros cuya ausencia arruina un día entero. · <b>11 cosas</b>, 2 imprescindibles</p>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Pegatina con la altura y el largo de la camper en el salpicadero</b><em>Medid el vehículo REAL, con claraboyas y antena. Es lo que os hará decidir bien delante de un túnel del Verdon.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-4">4/5</span><span class="n"><b>Cinta métrica</b><em>Para medir el vehículo y para comprobar gálibos dudosos in situ.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-5">5/5</span><span class="n"><b>Adaptadores de grifo</b><em>Repetido a propósito: es el olvido número uno del camperismo europeo.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Tijeras</b><em>No hay ninguna en ninguna camper hasta que la necesitas.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Bolígrafo</b><em>Formularios de área y de camping.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Pilas AA y AAA</b><em>Frontales y mandos.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Cuerda fina multiusos (5-10 m)</b><em>Tender, atar, sujetar.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-1">1/5</span><span class="n"><b>Imperdibles y aguja e hilo</b><em>Kit de costura mínimo.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Bolsas ziplock de varios tamaños</b><em>Móvil, documentos, comida, ropa mojada.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-3">3/5</span><span class="n"><b>Rollo extra de bolsas de basura</b><em>Nunca sobran.</em></span></label>
+        <label class="pk-item"><input type="checkbox"><span class="imp imp-2">2/5</span><span class="n"><b>Lista de contraseñas y acceso a la nube</b><em>Por si el móvil principal desaparece.</em></span></label>
+      </div>
+    </div>
+
+    <div class="legtot" style="border-left-color:#7A5A20;margin-top:20px">
+      <h4>🎒 Cómo usar esta lista</h4>
+      <p><b>Las 48 cosas marcadas 5/5 son las que no admiten discusión</b>: o van, o hay un problema real (multa, inmovilización, un día perdido o una noche sin dormir). Las 4/5 son difíciles de conseguir en ruta. Las 1/5 y 2/5 son lo primero que se queda fuera si no cabe.</p>
+      <p><b>Cargad por peso y por acceso, no por categoría:</b> lo pesado abajo y centrado sobre el eje; lo del día a mano. Y hay tres cosas que NO pueden acabar en el fondo del garaje: <b>chalecos reflectantes</b> (deben ser accesibles desde dentro, es la ley francesa), <b>calzos</b> y <b>ropa de abrigo</b> — porque el día 6 de la ida pasáis de bañaros en el Garda a dormir a 1.200 m la misma noche.</p>
+      <p><b>Cada día del viaje tiene su propio bloque «De la maleta, hoy»</b> con lo que hay que tener a mano esa jornada concreta. Miradlo la noche antes.</p>
+    </div>
   </div>
 </section>
 
@@ -1719,6 +2247,19 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
       cb.closest('.check').classList.toggle('done', cb.checked);
     });
   });
+  // Lista de la maleta: marcar cosas y contador
+  var pkInputs = document.querySelectorAll('.pk-item input');
+  var pkDone = document.getElementById('pkDone');
+  var pkUpdate = function(){
+    if (pkDone) pkDone.textContent = document.querySelectorAll('.pk-item input:checked').length;
+  };
+  pkInputs.forEach(function(cb){
+    cb.addEventListener('change', function(){
+      cb.closest('.pk-item').classList.toggle('done', cb.checked);
+      pkUpdate();
+    });
+  });
+  pkUpdate();
   // Abrir / cerrar todos los días de un tramo
   document.querySelectorAll('.ctrl-btn').forEach(function(btn){
     btn.addEventListener('click', function(){
