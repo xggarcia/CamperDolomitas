@@ -173,6 +173,15 @@ summary:hover .d-title{color:var(--pine)}
 
 #maleta .leg-tag{background:#EFE7DA;color:#7A5A20}
 .tab.active[data-tab="maleta"]{background:#7A5A20;border-color:#7A5A20;color:#fff}
+#inversa .leg-tag{background:#E6E2F2;color:#4B3F8A}
+.tab.active[data-tab="inversa"]{background:#4B3F8A;border-color:#4B3F8A;color:#fff}
+#inversa .route::before{background:linear-gradient(#4B3F8A,var(--line))}
+#inversa .day::before{border-color:#4B3F8A}
+#inversa .d-num{background:#E6E2F2;color:#4B3F8A}
+#inversa .day.pivot .d-num{background:var(--amber-soft);color:var(--amber)}
+#inversa summary:hover .d-title{color:#4B3F8A}
+#inversa .plan{background:linear-gradient(#E6E2F2,var(--paper) 60%)}
+#inversa .d-num{white-space:nowrap}
 .pk-bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--line);border-left:3px solid #7A5A20;border-radius:0 var(--radius) var(--radius) 0;padding:13px 16px;margin-top:18px;position:sticky;top:52px;z-index:40}
 .pk-bar .pk-count{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted)}
 .pk-bar .pk-count b{color:#7A5A20;font-size:17px}
@@ -269,6 +278,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
     <p class="hero-note"><b>Ojo con las fechas.</b> Vuestro PDF está fechado en <b>mayo de 2025</b>, pero todo lo que hay aquí está calculado para <b>agosto de 2026</b>. No es un detalle menor: la tasa de acceso de Venecia, la temporada del Skyway y los precios cambian según el mes. Si las fechas reales son otras, decídmelo y lo recalculo.</p>
     <p class="hero-note" style="border-left-color:#8A3B2E"><b>Gálibo: cada día lleva su bloque «Ruta segura camper».</b> Como no tengo las medidas exactas del vehículo, los avisos van por umbrales: <b>altura</b> ≤2,60 m (furgo alta) · 2,60-3,20 m (perfilada) · &gt;3,20 m (capuchina); <b>largo</b> ≤6 m · 6-7 m · &gt;7 m. Buscad vuestro umbral en cada tramo. Decidme largo y alto reales y afino los tres puntos donde de verdad cambia la decisión: <b>Route des Crêtes del Verdon</b>, <b>Sacro Monte de Orta</b> y <b>túnel del Mont Blanc vs Petit-Saint-Bernard</b>.</p>
     <p class="hero-note" style="border-left-color:var(--slate)"><b>Cada tramo lleva su ruta ya montada en Google Maps.</b> Los enlaces llevan <b>puntos de paso forzados</b> por poblaciones concretas: eso obliga al navegador a ir por el corredor seguro y le impide "optimizar" por un puerto o por una corniche. <b>Escala de dificultad:</b> <b>1/5</b> autopista llana · <b>2/5</b> nacional ancha con curvas · <b>3/5</b> lazadas o tramos justos, atención real · <b>4/5</b> puerto de montaña o bajada larga · <b>5/5</b> no apto para camper grande. <b>Peajes:</b> se evitan solo donde la alternativa gratis es nacional ancha y cuesta &lt;25 min; cada enlace dice lo que hace.</p>
+    <p class="hero-note" style="border-left-color:#4B3F8A"><b>Versión inversa disponible.</b> En la pestaña <b>🔄 Ruta inversa</b> tenéis el mismo viaje del revés — se sale por los Alpes y se vuelve por los Dolomitas y la costa — con fechas reales del <b>21 de agosto al 7 de septiembre de 2026</b>, <b>noche de fiesta en Grenoble</b> en lugar del Pont du Gard, parada en <b>Montpellier</b> y ningún día por encima de <b>4h30 de conducción</b>.</p>
     <div class="legend">
       <span class="legend-item"><i class="lg-warn"></i>Aviso importante</span>
       <span class="legend-item"><i class="lg-tip"></i>Consejo / nota positiva</span>
@@ -284,6 +294,7 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
     <div class="tabs" role="tablist">
       <button class="tab active" data-tab="ida" role="tab" aria-selected="true">🚐 Ida · 9 días</button>
       <button class="tab" data-tab="vuelta" role="tab" aria-selected="false">🏔 Vuelta · 8 días</button>
+      <button class="tab" data-tab="inversa" role="tab" aria-selected="false">🔄 Ruta inversa · 18 días</button>
       <button class="tab" data-tab="costes" role="tab" aria-selected="false">💶 Costes</button>
       <button class="tab" data-tab="reservas" role="tab" aria-selected="false">✅ Reservas</button>
       <button class="tab" data-tab="maleta" role="tab" aria-selected="false">🎒 Maleta</button>
@@ -1518,6 +1529,1399 @@ footer .mono{font-size:11.5px;margin-top:6px;display:block}
   </div>
 </section>
 
+
+<!-- ===================== RUTA INVERSA ===================== -->
+<section id="inversa">
+  <div class="wrap">
+    <div class="leg-head">
+      <span class="leg-tag">Ruta inversa · 18 días · 21 ago → 7 sep 2026</span>
+      <h2>La misma ruta, del revés</h2>
+      <p class="leg-desc">Mismo viaje, sentido contrario: <b>se sale por los Alpes y se vuelve por los Dolomitas y la costa</b>. Montado sobre las cinco normas que pusisteis: salida el <b>21 al mediodía</b>, <b>Venecia la noche del 29</b>, las paradas ya decididas intactas, <b>noche de fiesta en Grenoble</b> (que sustituye al Pont du Gard) y <b>parada en Montpellier</b> sin noche. Y una norma técnica añadida: <b>ningún día pasa de 5 h de conducción</b>. El más largo es el día 18, con 4h30 partidos por la visita a Carcassonne.</p>
+    </div>
+
+    <div class="hero-stats" style="margin-top:0;margin-bottom:16px">
+      <span class="stat"><b>18 días</b> · 21 ago – 7 sep</span>
+      <span class="stat"><b>~3.500 km</b></span>
+      <span class="stat"><b>Máx. 4h30/día</b> al volante</span>
+      <span class="stat"><b>Venecia</b> · sáb 29 por la noche ✅</span>
+      <span class="stat"><b>Fiesta en Grenoble</b> · sábado 22</span>
+    </div>
+
+    <p class="hero-note" style="border-left-color:#4B3F8A"><b>Lo que cambia respecto al plan original.</b> <b>Entra:</b> Montpellier (día 1, sin noche), Grenoble (día 2, con noche de fiesta), <b>Milán</b> (días 13-14) y una segunda noche en Val Gardena. <b>Sale:</b> Pont du Gard y Uzès/Avignon, como pedisteis, y la noche de tránsito en <b>Alessandria</b>, que es lo que paga la parada de Milán. <b>Se mueve:</b> Carcassonne pasa a ser la última parada del viaje (día 18) en vez de la penúltima. Todo lo demás — Annecy, Mont Blanc, Aosta, Orta, Bérgamo, Molveno, Verona, Venecia, Sorapis, Seceda, Garda, Génova, Mónaco, Verdon, Nimes, Narbona — se mantiene, solo que en orden inverso.</p>
+
+    <p class="hero-note" style="border-left-color:var(--pine)"><b>Tres cosas salen mejor así.</b> <b>1)</b> La noche de Grenoble cae en <b>sábado 22</b> — el mejor día posible — y al día siguiente solo hay <b>105 km hasta Annecy</b>, así que podéis salir a la hora que os dé la gana. <b>2)</b> Seceda ya no acaba con 2h15 de carretera: dormís <b>dos noches seguidas en Val Gardena</b> y el día de montaña termina en el valle. <b>3)</b> El último día es <b>lunes 7</b>, no domingo: la AP-7 hacia Barcelona va vacía en vez de colapsada.</p>
+
+    <p class="hero-note" style="border-left-color:var(--amber)"><b>Si al final podéis estirar hasta el martes 8.</b> El plan cabe en 18 días, pero hay un punto que agradecería el día extra: el <b>Verdon se queda con una tarde y una mañana</b> en vez de un día entero. Si os sobra el martes, meted un día completo de cañón entre el 16 y el 17 (kayak en Sainte-Croix por la mañana, Sentier Martel o miradores por la tarde) y el resto no se toca. Es el único sitio donde el día de más se nota de verdad.</p>
+
+    <div class="leg-controls">
+      <button class="ctrl-btn" data-act="open">▸ Abrir todos los días</button>
+      <button class="ctrl-btn" data-act="close">▾ Cerrar todos</button>
+    </div>
+
+    <div class="route">
+
+      <div class="day"><details>
+        <summary><span class="d-num">D1 · vie 21</span><span class="d-title">Barcelona → Montpellier</span><span class="d-km">~350 km · 3h30</span><span class="d-toll">💶 32-38 €</span><span class="d-tag">Salida al mediodía. Tarde de Place de la Comédie y acueducto.</span></summary>
+        <div class="d-body">
+          <p>Salís al mediodía, así que la primera etapa deja de ser el tránsito nocturno del plan original: llegáis a <b>Montpellier con el sol alto</b> y os queda la tarde entera. Es la parada que pedisteis sin noche — el centro se ve en tres horas andando — y además cierra un círculo bonito: al quitar el Pont du Gard, el <b>acueducto Saint-Clément del Peyrou</b> os da igualmente vuestra ración de arcos y agua.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad · ojo a la ZFE</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 1/5</span> Autopista de llanura de principio a fin, y de día. El único factor real es que es <b>viernes de agosto</b>: la AP-7 sentido norte carga a partir de las 15 h.</li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Barcelona,+Spain&amp;destination=Montpellier,+France&amp;waypoints=La+Jonquera,+Spain%7CPerpignan,+France%7CNarbonne,+France%7CBeziers,+France"><span>▶ Barcelona → Montpellier</span></a><span class="rd-cost">con peaje A9 · la alternativa gratis cruza Perpiñán y Béziers pueblo a pueblo</span></div></li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Montpellier,+France&amp;destination=Palavas-les-Flots,+France&amp;waypoints=Lattes,+France"><span>▶ Montpellier → Palavas-les-Flots (a dormir)</span></a><span class="rd-cost">sin peaje · 12 km por la D986/D62, llana y ancha</span></div></li>
+            <li><i>✅</i><b>Meted esto en el GPS:</b> AP-7 → La Jonquera / Le Perthus → <b>A9 "La Catalane"</b> → Narbona → Béziers → salida <b>31 Montpellier-Sud</b> o <b>32 Vendargues</b> según dónde aparquéis. Tres carriles, sin puertos ni túneles con límite.</li>
+            <li><i>🚨</i><b>ZFE de Montpellier.</b> El área metropolitana tiene <b>zona de bajas emisiones</b>: la <b>Crit'Air es obligatoria y visible</b> en el parabrisas, y los vehículos sin clasificar tienen restricciones <span class="unver">verificar el escalón vigente en 2026 antes de salir</span>. Es la misma pegatina que ya lleváis para el resto de Francia, pero aquí sí se mira.</li>
+            <li><i>⛔</i><b>No metáis la camper en l'Écusson</b> (el casco histórico): es peatonal, medieval y con bolardos escamoteables. Y los parkings del centro (Comédie, Triangle) son subterráneos con gálibo <b>~1,90 m</b>.</li>
+            <li><i>✅</i><b>La solución limpia:</b> los <b>parkings-tranvía de TaM</b> en la periferia (Mosson, Sabines, Occitanie, Euromédecine). Se paga el parking y el <b>billete de tranvía de ida y vuelta va incluido para todos los ocupantes</b>. <span class="unver">confirmar gálibo del parking elegido: varios son cubiertos</span>. Alternativa segura para camper alta: dejarla ya en Palavas/Lattes y entrar en bus o bici.</li>
+            <li><i>📐</i><b>Gálibo:</b> ninguno relevante en toda la etapa. Cualquier medida pasa.</li>
+            <li><i>⏰</i><b>Timing:</b> salid a las <b>12:30-13:00</b>. Llegáis sobre las <b>16:30-17:00</b>, que en agosto es media tarde de sobra para ver el centro y cenar fuera.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>Mañana</b> Última revisión de la camper: agua llena, gas cerrado en marcha, calzos y triángulos accesibles, <b>Crit'Air pegada</b> (hoy hace falta de verdad).</li>
+            <li><b>11:30</b> Depósito de gasóleo lleno antes de salir — es el combustible más barato de toda la ruta.</li>
+            <li><b>12:30-13:00</b> Salida de Barcelona por AP-7/A9. Comida en ruta.</li>
+            <li><b>~14:30</b> Paso de frontera en Le Perthus / La Jonquera.</li>
+            <li><b>16:30-17:00</b> Montpellier. Aparcar fuera del centro y entrar en tranvía.</li>
+            <li><b>17:15</b> <b>Place de la Comédie</b> y l'Écusson: callejeo por Saint-Roch, Place Saint-Ravy y la Rue de l'Ancien Courrier.</li>
+            <li><b>19:00</b> <b>Promenade du Peyrou</b> al atardecer: arco de triunfo, château d'eau y el <b>acueducto Saint-Clément</b> (880 m de arcos). La mejor luz del día.</li>
+            <li><b>20:30</b> Cena por la Place Jean Jaurès o la zona del mercado des Arceaux.</li>
+            <li><b>22:00</b> A dormir a <b>Palavas-les-Flots</b> o Lattes, a 12 km, con el mar al lado.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir · zona Montpellier</h4>
+              <p>El centro no tiene área de camper. Las opciones reales están <b>al sur, en la costa</b>, a 10-15 min: <b>Palavas-les-Flots</b>, <b>Lattes</b>, <b>Carnon</b> y <b>Villeneuve-lès-Maguelone</b> concentran áreas y campings de playa. <span class="unver">verificar plazas y precio en park4night: el 21 de agosto sigue siendo temporada alta</span></p>
+              <p>Precio orientativo de área municipal en esa franja de costa: <span class="eur">~12-18 €/24 h</span> con servicios. <b>Llegad antes de las 21 h</b> o llamad: en agosto las de playa cuelgan el completo.</p>
+              <p><b>Plan B si está todo lleno:</b> seguid 30-40 min más hasta Sète o Frontignan, con mucha más oferta de campings.</p>
+            </div>
+            <div class="cell"><h4>🏛 Qué ver en tres horas</h4>
+              <ul>
+                <li><b>Place de la Comédie</b> — la plaza peatonal más grande de Europa, con la fuente de las Tres Gracias y la Ópera. Es el salón de la ciudad.</li>
+                <li><b>L'Écusson</b> — el casco medieval, un laberinto de callejas con palacetes del s. XVII.</li>
+                <li><b>Promenade du Peyrou + acueducto Saint-Clément</b> — arcos de dos pisos, 880 m, con los Pirineos al fondo si el día está limpio. <b>Gratis.</b></li>
+                <li><b>Jardin des Plantes</b> (1593) — el jardín botánico más antiguo de Francia. Gratis, cierra pronto.</li>
+                <li><b>Musée Fabre</b> — si sobra tiempo y aprieta el calor. <span class="unver">verificar horario de agosto</span></li>
+              </ul>
+            </div>
+            <div class="cell"><h4>🍽 Comer</h4>
+              <p>Cocina del Languedoc: <b>tielle sétoise</b> (empanada de pulpo picante), ostras y mejillones de <b>Bouzigues</b> del estanque de Thau, <b>brasucade</b> de mejillones y <b>pastís de Pézenas</b> de postre.</p>
+              <p>Vinos: Picpoul de Pinet bien frío con las ostras, o un Languedoc tinto. Todo aquí cuesta bastante menos que en Provenza.</p>
+            </div>
+            <div class="cell"><h4>🩺 Curiosidad: la facultad más antigua del mundo</h4>
+              <p>La <b>Facultad de Medicina de Montpellier</b> funciona sin interrupción desde <b>1220</b> — es la escuela de medicina en activo más antigua del planeta. Por sus aulas pasaron <b>Rabelais</b>, que se doctoró aquí, y <b>Nostradamus</b>, a quien expulsaron por haber ejercido de boticario, oficio prohibido a los estudiantes. El <b>Jardin des Plantes</b> de al lado se creó en 1593 precisamente para que los alumnos aprendieran plantas medicinales, y sirvió de modelo al de París.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima en agosto</h4>
+              <p class="temp">Montpellier: máx ~30-32 °C · mín ~19 °C<br>Mar en Palavas: ~25 °C</p>
+              <p>Calor seco y sol hasta las 21 h. Si llegáis fundidos, el baño de Palavas antes de cenar arregla el día.</p>
+            </div>
+          </div>
+          <div class="tip-in"><b>Por qué Montpellier funciona aquí y no encajaba en el plan original.</b> En la ruta antigua este corredor se hacía de noche (Barcelona → Narbona saliendo a las 21:00) y no daba para nada. Saliendo al mediodía tenéis exactamente la tarde que Montpellier necesita: es una ciudad pequeña, plana y peatonal, y con tres horas se ve entera sin correr.</div>
+          <div class="warn"><b>Viernes de agosto:</b> la AP-7 sentido Francia carga desde primera hora de la tarde y La Jonquera es el punto negro. Salir a las 12:30 en vez de a las 15:00 son 40 min reales de diferencia.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.montpellier-tourisme.fr/">montpellier-tourisme.fr</a> <span class="lt">— qué ver, horarios, visitas guiadas</span></li>
+            <li><a href="https://www.tam-voyages.com/">tam-voyages.com</a> <span class="lt">— tranvía y parkings-tranvía (billete incluido)</span></li>
+            <li><a href="https://www.certificat-air.gouv.fr/">certificat-air.gouv.fr</a> <span class="lt">— Crit'Air: pedidla si no la tenéis ya</span></li>
+            <li><a href="https://museefabre.montpellier3m.fr/">Musée Fabre</a> <span class="lt">— entradas y horarios</span></li>
+            <li><a href="https://www.palavaslesflots.com/">palavaslesflots.com</a> <span class="lt">— playa y área de camper</span></li>
+            <li><a href="https://park4night.com/es/search">park4night</a> <span class="lt">— áreas en Palavas / Lattes / Carnon</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 1 · salida y tarde de ciudad</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Crit'Air pegada en el parabrisas</b> — hoy entráis en zona ZFE. Es el único día en que la pegatina puede costaros dinero de verdad.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Documentación del vehículo y seguro</b> — cruce de frontera y primer día.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Zapatillas cómodas de ciudad</b> — Montpellier se ve entero andando.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Gorra, gafas y crema 50+</b> — el Peyrou no tiene sombra y a las 19 h sigue pegando.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Botella reutilizable</b> — Montpellier está llena de fuentes.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Bañador arriba del todo</b> — dormís en la playa; el baño de la noche es gratis.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Calzos</b> — muchas áreas de esa costa tienen pendiente ligera.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day pivot"><details>
+        <summary><span class="d-num">D2 · sáb 22</span><span class="d-title">Montpellier → Grenoble 🍻</span><span class="d-km">~300 km · 3h10</span><span class="d-toll">💶 28-33 €</span><span class="d-tag">Teleférico al atardecer y la noche de fiesta del viaje. En sábado.</span></summary>
+        <div class="d-body">
+          <p>El día que pedisteis. Etapa corta por la mañana para llegar a comer, tarde de <b>teleférico a la Bastille</b> con los Alpes de fondo, y por la noche la <b>fiesta de Grenoble</b>: una ciudad universitaria de 60.000 estudiantes, con la vida concentrada en cuatro calles peatonales y precios que no son de Costa Azul. Y cae en <b>sábado</b>, que es exactamente donde tenía que caer.</p>
+          <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Fácil · pero es sábado de agosto en el Ródano</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 1/5</span> Autopista de principio a fin y sin un solo puerto. La dificultad de hoy no es la carretera: es el <b>calendario</b>. El valle del Ródano en sábado de agosto es el punto negro número uno de Francia.</li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Montpellier,+France&amp;destination=Grenoble,+France&amp;waypoints=Nimes,+France%7COrange,+France%7CMontelimar,+France%7CValence,+France%7CRomans-sur-Isere,+France"><span>▶ Montpellier → Grenoble (por Valence, esquivando Lyon)</span></a><span class="rd-cost">con peaje A9/A7/A49 · los pasos por Valence y Romans <b>impiden que os suba hasta Lyon</b></span></div></li>
+            <li><i>✅</i><b>Ruta:</b> <b>A9</b> → Nimes → <b>A7</b> valle del Ródano dirección norte → Orange → Montélimar → <b>salida Valence Sud</b> → <b>A49</b> por Romans-sur-Isère → Grenoble. Todo autopista ancha de llanura y valle.</li>
+            <li><i>⛔</i><b>No dejéis que el GPS os lleve por Lyon.</b> Vuestra salida es <b>Valence</b>, 100 km antes. Si la ruta propuesta menciona Lyon o el <b>túnel de Fourvière</b>, está mal: rehacedla.</li>
+            <li><i>⛔</i><b>Nada de "atajos" por el Vercors.</b> Si os propone entrar en Grenoble por la <b>D531 Gorges de la Bourne</b>, la <b>D518 Combe Laval</b> o cualquier carretera del Vercors, rechazadlo sin pensar: son cornisas excavadas en roca, con túneles de gálibo bajo y voladizos sobre el vacío. Están entre las carreteras más espectaculares de Francia y entre las peores del continente para una camper.</li>
+            <li><i>🚨</i><b>ZFE de Grenoble-Alpes Métropole.</b> Grenoble tiene una de las zonas de bajas emisiones más estrictas de Francia. <b>Crit'Air visible obligatoria</b> y restricciones por escalón <span class="unver">verificar el nivel vigente en 2026 antes de salir de casa</span>. Si vuestra camper es antigua, comprobadlo <b>ahora</b>, no el día 22.</li>
+            <li><i>📐</i><b>Gálibo:</b> ninguno en toda la etapa. El problema en Grenoble no es la altura, es <b>dónde dejar el vehículo</b> para poder volver de noche sin conducir.</li>
+            <li><i>⏰</i><b>Salid a las 08:00-08:30.</b> En sábado de agosto la A7 se llena a partir de las 10 h. Saliendo pronto llegáis a Grenoble a comer y tenéis toda la tarde para instalaros con calma antes de la noche.</li>
+          </ul></div>
+          <div class="road road-crit"><h4>🍻 Noche de fiesta · el único punto crítico del día <span class="rd-lvl">Regla de oro</span></h4><ul>
+            <li><i>🚫</i><b>Hoy nadie mueve la camper después de cenar. Nadie.</b> Elegid el sitio para dormir <b>antes</b> de la primera cerveza, dejadla aparcada y volved en <b>tranvía, bus o taxi</b>. Es la única norma innegociable de todo el viaje.</li>
+            <li><i>✅</i><b>Criterio para elegir dónde dormir:</b> que esté <b>a menos de 10 min andando de una parada de tranvía</b> de las líneas A o B, o que un taxi desde el centro no pase de 15-20 €. Todo lo demás (precio, servicios, vistas) es secundario hoy.</li>
+            <li><i>🚋</i><b>Tranvía de Grenoble (líneas A, B, C, D, E):</b> los <b>viernes y sábados alargan el servicio de madrugada</b>, y hay además buses nocturnos. <span class="unver">confirmar el último tranvía de la noche del sábado en tag.fr antes de salir de fiesta — es el dato que hay que mirar sí o sí</span></li>
+            <li><i>🅿️</i><b>Dónde dejarla:</b> Grenoble tiene <b>parkings-relais (P+R)</b> en las cabeceras de tranvía, y la zona de <b>l'Esplanade</b>, al norte del centro junto al Isère, es la referencia habitual para camper con parada de tranvía al lado. <span class="unver">verificar en park4night gálibo, si permite pernocta y si sigue operativo en 2026 — es un aparcamiento que ha cambiado de régimen varias veces</span></li>
+            <li><i>🏕</i><b>Plan B más tranquilo:</b> campings de la corona metropolitana (<b>Seyssins</b>, <b>Sassenage</b>, <b>Le Sappey</b> o la zona de <b>Vizille</b>), a 15-20 min. Se duerme mejor y se vuelve en taxi. <span class="unver">verificar apertura y precio en agosto</span></li>
+            <li><i>⚠️</i><b>Cuidado con dónde aparcáis en el extrarradio.</b> Grenoble tiene barrios donde no conviene dejar una camper visiblemente cargada toda la noche. Áreas o campings con vigilancia, y nada de valor a la vista.</li>
+            <li><i>💧</i><b>Antes de la fiesta:</b> agua llena y depósitos vaciados. Mañana no vais a tener el cuerpo para servicios.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>08:00</b> Salida de Montpellier. Café en ruta, en Nimes o en Montélimar (turrón).</li>
+            <li><b>12:00-12:30</b> Llegada a Grenoble. <b>Primero se aparca y se hace el check-in</b>, luego se disfruta.</li>
+            <li><b>13:30</b> Comida sin prisa. Siesta corta: hoy la noche es larga.</li>
+            <li><b>17:00</b> <b>Teleférico de la Bastille</b> — "les Bulles". Sube en 5 min a 476 m sobre la ciudad, con el Vercors, la Chartreuse, Belledonne y, con día limpio, el Mont Blanc a lo lejos.</li>
+            <li><b>18:30</b> Bajada (o descenso a pie por el <i>parc Guy Pape</i>, ~40 min) y paseo por el <b>barrio Saint-Laurent</b>, la orilla antigua del Isère.</li>
+            <li><b>20:00</b> Cena por <b>Place Notre-Dame</b>, <b>Place Saint-André</b> o la Rue Chenoise: es todo peatonal y está todo a cinco minutos.</li>
+            <li><b>22:30</b> Ronda de bares en <b>Saint-Laurent / Place Grenette / Rue Chenoise</b>. Terrazas hasta tarde y precio de ciudad estudiantil.</li>
+            <li><b>00:30</b> Copas o concierto. Los clásicos: <b>Le Barberousse</b> (bar de ron, ruidoso y garantizado), la <b>rue Auguste Gaché</b> y los alrededores de Notre-Dame, y <b>La Bobine</b> en el parc Paul Mistral para música en directo y DJ. <span class="unver">comprobar programación y horarios del sábado 22 — la agenda de agosto es más floja que en curso</span></li>
+            <li><b>Cierre</b> Tranvía, bus nocturno o taxi. <b>Nadie conduce.</b></li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>🍸 Dónde sale la noche</h4>
+              <ul>
+                <li><b>Barrio Saint-Laurent</b> (orilla norte del Isère, al pie del teleférico) — el más bonito para empezar: callejas estrechas, terrazas y bares pequeños.</li>
+                <li><b>Place Notre-Dame / Rue Chenoise / Place Grenette</b> — el núcleo duro de las terrazas y el ambiente estudiantil. Todo peatonal y todo pegado.</li>
+                <li><b>Le Barberousse</b> — bar de ron con fama en media Francia, el sitio al que va todo el mundo a la segunda copa.</li>
+                <li><b>La Bobine</b> (parc Paul Mistral) — sala de conciertos y DJ, la opción si queréis música de verdad y no solo terraza.</li>
+                <li><b>Aviso de calendario:</b> en agosto la ciudad está de vacaciones universitarias, así que hay <b>menos ambiente que en curso</b> y algún local cierra por vacaciones. Un sábado sigue moviéndose, pero no esperéis noviembre. <span class="unver">mirad la agenda la semana antes</span></li>
+              </ul>
+            </div>
+            <div class="cell"><h4>🚡 Teleférico de la Bastille</h4>
+              <p>Las famosas <b>"bulles"</b>: burbujas esféricas transparentes de 1976, sobre el primer teleférico urbano del mundo (1934). Suben de la orilla del Isère al fuerte de la Bastille (476 m) en unos 5 min.</p>
+              <p>Precio orientativo <span class="eur">~9-10 € ida y vuelta</span>, algo menos solo ida. <b>En verano abre hasta pasada la medianoche</b>, así que también sirve como plan de después de cenar. <span class="unver">verificar tarifas y horario de agosto de 2026 en bastille-grenoble.fr</span></p>
+              <p><b>Truco:</b> subir en burbuja y <b>bajar andando</b> por el parc Guy Pape y las rampas del fuerte (~40 min, cuesta abajo). Se ahorra la mitad del billete y la vista de la bajada es la mejor.</p>
+            </div>
+            <div class="cell"><h4>🌄 Si por la mañana alguien está entero</h4>
+              <p>El día 3 empieza tarde a propósito, pero si alguien madruga: <b>mercado de l'Estacade</b> o <b>Saint-Bruno</b> para desayunar como un local, el <b>Museo de Grenoble</b> (una de las mejores colecciones de arte de Francia fuera de París) o simplemente café en la Place Saint-André. <span class="unver">verificar días y horarios de los mercados</span></p>
+            </div>
+            <div class="cell"><h4>🍽 Comer y beber</h4>
+              <p><b>Ravioles du Dauphiné</b> (las de Royans, minúsculas y gratinadas), <b>gratin dauphinois</b> de verdad, quesos <b>Saint-Marcellin</b> y <b>Bleu du Vercors-Sassenage</b>, y nueces de Grenoble AOP en todo.</p>
+              <p>Y la bebida obligatoria: <b>Chartreuse</b>, verde (55°) o amarilla, que se destila a 30 km de aquí. Un chupito de verde es la forma local de terminar la noche — y de empezar el día siguiente con dolor de cabeza.</p>
+            </div>
+            <div class="cell"><h4>🏔 Curiosidad: la ciudad más plana de Francia</h4>
+              <p>Grenoble es <b>la ciudad más llana de Francia</b> — no llega a 10 m de desnivel en todo el casco — y está rodeada por tres macizos alpinos: Vercors, Chartreuse y Belledonne. De ahí la frase de Stendhal, que nació aquí: <i>"al final de cada calle, una montaña"</i>. Fue sede de los <b>Juegos Olímpicos de Invierno de 1968</b>, los que estrenaron el primer control antidopaje y la primera mascota olímpica de la historia. Y la <b>Chartreuse</b>, el licor de 130 plantas que os van a poner de chupito, la siguen elaborando monjes cartujos con una receta de 1605 que solo conocen dos de ellos a la vez.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Grenoble: máx ~30-32 °C · mín ~17 °C</p>
+              <p>Grenoble es famosa por acumular calor en su cubeta entre montañas. De día pega fuerte; de noche, en terraza, se está perfecto.</p>
+            </div>
+          </div>
+          <div class="warn"><b>Sábado negro en el Ródano.</b> Los sábados de agosto la A7 entre Orange y Valence es el tramo más saturado de Francia. Con salida a las 08:00 lo cruzáis antes de la ola; a partir de las 11 h podéis comeros dos horas de más. Mirad Bison Futé la noche antes.</div>
+          <div class="warn"><b>Y al día siguiente, nada exigente.</b> El día 3 son <b>105 km, 1h45</b> y sin ninguna dificultad técnica, con salida libre a mediodía. Está diseñado así a propósito: es el único día del viaje que se puede empezar a las 13:00 sin romper nada.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.grenoble-tourisme.com/">grenoble-tourisme.com</a> <span class="lt">— qué ver, agenda de eventos de agosto</span></li>
+            <li><a href="https://www.bastille-grenoble.fr/">bastille-grenoble.fr</a> <span class="lt">— teleférico: tarifas y horario de verano</span></li>
+            <li><a href="https://www.tag.fr/">tag.fr</a> <span class="lt">— tranvía y buses: <b>último servicio del sábado</b></span></li>
+            <li><a href="https://www.grenoblealpesmetropole.fr/">grenoblealpesmetropole.fr</a> <span class="lt">— ZFE y restricciones Crit'Air</span></li>
+            <li><a href="https://park4night.com/es/search">park4night</a> <span class="lt">— dónde dejar la camper con tranvía cerca</span></li>
+            <li><a href="https://www.bison-fute.gouv.fr/">Bison Futé</a> <span class="lt">— sábado de agosto en la A7: miradlo</span></li>
+            <li><a href="https://www.chartreuse.fr/">chartreuse.fr</a> <span class="lt">— el licor de los monjes, por si queréis la visita</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 2 · la noche del viaje</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Ropa de salir</b> — es la única noche del viaje que no es de camping. Una camisa y unas zapatillas decentes ocupan nada y aquí se agradecen.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Efectivo y tarjeta separados</b>, y solo lo justo encima. Noche de bares en ciudad grande.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Llave de repuesto de la camper</b> a otra persona del grupo — la noche que más se pierden las cosas.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Powerbank cargado</b> — el móvil es el mapa de vuelta y a las 3 de la mañana estará al 4%.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Ubicación exacta de la camper guardada</b> en el móvil de dos personas, no de una.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Ibuprofeno, sales de rehidratación y agua fría en la nevera</b> — el yo de mañana os lo agradecerá.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Tapones para dormir y antifaz</b> — dormís en ciudad y hasta tarde.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Chaqueta ligera</b> — a las 2 de la mañana en la orilla del Isère refresca.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">D3 · dom 23</span><span class="d-title">Grenoble → Annecy</span><span class="d-km">~105 km · 1h45</span><span class="d-toll">💶 0-9 €</span><span class="d-tag">Mañana de resaca, tarde de lago. El día más fácil del viaje.</span></summary>
+        <div class="d-body">
+          <p>El día tapón, puesto aquí a propósito: <b>105 km, sin puertos, sin ZTL y sin hora de llegada crítica</b>. Podéis levantaros a las 11, desayunar despacio y salir a mediodía. Por la tarde, el <b>lago de Annecy</b>: el agua más limpia de Europa y playas públicas gratis, que es exactamente la cura que pide una noche de Grenoble.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad · el más suave de los 18</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 1/5</span> Autopista de valle todo el rato. Ni un puerto, ni una lazada, ni un gálibo. Menos de dos horas.</li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Grenoble,+France&amp;destination=Annecy,+France&amp;waypoints=Crolles,+France%7CPontcharra,+France%7CChambery,+France"><span>▶ Grenoble → Annecy (A41)</span></a><span class="rd-cost">con peaje (~9 €) · hay variante gratis por la N90/D1090, +30 min</span></div></li>
+            <li><i>✅</i><b>Ruta:</b> <b>A41 dirección Chambéry</b> por el valle del Grésivaudan → Chambéry → A41 norte → salida <b>Annecy Sud</b> o <b>Annecy Nord</b> según dónde durmáis. Autopista ancha con vistas a Belledonne y la Chartreuse.</li>
+            <li><i>⛔</i><b>No cojáis "la panorámica" por el Col du Granier ni la Chartreuse (D912, D520b).</b> El macizo de la Chartreuse está lleno de carreteras estrechas con túneles excavados y voladizos. Con camper, la A41 y punto.</li>
+            <li><i>🅿️</i><b>Annecy:</b> muchos aparcamientos públicos del lago (Albigny, Veyrier) tienen <b>barreras de 1,90-2,20 m</b>. Id directos al área de camper reservada y no improviséis.</li>
+            <li><i>📐</i><b>Gálibo:</b> ninguno en ruta. Solo en los parkings del lago, ya avisados.</li>
+            <li><i>⏰</i><b>Aquí sí hay una prisa:</b> en agosto las áreas de Annecy <b>cuelgan el completo antes de las 16 h</b>. Si salís tardísimo de Grenoble, <b>llamad antes o llegad con reserva</b>. Es el único motivo para poner el despertador hoy.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día (versión resaca)</h4><ul>
+            <li><b>10:00-11:30</b> Levantarse sin culpa. Desayuno largo y café doble.</li>
+            <li><b>12:30</b> Salida hacia Annecy. Son 1h45 de autopista tranquila.</li>
+            <li><b>14:30</b> Llegada y check-in en el área. <b>Cuanto antes lleguéis, más seguro es el sitio.</b></li>
+            <li><b>15:30</b> Playa pública (Albigny, Marquisats o Sevrier). Baño y horizontal. El agua del lago a 22-24 °C es literalmente terapéutica hoy.</li>
+            <li><b>18:00</b> Opcional según fuerzas: bici por la <b>vía verde del lago</b> (~40 km, llana) o paddle.</li>
+            <li><b>19:30</b> Casco viejo, canales del Thiou y el <b>Palais de l'Île</b> al atardecer.</li>
+            <li><b>21:00</b> Cena saboyana y a la cama pronto: mañana hay puerto alpino y se sale a las 08:00.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir · Annecy</h4>
+              <p><b>Aire d'Albigny</b> — ~30 plazas, frente a la playa pública gratuita, 200 m del lago, 5 km del centro. <span class="eur">~12-15 €/noche</span>, agua y vaciado. Cerrada de 22:00 a 7:00. <b>Reservar con ~2 meses de antelación.</b></p>
+              <p><b>Aire de Doussard</b> (extremo sur, junto a playa y vía verde) — <span class="eur">13 €/24 h</span> (10 € + 3 € servicios), sin electricidad, máx. 48 h. Bus Y51 a Annecy.</p>
+              <p><b>Aire de Sevrier</b> ~10 €/noche, 100 m del lago. <b>Saint-Jorioz</b> ~12 €.</p>
+              <p><b>Camping municipal de Annecy:</b> mínimo <b>3 noches en julio y agosto</b> + tasa 0,60 €/persona. Descartado para una noche.</p>
+            </div>
+            <div class="cell"><h4>🚴 Qué hacer</h4>
+              <ul>
+                <li><b>Vía verde del lago</b> (~40 km): la mejor de Francia, y llana. Alquiler de bici en el centro.</li>
+                <li>Paddle / kayak: ~15-25 €/hora (Veyrier).</li>
+                <li>Playas públicas gratis: Albigny, Marquisats, Sevrier.</li>
+                <li>Casco viejo, canales del Thiou y <b>Palais de l'Île</b>.</li>
+              </ul>
+            </div>
+            <div class="cell"><h4>🍽 Comer</h4>
+              <p>Saboya en estado puro: <b>tartiflette</b>, fondue savoyarde, diots, <b>féra</b> y filets de perche del lago, tarte aux myrtilles. Crêpes junto al Palais de l'Île.</p>
+              <p>Aviso: con 30 °C, la tartiflette de mediodía es una decisión valiente. Los filets de perche del lago con ensalada son la versión sensata.</p>
+            </div>
+            <div class="cell"><h4>💧 Curiosidad: el lago más limpio de Europa</h4>
+              <p>Desde los años 60, Annecy aplica normativas ambientales estrictas que han convertido su lago en <b>el más limpio de Europa</b> — se puede beber directamente en muchos puntos. El <b>canal Thiou</b>, el río más corto de Francia, nace del lago y pasa justo por debajo del <b>Palais de l'Île</b> (s. XII, con forma de proa de barco), lo que le vale a la ciudad el apodo de "Venecia de los Alpes". Aquí la comparación tiene aún más gracia que en el plan original: <b>vosotros veréis la copia antes que el original</b>, y podréis juzgar dentro de seis días si se parecen en algo.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Máx ~26 °C · mín ~14 °C · agua ~21,5-24 °C</p>
+            </div>
+          </div>
+          <div class="tip-in"><b>Este día es el seguro de la noche de Grenoble.</b> Está deliberadamente vacío: 105 km, cero visitas obligatorias y una llegada que solo depende de encontrar sitio en el área. Si mañana alguien está para pocas cosas, no pasa absolutamente nada. Lo único que no se puede es alargarlo tanto que lleguéis a Annecy a las 18 h sin sitio donde dormir.</div>
+          <div class="warn"><b>En agosto las áreas de Annecy cuelgan el completo antes de las 16 h.</b> Llegad antes de las 15 h o reservad Albigny con antelación. Y llevad calzos: Albigny y Veyrier tienen hasta 5° de pendiente.</div>
+          <div class="warn"><b>Mañana toca el puerto.</b> Hoy, antes de acostaros: depósito lleno, presión de neumáticos y frenos revisados. El Petit-Saint-Bernard es el tramo más exigente del viaje y se afronta descansado.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.lac-annecy.com/">lac-annecy.com</a> <span class="lt">— turismo oficial del lago</span></li>
+            <li><a href="https://www.annecy-ville.fr/aires-camping-car-annecy/">Áreas de camper en Annecy</a></li>
+            <li><a href="https://camping-municipal.annecy.fr/">Camping municipal de Annecy</a> <span class="lt">— mín. 3 noches en agosto</span></li>
+            <li><a href="https://www.velonecy.com/">velonecy.com</a> <span class="lt">— alquiler de bici para la vía verde</span></li>
+            <li><a href="https://www.savoie.fr/">savoie.fr</a> <span class="lt">— estado del Petit-Saint-Bernard para mañana</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 3 · recuperación junto al lago</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Bañador y toalla</b> — el lago de Annecy es de los mejores baños del viaje y hoy hace de medicina.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Calzos de nivelación</b> — las áreas de Annecy llegan a <b>5° de pendiente</b>.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Sales de rehidratación y fruta</b> — el desayuno de hoy importa más que el de cualquier otro día.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Casco de bici</b> — si lleváis bicis, la vía verde son ~40 km llanos.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Gafas de sol</b> — reverbero fuerte sobre el lago.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Sillas plegables</b> — hoy sí apetece sentarse fuera sin hacer nada.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Biodramina para mañana</b>, dejada preparada: el puerto se toma <b>antes</b> de salir, no en la primera curva.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">D4 · lun 24</span><span class="d-title">Annecy → Col du Petit-Saint-Bernard → Courmayeur</span><span class="d-km">~200 km · 3h15</span><span class="d-toll free">💶 0 €</span><span class="d-tag">Cruce alpino gratis. El tramo más exigente del viaje.</span></summary>
+        <div class="d-body">
+          <p>Cruce de los Alpes por el <b>Col du Petit-Saint-Bernard (2.188 m)</b>: panorámico, gratuito y apto para camper. Os ahorra el túnel del Mont Blanc, que para una camper de más de 3 m son <b>204,80 € solo de ida</b>. En este sentido la subida es la francesa (larga y tendida por la Tarentaise) y la bajada, la italiana hacia La Thuile y Pré-Saint-Didier.</p>
+          <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Precaución · puerto alpino</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 4/5</span> <b>El tramo más exigente de todo el viaje</b>, y a la vez perfectamente asumible: puerto de 2.188 m sin gálibo ninguno (pasan autocares), pero con <b>~30 km de subida continua</b> por el lado francés y <b>~15 km de bajada de lazadas</b> por el italiano. No es técnico, es de gestión: salir temprano, marchas cortas y no tener prisa.</li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Annecy,+France&amp;destination=Courmayeur,+Italy&amp;waypoints=Faverges,+France%7CAlbertville,+France%7CMoutiers,+France%7CBourg-Saint-Maurice,+France%7CLa+Thuile,+Italy%7CPre-Saint-Didier,+Italy&amp;avoid=tolls"><span>▶ Annecy → Courmayeur (Petit-Saint-Bernard)</span></a><span class="rd-cost">SIN PEAJE Y SIN TÚNEL · ahorra 204,80 € del Mont Blanc. Los pasos por Albertville y Moûtiers <b>bloquean el Cormet de Roselend</b>, que es la trampa del día</span></div></li>
+            <li><i>✅</i><b>Ruta:</b> <b>A41</b> → <b>A43</b> → <b>A430</b> → Albertville → <b>N90</b> por Moûtiers → <b>Bourg-Saint-Maurice</b> → <b>D1090</b> → La Rosière → <b>Col du Petit-Saint-Bernard (2.188 m)</b> → <b>SS26</b> → La Thuile → Pré-Saint-Didier → Courmayeur.</li>
+            <li><i>📐</i><b>Gálibo:</b> <b>ninguno</b> — el puerto no tiene túneles ni límite de altura o longitud; lo cruzan autocares y camiones. Es la gran ventaja frente al túnel del Mont Blanc: con &gt;3 m de altura os ahorráis <b>204,80 €</b> de una tacada.</li>
+            <li><i>⚠️</i><b>Obras 2026:</b> paso alternado por semáforo (~90 m de muro, sector des Zittieux). Con camper y cola, la espera se alarga. <b>Salid a las 07:30-08:00 de Annecy</b>: cruzáis el puerto antes de que salgan las motos y los autocares.</li>
+            <li><i>⛔</i><b>La trampa seria de hoy: el Cormet de Roselend (D902).</b> Entre Albertville y Bourg-Saint-Maurice, algunos navegadores lo proponen como atajo por Beaufort en lugar de la N90. Es una carretera de <b>3,5-4 m de ancho en tramos, sin quitamiedos y con paso de un solo vehículo</b>. Con camper grande es directamente inviable. Subid SIEMPRE por Moûtiers y la N90.</li>
+            <li><i>⚠️</i><b>La subida francesa:</b> ~30 km de rampa continua desde Bourg-Saint-Maurice. Vigilad la <b>temperatura del motor</b>, marchas largas fuera, aire acondicionado apagado si sube la aguja, y parada de enfriado si hace falta. Con camper cargada y 30 °C abajo, esto importa más que las curvas.</li>
+            <li><i>⚠️</i><b>La bajada italiana:</b> del puerto a Pré-Saint-Didier son ~15 km de lazadas por La Thuile. <b>Segunda o tercera marcha y freno motor</b>, nada de pedal continuo. Y ojo a las motos que adelantan en curva: en agosto la D1090 y la SS26 son un circuito.</li>
+            <li><i>⛽</i><b>Repostad en Bourg-Saint-Maurice</b> antes de subir. La siguiente gasolinera cómoda es Morgex, ya abajo en Italia.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>07:30-08:00</b> Salida de Annecy: menos tráfico en el puerto y en el paso alternado de obras.</li>
+            <li><b>09:30</b> Albertville / Moûtiers. Café y repostaje en <b>Bourg-Saint-Maurice</b>.</li>
+            <li><b>11:00</b> <b>Col du Petit-Saint-Bernard</b>. Parada de fotos en la cima, restos del templo romano y el hospicio. A 2.188 m sopla: chaqueta.</li>
+            <li><b>12:00</b> Bajada a La Thuile y Pré-Saint-Didier. Freno motor.</li>
+            <li><b>13:00</b> Llegada a Courmayeur / Pré-Saint-Didier. Check-in y comida valdostana.</li>
+            <li><b>16:00</b> Paseo por el centro peatonal de Courmayeur. Compra grande hecha abajo, en Morgex o Pré-Saint-Didier.</li>
+            <li><b>17:00</b> <b>Comprar online la entrada del Skyway para mañana</b>, franja de las 08:30. Es obligatorio y con reserva horaria.</li>
+            <li><b>19:00</b> Opcional: las <b>termas de Pré-Saint-Didier</b>, a 200 m del área. Después de un puerto alpino, es dinero bien gastado.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>⛰ Col du Petit-Saint-Bernard</h4>
+              <p>Une la Alta Tarentaise (La Rosière) con el Valle de Aosta (La Thuile). <b>Gratuito.</b> En 2026 abrió el <b>domingo 24 de mayo a las 10 h</b> (retrasado desde el 22 por riesgo de aludes).</p>
+              <p><b>Aviso 2026:</b> hay <b>circulación con paso alternado</b> en el sector des Zittieux por obras de un muro de contención de ~90 m. Con camper, evitad las horas punta.</p>
+              <p>Subida de lazadas, ancha y bien mantenida. Última gasolinera: Bourg-Saint-Maurice (Francia) y Morgex (Italia). <b>Consultad el estado 48 h antes</b> en <span class="mono">savoie.fr</span> y <span class="mono">larosiere.net</span>.</p>
+              <p><b>Si estuviera cerrado:</b> túnel del Mont Blanc (de pago, carísimo) o Col du Mont-Cenis.</p>
+            </div>
+            <div class="cell"><h4>🛏 Dormir</h4>
+              <p><b>Área Camper Semana</b> (Avenue du Mont Blanc 11, Pré-Saint-Didier) — 16 plazas, barrera, videovigilada, <span class="eur">3 € la 1ª hora + 0,50 €/hora</span> (≈10-14,50 €/24 h), agua 2 €/60 l. A 200 m del centro y de las termas; bus a Courmayeur enfrente.</p>
+              <p><b>Alternativa:</b> Parcheggio Dolonne (Courmayeur), sin servicios. Y el propio aparcamiento del <b>Skyway en Pontal d'Entrèves</b>, grande y llano.</p>
+              <p><b>Dormís aquí dos noches</b> (24 y 25): deshaced la maleta a gusto, que es la única parada doble antes de Val Gardena.</p>
+            </div>
+            <div class="cell"><h4>🐘 Curiosidad: la ruta de Aníbal</h4>
+              <p>Los romanos ya usaban este puerto (lo llamaban <i>Alpis Graia</i>) como parte de la Via delle Gallie, y hay quien cree que <b>Aníbal cruzó por aquí con sus elefantes</b> para invadir Roma en el 218 a.C. En la cima hay restos de un templo dedicado a Júpiter y una antigua posada romana con 12 celdas para viajeros. Siglos después, San Bernardo de Menthon fundó aquí un hospicio para proteger a los peregrinos de los bandidos y del clima — el mismo santo que da nombre al otro puerto, el Gran San Bernardo, cuna de la raza de perro homónima (que no cruzaréis en esta ruta).</p>
+            </div>
+            <div class="cell"><h4>🍽 Comer</h4>
+              <p>Cocina valdostana, de las mejores de los Alpes: <b>fonduta</b>, <b>carbonade</b>, polenta concia, <b>Fontina DOP</b>, jamón de Bosses, seupa à la valpelenentse.</p>
+              <p>Y el café "à la valdôtaine" en la <i>grolla</i>, la copa de madera con varias boquillas que va pasando por la mesa.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Bourg-Saint-Maurice: máx ~28 °C<br>Col (2.188 m): 8-14 °C y viento<br>Courmayeur (1.224 m): máx ~18-20 °C · mín ~7-9 °C</p>
+              <p>~40% de probabilidad de lluvia al día en el valle. Aquí ya se duerme con manta.</p>
+            </div>
+          </div>
+          <div class="warn"><b>Aviso sobre el Área Semana:</b> varias reseñas de 2024-25 dicen que se ha degradado a "parking de pago" y que los servicios a veces no funcionan. Verificad al llegar y tened Dolonne como plan B.</div>
+          <div class="warn"><b>Subida y bajada:</b> ~30 km de rampa y ~15 km de lazadas. Marchas cortas en los dos sentidos y ni un frenazo largo. Si huele a frenos, parad 10 min y dejadlos enfriar.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.savoie.fr/">savoie.fr</a> <span class="lt">— estado del Petit-Saint-Bernard, obras</span></li>
+            <li><a href="https://www.larosiere.net/">larosiere.net</a> <span class="lt">— apertura del puerto</span></li>
+            <li><a href="https://www.courmayeurmontblanc.it/">courmayeurmontblanc.it</a> <span class="lt">— Courmayeur: parkings y buses</span></li>
+            <li><a href="https://www.montebianco.com/">montebianco.com</a> <span class="lt">— Skyway: <b>comprad hoy para mañana</b></span></li>
+            <li><a href="https://www.termedipre.it/">Terme di Pré-Saint-Didier</a> <span class="lt">— spa a 200 m del área</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 4 · puerto alpino y llegada al Mont Blanc</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Biodramina tomada ANTES de salir</b> — 30 km de subida y 15 de bajada en curvas. Tomada después ya no sirve.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Forro polar y pantalón largo arriba del todo</b> — en la cima del puerto hay 10 °C y viento, y Courmayeur está a 1.224 m.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Bolsas por si alguien se marea</b> y agua fresca a mano en cabina.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Saco de dormir o manta extra</b> — dormís dos noches en alta montaña.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Compra grande hecha abajo</b> — en Courmayeur todo tiene precio de estación de esquí.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Chaqueta</b> para la parada de fotos en el puerto: a 2.188 m sopla de verdad.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Depósito lleno en Bourg-Saint-Maurice</b> (no es maleta, pero se olvida igual).</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">D5 · mar 25</span><span class="d-title">Courmayeur · Skyway Monte Bianco + Val Ferret</span><span class="d-km">0 km de camper</span><span class="d-toll free">💶 0 €</span><span class="d-tag">3.466 m en cabina giratoria. Día sin conducir.</span></summary>
+        <div class="d-body">
+          <p>Día sin conducir y probablemente el mejor de la primera mitad. Por la mañana, el <b>Skyway Monte Bianco</b>: cabinas giratorias de 360° hasta los 3.466 m, con el Mont Blanc encima de la cabeza. Por la tarde, la Val Ferret: pradera glaciar, paseo llano y cervezas. Ayer cruzasteis el puerto, así que hoy toca premio.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">0 km · camper aparcada</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 0/5</span> No hay tramo. Es el primer día del viaje con la camper parada: aprovechadlo para la revisión de después del puerto.</li>
+            <li><i>✅</i><b>Camper quieta todo el día</b> en el aparcamiento del <b>Skyway en Pontal d'Entrèves</b>, que es grande, llano y admite vehículos largos. Del parking a la estación se va andando.</li>
+            <li><i>⛔</i><b>Val Ferret:</b> en verano la carretera <b>Planpincieux → Arnouvaz está restringida al tráfico privado en horario diurno</b> <span class="unver">verificar horas y fechas 2026</span>. Se sube en <b>bus lanzadera</b> desde Courmayeur/Entrèves. Ni lo intentéis con la camper: además de la restricción, es estrecha y sin apartaderos.</li>
+            <li><i>⛔</i><b>Centro de Courmayeur:</b> peatonal. Nada de acercarse.</li>
+            <li><i>🔧</i><b>Día perfecto para la revisión de después del puerto:</b> pastillas y líquido de frenos (ayer bajasteis 15 km de lazadas), presión de neumáticos incluida la de repuesto, y nivel de aceite y refrigerante después de 30 km de rampa continua. Es el mejor momento de los 18 días para hacerlo.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>08:30</b> Primera franja del Skyway. Bus urbano desde el centro (12-15 min) o parking cubierto en la base.</li>
+            <li><b>09:15</b> Punta Helbronner (3.466 m). Máximo 1h30 arriba.</li>
+            <li><b>11:00</b> Parada en Pavillon: Jardín Botánico Saussurea (el más alto de Europa) y la Mont Blanc Infinity Room.</li>
+            <li><b>13:00</b> Comida en Courmayeur o La Palud.</li>
+            <li><b>14:30</b> Bus gratuito a la <b>Val Ferret</b>. Paseo llano hasta un rifugio (Bonatti, Bertone).</li>
+            <li><b>19:00</b> Cena tranquila. Génépi de chupito. Mañana se madruga poco: son 190 km fáciles.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>🚡 Skyway Monte Bianco · 2026</h4>
+              <p>De Pontal d'Entrèves (1.300 m) → Pavillon (2.173 m) → <b>Punta Helbronner (3.466 m)</b>.</p>
+              <ul>
+                <li><span class="eur">Ida-vuelta hasta Punta Helbronner: ~59 € (baja) / ~63 € (alta) online</span>; 64-68 € en taquilla. <span class="unver">las fuentes oscilan 58-63 €</span></li>
+                <li>Hasta Pavillon: ~25-27 € online.</li>
+                <li>Familia (2 adultos + 2 jóvenes 8-23): 177 € online.</li>
+                <li><b>Alta temporada: del 1 al 30 de agosto de 2026</b> — vuestro día 25 cae dentro.</li>
+                <li><b>En verano solo se compra online, con reserva de franja horaria (gratuita).</b> Llegar 15 min antes. → <span class="mono">montebianco.com</span></li>
+                <li>Estancia limitada a <b>1h30 en Punta Helbronner</b>. Cabinas cada 15-20 min.</li>
+                <li>Parking cubierto de 300 plazas en la base; reservadlo al comprar el billete.</li>
+              </ul>
+            </div>
+            <div class="cell"><h4>🚌 Val Ferret · bus GRATIS</h4>
+              <p>Courmayeur ofrece <b>transporte público gratuito en verano</b> (líneas Val Ferret, Val Veny y Circolare, gestión Arriva Italia). En 2024 fue del 7 jun al 29 sep; <span class="unver">confirmar fechas 2026</span> en courmayeurmontblanc.it.</p>
+              <p>El acceso en coche está contingentado con barrera automática hasta el parking de Planpincieux (~260 plazas, de pago 9:00-19:00, ~15 €/día). Cuando se llena, solo se entra en navetta. El tramo alto (Lavachey → Arnouva) está cerrado al tráfico privado.</p>
+              <p><b>Con camper: ni lo intentéis.</b> Dejadla en Courmayeur y usad el bus gratuito.</p>
+            </div>
+            <div class="cell"><h4>🍽 Comer</h4>
+              <p>Picnic arriba o comida en La Palud. En los rifugios de Val Ferret: polenta, tomino, tarta de arándanos.</p>
+              <p>Cena en el centro peatonal de Courmayeur: pizza y cerveza a precio razonable si os alejáis de la calle principal.</p>
+            </div>
+            <div class="cell"><h4>💎 Curiosidad: buscadores de cristal</h4>
+              <p>El Mont Blanc se conquistó por primera vez el <b>8 de agosto de 1786</b>, casi el mismo mes en el que vosotros estaréis aquí 240 años después. Los primeros en llegar a la cima no eran alpinistas: <b>Jacques Balmat</b>, buscador de cristales de roca, y el médico <b>Michel Paccard</b> encontraron la ruta buscando minerales para vender. Las cabinas del Skyway giran <b>360°, hasta dos vueltas completas</b> en la subida, para que nadie se pierda ningún ángulo del macizo.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Courmayeur: máx ~18-20 °C · mín ~7-9 °C<br><b>Punta Helbronner (3.466 m): 0-5 °C</b>, incluso en agosto</p>
+              <p>Abrigo, gorro y gafas de sol para arriba. El sol a 3.500 m quema en minutos.</p>
+            </div>
+          </div>
+          <div class="warn"><b>Subid a primera hora.</b> A mediodía las nubes tapan la cima casi siempre y las tormentas de tarde son frecuentes. Comprad la entrada la noche antes con la franja más temprana.</div>
+          <div class="tip-in"><b>Guardad la comparación para dentro de una semana.</b> Esto es alta montaña glaciar: hielo, granito y un macizo de 4.800 m. Los <b>Dolomitas</b> que veréis a partir del día 11 son justo lo contrario — caliza vertical, praderas y agujas de coral fosilizado. En la ruta original se veían primero los Dolomitas; así los veréis después, y el contraste se aprecia igual de bien al revés.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.montebianco.com/">montebianco.com</a> <span class="lt">— Skyway: precios, franjas, parking</span></li>
+            <li><a href="https://www.courmayeurmontblanc.it/">courmayeurmontblanc.it</a> <span class="lt">— fechas del bus gratuito 2026</span></li>
+            <li><a href="https://www.arriva.it/">arriva.it</a> <span class="lt">— navetta Val Ferret y Val Veny</span></li>
+            <li><a href="https://www.giardinosaussurea.net/">Giardino Saussurea</a> <span class="lt">— el jardín botánico más alto de Europa</span></li>
+            <li><a href="https://www.rifugiobonatti.it/">Rifugio Bonatti</a> <span class="lt">— la parada de Val Ferret</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 5 · Skyway a 3.466 m · EL DÍA MÁS FRÍO DEL VIAJE</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Forro polar + cortavientos + gorro + guantes</b> — en Punta Helbronner podéis tener <b>de 0 a 5 °C</b> y viento, en pleno agosto. Es el día que más gente subestima.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Gafas de sol categoría 3-4</b> — nieve permanente a 3.466 m: sin gafas hay riesgo real de daño ocular.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Crema solar 50+ en cara y orejas</b> — a esa altitud la radiación es brutal aunque haga frío.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Reserva del Skyway en el móvil y en papel</b> — es online obligatorio y con franja horaria asignada.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Cacao labial con protección</b> — frío, viento y altura parten los labios en una mañana.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Baterías de cámara cargadas y en un bolsillo interior</b> — el frío las agota en minutos.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Pantalón largo</b> — nada de subir en shorts.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Biodramina</b> — la cabina gira 360° durante la subida.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">D6 · mié 26</span><span class="d-title">Courmayeur → Aosta → Lago d'Orta</span><span class="d-km">~190 km · 2h30</span><span class="d-toll">💶 0-24 €</span><span class="d-tag">La 'Roma de los Alpes' y el lago secreto del Piamonte.</span></summary>
+        <div class="d-body">
+          <p>Se baja el Valle de Aosta entero con parada en <b>Aosta</b>, "la Roma de los Alpes", y se sigue hasta el <b>lago d'Orta</b>: el secreto mejor guardado del Piamonte. Pequeño, sin la masificación de Como, con Orta San Giulio (uno de los <i>borghi più belli d'Italia</i>) y una isla monástica a cinco minutos en barca.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 1/5</span> Valle de Aosta bajado por autopista de viaductos anchos, o por la SS26 paralela si vais sin peaje. Ninguna de las dos tiene dificultad real. Después, llanura padana.</li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Courmayeur,+Italy&amp;destination=Aosta,+Italy&amp;waypoints=Morgex,+Italy%7CSarre,+Italy&amp;avoid=tolls"><span>▶ Courmayeur → Aosta</span></a><span class="rd-cost">SIN PEAJE · la SS26 es ancha y va paralela a la A5. Repostad en Morgex</span></div></li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Aosta,+Italy&amp;destination=Omegna,+Italy&amp;waypoints=Ivrea,+Italy%7CSanthia,+Italy%7CArona,+Italy"><span>▶ Aosta → Omegna (lago d'Orta)</span></a><span class="rd-cost">con peaje A5/A4/A26 · ~2h · destino en el área de camper, no en Orta pueblo</span></div></li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Aosta,+Italy&amp;destination=Omegna,+Italy&amp;waypoints=Ivrea,+Italy%7CSanthia,+Italy%7CArona,+Italy&amp;avoid=tolls"><span>▶ Aosta → Omegna (SIN PEAJE)</span></a><span class="rd-cost">−20 € · +35 min por la SS26, nacional ancha de fondo de valle</span></div></li>
+            <li><i>✅</i><b>Ruta:</b> SS26 → Aosta → <b>A5 Aosta-Torino</b> → Ivrea → <b>A4 dirección Milán</b> → enlace <b>A26</b> → salida <b>Arona</b> o <b>Borgomanero</b> → <b>SS229</b> hasta Omegna/Orta. La A5 baja el valle con viaductos y túneles amplios: de las autopistas alpinas más cómodas que existen.</li>
+            <li><i>⛔</i><b>No cojáis el Colle del Gran San Bernardo (SS27)</b> aunque el navegador lo proponga: no está en vuestra ruta y son lazadas largas de alta montaña.</li>
+            <li><i>⛔</i><b>Aosta:</b> ZTL controlada por matrícula. Aparcad en el <b>área de Via Caduti del Lavoro</b> (5 min andando al centro romano) y no os acerquéis al casco.</li>
+            <li><i>🚨</i><b>Sacro Monte de Orta — el punto negro del día.</b> La carretera de subida son lazadas estrechas de radio corto. <b>&gt;7 m: no subáis, punto.</b> Hay curvas donde una camper de 7,5 m sencillamente no gira y no hay dónde dar la vuelta. Entre 6 y 7 m, solo con pericia y en horario de poco tráfico.</li>
+            <li><i>✅</i><b>La solución limpia:</b> camper en el <b>área de Omegna</b> o en el parking bajo de <b>Orta Miasino</b>, y subid al Sacro Monte <b>andando</b> (~20 min desde el pueblo) o en el bus lanzadera. La visita son 20 capillas y es gratis: no se pierde nada.</li>
+            <li><i>⛔</i><b>Orta San Giulio pueblo:</b> peatonal y ZTL, calles de 2,5 m. Se entra a pie desde el aparcamiento de arriba, siempre.</li>
+            <li><i>📐</i><b>Gálibo:</b> túneles de la A5 sin restricción; <b>repostad en Morgex</b>, que arriba hay poca gasolinera y alguna con marquesina baja. En Orta el problema no es la altura: es <b>exclusivamente la longitud</b>.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>09:00</b> Salida de Courmayeur por la SS26 (sin peaje, ancha y bonita).</li>
+            <li><b>09:45</b> <b>Aosta</b>. Aparcar en el área de Via Caduti del Lavoro y entrar andando (5 min).</li>
+            <li><b>10:00</b> Arco de Augusto, Porta Praetoria, Teatro Romano y murallas.</li>
+            <li><b>12:30</b> Comida valdostana en Aosta — la última de esta cocina en todo el viaje.</li>
+            <li><b>14:00</b> Salida hacia el lago d'Orta (~140 km, 2h).</li>
+            <li><b>16:30</b> Llegada a Omegna. Check-in y baño en el lido.</li>
+            <li><b>18:00</b> <b>Sacro Monte de Orta</b> a pie (UNESCO, 20 capillas, gratis, ~1,5 h) con el atardecer desde arriba.</li>
+            <li><b>20:30</b> Aperitivo y cena en <b>Piazza Motta</b>, en Orta San Giulio, con la isla enfrente iluminada.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>🎟 Aosta romana</h4>
+              <p>El <b>Teatro Romano reabrió el 3 de julio de 2026</b> tras 3 años de obras (visita parcial). Billete combinado <b>"Aosta Archeologica" <span class="eur">10 €</span></b>: Teatro + Museo Arqueológico (MAR) + otros sitios. Horario de verano ~09:00-19:00 <span class="unver">verificar in situ</span>.</p>
+              <p><b>Gratis y a cualquier hora:</b> Arco de Augusto, Porta Praetoria y las murallas. → <span class="mono">lovevda.it</span></p>
+              <p><b>Nota:</b> aquí Aosta es vuestro <b>primer romano del viaje</b> (Nimes cae en la vuelta, el día 17). Es un pueblo alpino con restos integrados en la trama medieval, no una ciudad-monumento, y funciona muy bien como aperitivo.</p>
+            </div>
+            <div class="cell"><h4>🛏 Dormir</h4>
+              <p><b>Parada en Aosta:</b> área de Via Caduti del Lavoro, esquina Corso Garibaldi — <span class="eur">1 €/hora de 8:00 a 20:00 y GRATIS de 20:00 a 8:00</span>. Camper service gratuito, sin electricidad, 5 min a pie del centro.</p>
+              <p><b>Noche: Area Camper Lago d'Orta (Omegna)</b> — junto al lido, ~36 plazas amplias y con sombra, <span class="eur">~14 €/12 h</span>, a 15 min a pie del centro, con acceso a piscina (de pago). La opción cómoda.</p>
+              <p><b>Sosta libre gratuita</b> en el parking de la cima del <b>Sacro Monte</b> (máx. 72 h, ~8 vehículos, fuente y baños, sin descargas). Ojo a la longitud en las lazadas de subida.</p>
+            </div>
+            <div class="cell"><h4>🍽 Comer</h4>
+              <p><b>En Aosta:</b> fonduta, carbonade, Fontina DOP, polenta concia.</p>
+              <p><b>En Orta:</b> Piamonte puro — <b>tapulon</b> (carne picada estofada), gnocchi, risotto, quesos y vinos de la zona. Novara, cuna del gorgonzola, está al lado. Aperitivo al atardecer en Piazza Motta, frente a la isla.</p>
+            </div>
+            <div class="cell"><h4>🗺 Curiosidad: la región más pequeña</h4>
+              <p>El Valle de Aosta es la región <b>más pequeña y menos poblada</b> de Italia (~125.000 habitantes) y la única con estatus <b>trilingüe</b>: italiano, francés y el <i>valdôtain</i>, un dialecto francoprovenzal que sigue vivo en los pueblos. Aosta fue fundada por Augusto en el 25 a.C. como <i>Augusta Praetoria</i> — de ahí el apodo "Roma de los Alpes" y el arco que lleva su nombre.</p>
+            </div>
+            <div class="cell"><h4>🐉 Curiosidad: la leyenda del dragón</h4>
+              <p>Cuenta la leyenda que en el año 390 la Isola San Giulio estaba infestada de dragones y serpientes, y ningún barquero se atrevía a llevar al santo hasta allí. San Giulio extendió su capa sobre el agua, la usó como barca, ahuyentó a las bestias y fundó su iglesia número cien. En la sacristía de la basílica todavía se conserva una vértebra enorme que, según las monjas, perteneció al dragón. <b>Nietzsche</b> también pasó por aquí y llamó a Orta "uno de los lugares más evocadores del mundo" — fue donde conoció a Lou von Salomé.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Aosta: máx ~28 °C<br>Lago d'Orta: máx ~28-30 °C · mín ~18 °C · agua ~23 °C</p>
+              <p>Primer día de calor de verdad desde Montpellier: bajáis de 1.224 m a 290 m.</p>
+            </div>
+          </div>
+          <div class="warn"><b>ZTL Aosta:</b> franjas amarilla y roja controladas por matrícula. Aparcad fuera.</div>
+          <div class="warn"><b>Orta San Giulio es peatonal total.</b> La camper se queda arriba sí o sí — planificadlo, porque el pueblo está abajo y la cuesta se nota al volver.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.lovevda.it/">lovevda.it</a> <span class="lt">— turismo del Valle de Aosta, "Aosta Archeologica"</span></li>
+            <li><a href="https://www.comune.aosta.it/">comune.aosta.it</a> <span class="lt">— ZTL y áreas</span></li>
+            <li><a href="https://www.distrettolaghi.it/">distrettolaghi.it</a> <span class="lt">— turismo oficial del lago d'Orta</span></li>
+            <li><a href="https://www.sacromonteorta.it/">Sacro Monte de Orta</a> <span class="lt">— UNESCO, acceso gratuito</span></li>
+            <li><a href="https://www.comune.omegna.vb.it/">Omegna</a> <span class="lt">— área camper y lido</span></li>
+            <li><a href="https://park4night.com/es/search">park4night</a> <span class="lt">— sosta libre en el Sacro Monte</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 6 · Aosta a pie y Sacro Monte en cuesta</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Zapatillas cómodas</b> — Aosta se ve entera a pie en 90 min y al Sacro Monte se sube andando (~20 min en cuesta).</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Botella reutilizable</b> — Aosta tiene fuentes por todo el centro romano.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Efectivo suelto</b> — la barca a la Isola San Giulio (mañana) y muchos parkings de lago no aceptan tarjeta.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Repelente</b> — atardecer junto a un lago: mosquitos asegurados.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Sillas plegables</b> — el área de Omegna es de las pocas donde de verdad apetece sentarse fuera.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Ropa fresca otra vez a mano</b> — bajáis 900 m de altitud y se nota.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">D7 · jue 27</span><span class="d-title">Isola San Giulio → Bérgamo Città Alta</span><span class="d-km">~150 km · 2h</span><span class="d-toll">💶 17-20 €</span><span class="d-tag">Isla de leyenda por la mañana, Città Alta veneciana por la tarde.</span></summary>
+        <div class="d-body">
+          <p>Mañana de barca a la <b>Isola San Giulio</b> — basílica románica y la "Via del Silenzio", que da la vuelta a la isla — y tarde en una de las ciudades más bonitas del norte de Italia que casi nadie mete en ruta: <b>Bérgamo Alta</b>, amurallada, veneciana y Patrimonio UNESCO. Se sube en funicular histórico, que ya es media visita.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 1/5</span> Autopista de llanura padana entera. Dos horas justas y sin un solo punto delicado.</li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Omegna,+Italy&amp;destination=Bergamo,+Italy&amp;waypoints=Borgomanero,+Italy%7CArona,+Italy%7CNovara,+Italy%7CMilano,+Italy"><span>▶ Lago d'Orta → Bérgamo (A26 + A4)</span></a><span class="rd-cost">con peaje A26/A4 · rodea Milán por el norte, sin entrar</span></div></li>
+            <li><i>✅</i><b>Ruta:</b> <b>SS229</b> → <b>A26 sur</b> → enlace con la <b>A4 dirección Milán/Venecia</b> a la altura de Novara → salida <b>Bergamo</b>. Todo nacional ancha y autopista.</li>
+            <li><i>⛔</i><b>No entréis en Milán</b> bajo ningún concepto: <b>Area B y Area C</b> son zonas de tráfico restringido con cámaras, y una camper ahí dentro es multa segura. La A4 la rodea sin tocarla.</li>
+            <li><i>⛔</i><b>Città Alta:</b> ZTL total, calles de un carril y rampas del 15%. <b>La camper no sube.</b> Aparcad abajo (<b>Parcheggio della Malpensata</b> o <b>Ex Ospedale</b>, ambos admiten vehículos largos) y usad el <b>funicular</b>, que además es parte de la visita.</li>
+            <li><i>📐</i><b>Gálibo:</b> ninguno relevante en todo el día.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>09:00</b> Barca desde <b>Piazza Motta</b> a la <b>Isola San Giulio</b>. Basílica y Via del Silenzio (la vuelta entera son 20 min andando).</li>
+            <li><b>11:00</b> Vuelta al pueblo, café en Piazza Motta y recogida.</li>
+            <li><b>12:00</b> Salida hacia Bérgamo (~150 km, 2h).</li>
+            <li><b>14:00</b> Aparcar en la ciudad baja. Comida.</li>
+            <li><b>15:30</b> Funicular a la Città Alta. Piazza Vecchia, Santa Maria Maggiore, Cappella Colleoni.</li>
+            <li><b>19:00</b> <b>Murallas venecianas al atardecer</b> — el mejor plan gratis de la ciudad.</li>
+            <li><b>20:30</b> Cena de casoncelli y stracciatella en La Marianna.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>⛵ Isola San Giulio</h4>
+              <p>Barca desde <b>Piazza Motta</b>, a diario desde las 9:00, retornos cada ~15-20 min hasta ~16 h.</p>
+              <p><span class="eur">~3-4 € por persona ida y vuelta</span> (servicio público de línea ~3,15 €). Hay billete diario de navegación por el lago. → <span class="mono">navigazionelagodorta.it</span></p>
+              <p>La <b>Via del Silenzio</b> es el camino que rodea la isla, con carteles de meditación de las monjas benedictinas. Se hace en 20 min y es de las cosas más raras y bonitas del viaje.</p>
+            </div>
+            <div class="cell"><h4>🚠 Bérgamo · funicular</h4>
+              <p>Sube 85 m en 2-3 min, cada 5-10 min, de ~06:58 a ~00:11.</p>
+              <ul>
+                <li><span class="eur">Billete urbano ATB: ~1,70 €</span> (75 min, vale también en bus y en el 2º funicular).</li>
+                <li>Billete 24 h: <span class="eur">4,90 €</span> · 10 viajes: ~14,50 €.</li>
+                <li><b>Funicular de San Vigilio</b> (desde Largo Porta Sant'Alessandro): mismo billete, sube al mirador y al Parco dei Colli.</li>
+              </ul>
+            </div>
+            <div class="cell"><h4>🛏 Dormir · Bérgamo</h4>
+              <p>Áreas de sosta en la ciudad baja / afueras. Los parkings de pago de Bérgamo Bassa son la opción estándar; el del barrio Loreto / Croce Rossa suele ser gratuito. <span class="unver">verificar en park4night</span></p>
+            </div>
+            <div class="cell"><h4>🍽 Comer</h4>
+              <p><b>Casoncelli alla bergamasca</b> (pasta rellena con mantequilla, salvia y panceta) — el plato de la ciudad. <b>Polenta e osei</b>, también en versión dulce.</p>
+              <p>La <b>stracciatella</b> se inventó aquí, en la gelateria <b>La Marianna</b>. Es obligatorio.</p>
+              <p>Evitad las terrazas de Piazza Vecchia y buscad trattorias en las calles laterales.</p>
+            </div>
+            <div class="cell"><h4>🍦 Curiosidad: el helado accidental</h4>
+              <p>En 1961, <b>Enrico Panattoni</b>, dueño de La Marianna en la Città Alta, tuvo una idea simple: verter chocolate fundido caliente sobre una base de helado de nata fría. El chocolate se solidificó al instante en esquirlas finas — de ahí el nombre "stracciatella" (de <i>stracciare</i>, rasgar), inspirado en la sopa romana del mismo nombre. La Marianna sigue abierta hoy, regentada por la misma familia.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Bérgamo: máx ~30-34 °C · mín ~20 °C</p>
+              <p>Calor húmedo de llanura padana. Aparcad a la sombra.</p>
+            </div>
+          </div>
+          <div class="warn"><b>ZTL Città Alta:</b> activa jueves, viernes y sábado por la noche y domingos/festivos de primavera a otoño. <b>Vuestro día 27 es jueves</b>, así que estará activa por la noche. Con camper es impensable subir de todas formas: funicular siempre.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.navigazionelagodorta.it/">navigazionelagodorta.it</a> <span class="lt">— barcas a la Isola San Giulio</span></li>
+            <li><a href="https://www.visitbergamo.net/">visitbergamo.net</a> <span class="lt">— turismo oficial, qué ver y comer</span></li>
+            <li><a href="https://www.atb.bergamo.it/">atb.bergamo.it</a> <span class="lt">— funicular y billetes urbanos</span></li>
+            <li><a href="https://www.comune.bergamo.it/">comune.bergamo.it</a> <span class="lt">— horarios exactos de la ZTL</span></li>
+            <li><a href="https://www.camperonline.it/sosta-camper/">CamperOnLine</a> <span class="lt">— áreas en Bérgamo Bassa</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 7 · isla y Città Alta</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Efectivo suelto</b> — la barca a la isla y el funicular de Bérgamo (1,70 €).</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Ropa que cubra hombros y rodillas</b> — la basílica de la isla y Santa Maria Maggiore aplican el código de vestimenta.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Zapatillas de suela buena</b> — la Città Alta es empedrado en cuesta.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Riñonera antirrobo</b> — Bérgamo Alta en agosto está llena.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Mochila pequeña plegable</b> — dejáis la camper en la ciudad baja todo el día.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">D8 · vie 28</span><span class="d-title">Bérgamo → Lago di Molveno</span><span class="d-km">~255 km · 3h05</span><span class="d-toll">💶 20-23 €</span><span class="d-tag">El lago más bonito de Italia, con el Brenta enfrente.</span></summary>
+        <div class="d-body">
+          <p>Se sube al <b>Brenta</b>, el grupo dolomítico occidental, y se duerme en un lago alpino de agua limpísima con las paredes de la Paganella y el Brenta enfrente. Llegando a comer os queda la tarde entera para la telecabina, el baño y el paseo del lago — que en el plan original quedaba comprimido en una mañana.</p>
+          <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Precaución en la subida final</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 3/5</span> Hasta Trento, <b>1/5</b>: autopista de llanura. La subida final por la <b>SS421</b> (Mezzolombardo → Fai della Paganella → Andalo) es el primer tramo exigente desde el puerto: lazadas cerradas y algún punto justo de ancho. Si medís &gt;7 m, coged el segundo enlace.</li>
+            <li><i>🚨</i><b>Corrección de kilómetros:</b> los ~190 km que circulan por ahí <b>solo salen yendo por la Gardesana Occidentale del Garda</b> (galerías estrechas sin iluminar) o por el Passo del Tonale. Las dos están en la lista negra. Por la ruta segura son <b>~255 km y ~3h05</b>.</li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Bergamo,+Italy&amp;destination=Molveno,+Italy&amp;waypoints=Brescia,+Italy%7CVerona,+Italy%7CTrento,+Italy%7CMezzolombardo,+Italy%7CAndalo,+Italy"><span>▶ Bérgamo → Molveno (A4 + A22, SS421)</span></a><span class="rd-cost">con peaje · los pasos por Brescia y Verona <b>bloquean el Tonale y la Gardesana</b></span></div></li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Bergamo,+Italy&amp;destination=Molveno,+Italy&amp;waypoints=Brescia,+Italy%7CVerona,+Italy%7CTrento,+Italy%7CSarche,+Italy%7CPonte+Arche,+Italy"><span>▶ Bérgamo → Molveno (ancha, por el sur)</span></a><span class="rd-cost">+25 min · para &gt;7 m o si llegáis cansados</span></div></li>
+            <li><i>✅</i><b>Ruta normal:</b> <b>A4 dirección Venecia</b> → Brescia → Verona → <b>A22 del Brennero dirección norte</b> → salida <b>San Michele all'Adige/Mezzocorona</b> → SS43 → <b>SS421</b> por Fai della Paganella y Andalo. <b>Hasta 7 m: factible con precaución.</b></li>
+            <li><i>✅</i><b>Alternativa más ancha si medís &gt;7 m o vais cansados:</b> A22 → salida <b>Trento Centro</b> → <b>SS45bis</b> → Sarche → <b>SS237</b> → Ponte Arche → SS421 subiendo desde el sur. Añade ~25 min y es notablemente más cómoda.</li>
+            <li><i>⛔</i><b>La trampa del Garda:</b> si el GPS os propone rodear por la <b>SS45bis Gardesana Occidentale</b> (orilla oeste, Limone-Gargnano), rechazadlo. Son <b>galerías excavadas en roca sin iluminar, estrechas y con gálibos bajos</b>, de lo peor que hay en Italia para un vehículo grande.</li>
+            <li><i>⛔</i><b>Ni Passo del Tonale ni Passo del Ballino / Val di Ledro</b> como "ruta escénica": puertos con lazadas y firme irregular, dos horas más y sin ninguna ganancia.</li>
+            <li><i>📐</i><b>Gálibo:</b> A4/A22 sin límite. En la SS421 el problema no es la altura, es el <b>ancho y el radio de giro</b>.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>09:00</b> Salida de Bérgamo por la A4.</li>
+            <li><b>12:30</b> Subida por la SS421 con luz y descansados — que es justo como hay que hacerla.</li>
+            <li><b>13:00</b> Llegada a Molveno y check-in. Comida.</li>
+            <li><b>15:00</b> <b>Telecabina Pradel</b> ("La Panoramica"), con el Brenta enfrente y el Forest Park arriba. Cierra a las 18:45.</li>
+            <li><b>17:30</b> Baño en el lago, o SUP / pedaló / barca en el Lido (hasta las 19:00).</li>
+            <li><b>20:00</b> Cena: trucha del lago, polenta carbonera, carne salada.</li>
+            <li><b>21:30</b> Preparar mañana: es el día que acaba en <b>Venecia</b>, y se sale a las 08:30.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>🛏 Dormir · Molveno</h4>
+              <p><b>Camping Spiaggia Lago di Molveno</b> (Via Lungolago 27; +39 0461 586978) — a orillas del lago, ~210 plazas, <span class="eur">~35-45 €/noche</span> <span class="unver">confirmar por teléfono</span>. Incluye <b>Trentino Guest Card</b> y camper service gratuito.</p>
+              <p>Hay también área de sosta municipal junto al lido: en agosto llegó a <b>~45-50 €/24 h</b> y prohíbe abrir toldos y sillas fuera (multa 150 €). Es la parada con peor relación precio/servicio del viaje, pero el sitio lo vale.</p>
+              <p><b>Es viernes de agosto:</b> reservad o llegad a la hora que dice el plan, no a las 18 h.</p>
+            </div>
+            <div class="cell"><h4>🚡 Telecabina Pradel</h4>
+              <p>"La Panoramica", con el Brenta enfrente y un parque aventura arriba (Forest Park).</p>
+              <p><span class="eur">Tramo I: 12 € ida / 18 € ida-vuelta</span> (2026). Combinado I+II hasta Croz dell'Altissimo: 23 € i/v. Verano: 27 jun-6 sep 2026, tramo I de 08:00 a 18:45. Parking Ischia 15 €/día. → <span class="mono">funiviemolveno.it</span></p>
+              <p><b>Acquapark:</b> 6 jun-6 sep 2026, 09:00-18:00, con piscina olímpica de 50 m. Alquiler de barca, pedaló y SUP en el Lido, 09:00-19:00.</p>
+            </div>
+            <div class="cell"><h4>🏆 Curiosidad: el lago más bonito de Italia</h4>
+              <p>Molveno lleva <b>once años ganando las "5 Vele"</b> de Legambiente y el Touring Club Italiano, el premio al mejor lago de Italia por pureza del agua, sostenibilidad y servicios. El escritor Antonio Fogazzaro lo describió como "una perla preciosa en un cofre del tesoro todavía más precioso" — el cofre son las Dolomiti di Brenta, que se reflejan enteras en el agua en calma.</p>
+            </div>
+            <div class="cell"><h4>🍽 Comer</h4>
+              <p><b>Molveno:</b> trucha del lago, polenta carbonera, carne salada, canederli. Y strudel de postre: ya estáis en zona de influencia tirolesa.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Llanura (Brescia/Verona): máx ~32-34 °C<br>Molveno (860 m): máx ~26-28 °C · agua ~18-21 °C (fría, es alpino)</p>
+              <p>Segundo salto térmico grande del viaje: sacad el forro polar antes de subir.</p>
+            </div>
+          </div>
+          <div class="warn"><b>Pernocta libre:</b> en Trentino está prohibida y se controla. Podéis "sostare" (dormir dentro con todo cerrado) donde se permita aparcar, pero sacar sillas, toldo o cuñas es <i>campeggio libero</i> e ilegal.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.campingmolveno.it/">campingmolveno.it</a> <span class="lt">— +39 0461 586978, confirmar agosto</span></li>
+            <li><a href="https://www.visitmolveno.it/">visitmolveno.it</a> <span class="lt">— lago, actividades, área de sosta</span></li>
+            <li><a href="https://www.funiviemolveno.it/">funiviemolveno.it</a> <span class="lt">— telecabina Pradel, precios y horarios</span></li>
+            <li><a href="https://www.visittrentino.info/">visittrentino.info</a> <span class="lt">— Trentino y Guest Card</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 8 · de 34 °C a 12 °C otra vez</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Forro polar y ropa de dormir de abrigo</b> — Molveno está a 860 m y la noche baja bastante.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Bañador</b> — el lago tiene agua limpísima, aunque fría.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Calzos</b> — las áreas del lago tienen pendiente.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Cortavientos</b> — la telecabina del Pradel es fresca aunque abajo haga calor.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Despensa llena antes de subir</b> — en el valle todo cuesta el doble y cierra pronto.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Saco de dormir ligero</b> otra vez a mano tras la llanura.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day pivot"><details>
+        <summary><span class="d-num">D9 · sáb 29</span><span class="d-title">Molveno → Verona → VENECIA 🎯</span><span class="d-km">~270 km · 3h15</span><span class="d-toll">💶 17-18 €</span><span class="d-tag">La norma innegociable: esta noche dormís en la laguna.</span></summary>
+        <div class="d-body">
+          <p><b>El día marcado en rojo del calendario.</b> Se baja del Brenta, se para a comer en <b>Verona</b> (arena romana, Piazza delle Erbe, la casa de Julieta si os va el postureo) y se llega a la laguna con luz. <b>La noche del sábado 29 la pasáis en Venecia</b>, que es exactamente lo que pedisteis — y con margen de tres horas por si algo se tuerce.</p>
+          <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Precaución al empezar · día con hora de llegada</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 2/5</span> La bajada de la <b>SS421</b> es lo único que pide atención, y la hacéis a primera hora, descansados y en el sentido fácil. A partir de Mezzolombardo, autopista pura hasta la laguna.</li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Molveno,+Italy&amp;destination=Verona,+Italy&amp;waypoints=Andalo,+Italy%7CMezzolombardo,+Italy%7CTrento,+Italy%7CRovereto,+Italy"><span>▶ Molveno → Verona (SS421 + A22)</span></a><span class="rd-cost">con peaje A22 · bajada por la misma SS421 de ayer</span></div></li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Verona,+Italy&amp;destination=Fusina,+Venezia,+Italy&amp;waypoints=Vicenza,+Italy%7CPadova,+Italy%7CMestre,+Italy"><span>▶ Verona → Fusina (Venecia)</span></a><span class="rd-cost">con peaje A4 (~9 €) · sin peaje son 3h40 por la SS11</span></div></li>
+            <li><i>✅</i><b>Ruta:</b> <b>SS421</b> bajando por Andalo y Fai della Paganella → Mezzolombardo → <b>A22 sur</b> → Trento → Rovereto → Verona → <b>A4 dirección Venecia</b> → Mestre → <b>SS309</b> → <b>Fusina</b>.</li>
+            <li><i>⛔</i><b>Verona:</b> todo el casco es <b>ZTL con cámaras y multa por matrícula</b>. Aparcad en el <b>Parcheggio Centro (Via Città di Nimes)</b> o en la periferia y entrad andando.</li>
+            <li><i>🅿️</i><b>Venecia:</b> la camper se queda en <b>Fusina</b> y se entra en barco. <b>No crucéis el Ponte della Libertà</b> hacia Tronchetto/Piazzale Roma: es caro, los aparcamientos tienen gálibos bajos y para nada lo necesitáis.</li>
+            <li><i>📐</i><b>Gálibo:</b> ninguno en la ruta. Solo en los aparcamientos de la isla, que ya están descartados.</li>
+            <li><i>⏰</i><b>Hoy sí hay hora:</b> es la única llegada del viaje con fecha comprometida. Salid a las <b>08:30</b> y llegaréis a Fusina hacia las <b>17:30</b>. Aunque Verona se alargue una hora, seguís cenando en la laguna.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>08:30</b> Salida de Molveno. Bajada de la SS421 con luz plena.</li>
+            <li><b>10:30</b> <b>Verona</b> (~120 km). Aparcar fuera de la ZTL y entrar andando.</li>
+            <li><b>11:00</b> Arena, Piazza delle Erbe, Ponte Pietra, Castelvecchio, Casa di Giulietta.</li>
+            <li><b>13:00</b> Comida veronesa: risotto all'Amarone o pastissada de caval.</li>
+            <li><b>15:00</b> Salida hacia Fusina (~120 km, 1h30).</li>
+            <li><b>17:00-17:30</b> <b>Check-in en Camping Fusina.</b> Servicios: llenar agua y vaciar depósitos hoy.</li>
+            <li><b>18:30</b> Motoscafo <b>lineaFUSINAZATTERE</b> al centro (20 min). Primera vez en Venecia y con la mejor luz del día.</li>
+            <li><b>19:30</b> <b>Spritz al atardecer</b> en Zattere o Dorsoduro, con la Giudecca enfrente. 🎉</li>
+            <li><b>21:00</b> Cena de cicchetti en un bacaro. Mañana Venecia entera es vuestra.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>🏛 Verona</h4>
+              <p>La <b>Arena</b> es un anfiteatro romano del s. I que sigue en uso: en verano hay ópera. Piazza delle Erbe, Ponte Pietra, Castelvecchio.</p>
+              <p><b>ZTL en el centro con cámaras.</b> Aparcad fuera y entrad andando. <span class="unver">verificar área camper y ZTL</span></p>
+              <p><b>Ventaja de la ruta inversa:</b> aquí Verona es una parada de paso a mediodía, no un desvío. Y es la única ciudad romana que veréis antes de Nimes, ya en la recta final.</p>
+            </div>
+            <div class="cell"><h4>🛏 Dormir · Camping Fusina</h4>
+              <p><b>Camping Fusina</b> (Malcontenta) — la mejor opción con diferencia. Está <b>frente a la laguna</b>, tiene línea propia de motoscafo <b>"lineaFUSINAZATTERE"</b> que sale del propio camping y llega al centro en <b>20 min</b>. Recepción 24 h, piscina, restaurante, pizzería, market, lavandería, wifi. Lo diseñó Carlo Scarpa en 1957.</p>
+              <p>Precio: <span class="eur">~28,50 €</span> camper + 2 personas en "Area Green" (electricidad 3 €/día aparte) <span class="unver">tarifa de temporada media</span>; en agosto será más. Otra fuente lo sitúa <b>desde 33,40 €/noche</b>. <b>Reservad: llegáis un sábado de agosto y os quedáis dos noches.</b> → <span class="mono">campingfusina.com</span></p>
+              <p><b>Alternativas:</b> Camper Park Tronchetto (caro para ser un parking); Punta Sabbioni / Cavallino-Treporti (campings + vaporetto, buena opción si queréis playa); Parcheggio P9 Favaro (gratuito, tram/bus a 200 m, sin servicios).</p>
+            </div>
+            <div class="cell"><h4>💌 Curiosidad: el balcón falso</h4>
+              <p>La Casa di Giulietta (Via Cappello 23) tiene el famoso balcón desde donde Julieta habría hablado con Romeo... pero <b>se añadió entre 1936 y 1940</b>, hecho con piezas de un sarcófago medieval. La casa ni siquiera fue de una familia Capuleto real. Lo que sí es auténtico es la tradición de las cartas: desde los años 30 hay un "Club de Julieta" que sigue respondiendo cartas de amor llegadas de todo el mundo dirigidas simplemente a "Julieta, Verona".</p>
+            </div>
+            <div class="cell"><h4>🍽 Comer</h4>
+              <p><b>Verona:</b> risotto all'Amarone, pastissada de caval, tortellini di Valeggio. Vinos Valpolicella y Amarone.</p>
+              <p><b>Venecia, primera noche:</b> <b>cicchetti</b> con una <i>ombra</i> de vino en un bacaro de Cannaregio. Sarde in saor, baccalà mantecato. Spritz (con Select, no Aperol, si lo queréis de verdad).</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Verona: máx ~32-34 °C (calor de llanura)<br>Venecia: máx ~29-31 °C · mín ~20 °C · muy húmedo</p>
+            </div>
+          </div>
+          <div class="tip-in"><b>El día que sostiene todo el plan.</b> Los ocho días anteriores están calculados hacia atrás desde aquí: por eso el día 3 es de 105 km y el 5 es de cero. Si algo se retrasa antes, el colchón está en los días 3, 5 y 7, que se pueden comprimir sin perder nada. <b>Este no se toca.</b></div>
+          <div class="warn"><b>La camper no entra en Venecia.</b> No hay debate: el centro es peatonal y acuático. Se deja en Fusina y se entra en barco.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.visitverona.it/">visitverona.it</a> <span class="lt">— turismo oficial</span></li>
+            <li><a href="https://www.arena.it/">arena.it</a> <span class="lt">— Arena de Verona y ópera de verano</span></li>
+            <li><a href="https://www.campingfusina.com/">campingfusina.com</a> <span class="lt">— reserva y tarifas</span></li>
+            <li><a href="https://www.campingfusina.com/orari-linee-di-navigazione/">Horarios lineaFUSINAZATTERE</a> <span class="lt">— el barco al centro</span></li>
+            <li><a href="https://www.veneziaunica.it/">veneziaunica.it</a> <span class="lt">— billetes y pases para mañana</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 9 · Verona y llegada a la laguna</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Reserva de Fusina impresa o en el móvil</b> — llegáis en sábado de agosto.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Ropa que cubra hombros y rodillas</b> — la Arena y las iglesias de Verona.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Mosquiteras de ventana y puerta</b> — dormís junto a la laguna: mosquitos garantizados.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Repelente fuerte</b> — mismo motivo.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Ventilador USB 12V</b> — Venecia en agosto es 31 °C y muy húmedo.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Zapatillas cómodas</b> — Verona se ve andando desde el parking periférico.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day pivot"><details>
+        <summary><span class="d-num">D10 · dom 30</span><span class="d-title">Venecia día completo → salto a los Dolomitas</span><span class="d-km">0 km hasta las 19:00 · luego ~150 km · 2h15</span><span class="d-toll">💶 9-11 €</span><span class="d-tag">La Serenissima entera. A las 19:00, camper y a subir.</span></summary>
+        <div class="d-body">
+          <p>El pivote del viaje, con vuestro horario: <b>Venecia entera hasta las 19:00</b> y después la camper. Ese traslado de tarde no es un capricho del plan — es lo que os deja mañana <b>al pie del sendero de Sorapis</b>, que es el único sitio desde donde esa ruta se hace bien.</p>
+          <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Fácil de trazado · pero se conduce de noche</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 2/5</span> Autopista y nacional moderna de trazado ancho. Sube a <b>3/5</b> solo por el factor hora: los últimos 12 km (Cortina → Passo Tre Croci) los haréis <b>de noche</b> y después de un día entero andando por Venecia.</li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Fusina,+Venezia,+Italy&amp;destination=Passo+Tre+Croci,+Cortina+d'Ampezzo,+Italy&amp;waypoints=Mestre,+Italy%7CBelluno,+Italy%7CLongarone,+Italy%7CPieve+di+Cadore,+Italy%7CCortina+d'Ampezzo,+Italy"><span>▶ Fusina → Passo Tre Croci</span></a><span class="rd-cost">con peaje A27 Mestre-Belluno · bloquea la Val Zoldana y el Passo Duran</span></div></li>
+            <li><i>✅</i><b>Ruta:</b> Fusina → <b>SS309</b> → Mestre → <b>A27</b> hasta Belluno → <b>SS51 Alemagna</b> → Longarone → Pieve di Cadore → Cortina → <b>SR48</b> hasta el <b>Passo Tre Croci</b>. Túneles amplios, carriles de adelantamiento y trazado moderno todo el camino.</li>
+            <li><i>⛔</i><b>No cojáis la SP251 Val Zoldana</b> ni el <b>Passo Duran</b> como "alternativa panorámica": estrechas, con tramos de un carril y sin sitio para cruzarse. De noche, impensable.</li>
+            <li><i>⚠️</i><b>Subida a Tre Croci de noche:</b> los últimos 12 km desde Cortina son carretera turística mantenida y ancha para su cota, apta hasta 8 m — pero de noche hay <b>fauna en la calzada</b> (ciervos y corzos son habituales) y algún ciclista sin luces. Luces largas cuando no venga nadie y velocidad de paseo.</li>
+            <li><i>📐</i><b>Gálibo:</b> los túneles de la A27 y la SS51 pasan de 4 m. Sin restricciones en todo el trayecto.</li>
+            <li><i>📵</i><b>Cobertura móvil floja</b> en la zona de Tre Croci. <b>Descargad el mapa y las coordenadas del sitio de dormir antes de salir de Venecia</b>, no cuando ya estéis subiendo a oscuras.</li>
+            <li><i>☕</i><b>Parad a cenar o a tomar café en Belluno o Longarone</b>, sobre las 20:45. Partir el trayecto en dos cambia por completo cómo se llega arriba.</li>
+          </ul></div>
+          <div class="road road-crit"><h4>🤔 Las dos formas de hacer este traslado <span class="rd-lvl">Decisión de la tarde</span></h4><ul>
+            <li><i>🥇</i><b>Opción A · subir del tirón a Tre Croci (recomendada).</b> Salís a las 19:00, paráis a cenar en Belluno y llegáis hacia las <b>22:00-22:15</b>. Dormís <b>a 1,3 km del inicio del sendero</b> y mañana salís andando a las 07:00 sin conducir nada. Son 2h15 con parada. <b>Es lo que hace que el día 11 funcione.</b></li>
+            <li><i>🥈</i><b>Opción B · dormir a medio camino.</b> Si el día de Venecia os deja fundidos, parad en la zona de <b>Longarone / Pieve di Cadore</b> (~1h45) y subid mañana a las 06:15. <b>Coste:</b> llegaréis al trailhead sobre las 07:15 y en agosto <b>el parking de Tre Croci se llena entre las 7 y las 9</b> — es una lotería. Solo si de verdad no estáis para conducir.</li>
+            <li><i>❌</i><b>Lo que no funciona:</b> quedarse a dormir en Fusina y subir mañana por la mañana. Serían 2h30 de coche antes de empezar a andar, llegaríais al sendero a mediodía con el lago lleno de gente, y el día 11 se rompe entero.</li>
+            <li><i>🔄</i><b>Si elegís B, el plan aguanta igual:</b> el día 11 solo tiene la ruta y un traslado de 2h15, así que perder una hora por la mañana no arrastra nada. Lo único que se pierde es el Sorapis vacío.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>08:30</b> Barco desde Fusina a Zattere (20 min). Entrar temprano es la única forma de ver Venecia sin agobio.</li>
+            <li><b>09:00</b> Dorsoduro y Gallerie dell'Accademia (el barrio con más vida y menos turismo de masas).</li>
+            <li><b>11:00</b> Vaporetto línea 1 por el Gran Canal — el "tour" más barato de la ciudad.</li>
+            <li><b>12:00</b> San Marcos y Rialto. Mercado de Rialto (cierra a mediodía: id antes).</li>
+            <li><b>14:00</b> Comida de cicchetti lejos de San Marcos.</li>
+            <li><b>15:00</b> <b>Murano o Burano</b> — con el barco de vuelta calculado para estar en Fusina a las 18:30.</li>
+            <li><b>18:30</b> De vuelta en el camping. Servicios: agua, grises y químico. Cargar todo.</li>
+            <li><b>19:00</b> <b>Salida hacia los Dolomitas.</b> 🚐</li>
+            <li><b>20:45</b> Cena o café largo en Belluno / Longarone.</li>
+            <li><b>22:00-22:15</b> Llegada al Passo Tre Croci. A dormir: mañana se anda a las 07:00.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>🎟 Tasa de acceso · buenas noticias</h4>
+              <p><b>En agosto de 2026 NO se paga.</b> El <i>contributo di accesso</i> se aplica solo <b>60 días entre el 3 de abril y el 26 de julio de 2026</b>, de 8:30 a 16:00 y solo en el centro histórico. Vuestro 30 de agosto queda fuera.</p>
+              <p>No afecta a Murano, Burano, Torcello ni al Lido. → <span class="mono">cda.ve.it</span></p>
+            </div>
+            <div class="cell"><h4>🚤 Vaporetto ACTV</h4>
+              <ul>
+                <li>Billete 75 min "Rete Unica": <span class="eur">9,50 €</span> — carísimo para un trayecto.</li>
+                <li><b>Venezia Daily Pass 24 h: <span class="eur">25 €</span></b> — con 3 trayectos ya sale a cuenta, y hoy vais a hacer bastantes más. Es lo que os toca.</li>
+                <li><b>Rolling Venice card</b>: descuentos en transporte y entradas <b>para 6-29 años</b>. Si el grupo entra en esa franja, preguntad: es dinero directo.</li>
+                <li>Menores de 6, gratis.</li>
+                <li><b>Ojo:</b> los billetes ACTV <b>no valen</b> en las líneas 16, 19 ni en Alilaguna. El barco de Fusina va aparte.</li>
+              </ul>
+            </div>
+            <div class="cell"><h4>🛏 Dormir · el sitio de esta noche</h4>
+              <p><b>🥇 <a href="https://park4night.com/es/place/248552">P4N #248552</a></b> (SR48, 46.5580, 12.2193). <b>Gratis</b>, 3 plazas oficiales (caben 4-6), 4,28/5 con 25 reseñas. <b>Llano</b>, protegido por guardarraíl, tranquilo de noche. <b>A 1,3 km del inicio del sendero.</b> Ojo: una reseña cuenta que una autocaravana de <b>7,5 m no cupo</b>.</p>
+              <p><b>🥈 <a href="https://park4night.com/es/place/491522">P4N #491522</a></b> (46.5560, 12.2052). <b>Gratis</b>, 20 plazas. <b>El sendero 215 sale justo de aquí</b>, pero está inclinado, pegado a la carretera y hay quejas de ruido nocturno. Llegando a las 22 h tendréis sitio, que es la ventaja de subir hoy.</p>
+              <p><b>🥉 <a href="https://park4night.com/es/place/543627">P4N #543627</a></b> (Auronzo, 46.5577, 12.2340). Gratis, 5 plazas, 4,5/5. ~2,5 km del sendero.</p>
+              <p><b>Ninguno tiene servicios</b> — por eso hay que descargar y llenar en Fusina antes de salir. Y en los tres: <b>prohibido acampar</b>; dormir dentro sí, sacar sillas no.</p>
+            </div>
+            <div class="cell"><h4>🍽 Comer</h4>
+              <p><b>Cicchetti</b> (las tapas venecianas) con una <i>ombra</i> de vino en un bacaro — la mejor forma de comer barato en Venecia. Zona de Cannaregio y alrededores de Rialto.</p>
+              <p>Sarde in saor, baccalà mantecato, fritto misto. <b>Regla:</b> alejaos de San Marcos para comer. Cada metro cuenta.</p>
+              <p><b>Y hoy, además:</b> comprad algo para la cena de esta noche antes de salir. Arriba, a las 22 h, no hay nada abierto.</p>
+            </div>
+            <div class="cell"><h4>🌲 Curiosidad: el bosque bajo el agua</h4>
+              <p>Venecia entera está apoyada sobre <b>millones de pilotes de madera de alerce</b> (unos 9 por m²) hincados en el fango hace más de 1.000 años. Al estar completamente sumergidos y sin oxígeno, los microorganismos que pudren la madera no sobreviven — y con el tiempo los minerales del agua endurecen los troncos casi como si fueran piedra. Literalmente camináis sobre un bosque invertido.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Venecia: máx ~29-31 °C · mín ~20 °C, muy húmedo<br>Passo Tre Croci (1.805 m) de noche: <b>~8-10 °C</b></p>
+              <p>En 3 horas pasáis de 30 °C con humedad a 9 °C de montaña. Dejad la ropa de abrigo accesible <b>antes</b> de salir de Fusina.</p>
+            </div>
+          </div>
+          <div class="warn"><b>El día 30 no es un día de descanso.</b> Son 10 h andando por Venecia con 30 °C y humedad, y después 2h15 de carretera de noche. Repartid la conducción, y si a las 19:00 el conductor está fundido, aplicad la opción B sin dramas.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://cda.ve.it/es/">cda.ve.it</a> <span class="lt">— tasa de acceso: fechas y pago</span></li>
+            <li><a href="https://www.veneziaunica.it/">veneziaunica.it</a> <span class="lt">— billetes, pases, Rolling Venice</span></li>
+            <li><a href="https://actv.avmspa.it/">actv.avmspa.it</a> <span class="lt">— vaporetto: líneas y horarios</span></li>
+            <li><a href="https://www.basilicasanmarco.it/">basilicasanmarco.it</a> <span class="lt">— San Marcos, reserva de acceso</span></li>
+            <li><a href="https://www.veneziaunica.it/it/content/isole-della-laguna">Islas de la laguna</a> <span class="lt">— Murano, Burano, Torcello</span></li>
+            <li><a href="https://park4night.com/es/place/248552">P4N #248552</a> <span class="lt">— el sitio de esta noche</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 10 · Venecia a pie + traslado nocturno</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Riñonera antirrobo bajo la ropa</b> — San Marcos y Rialto son el mejor sitio de Italia para que te vacíen un bolsillo.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Zapatillas cómodas ya usadas</b> — Venecia son kilómetros de piedra y cientos de escalones de puente.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Mapa offline y coordenadas del sitio de dormir descargados</b> — arriba no hay cobertura y llegáis de noche.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Ropa de abrigo sacada del garaje ANTES de salir</b> — a las 22 h en Tre Croci hay 9 °C.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Botella reutilizable</b> — Venecia tiene fuentes públicas potables por toda la ciudad.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Powerbank cargado</b> — día entero fuera y luego el móvil hace de mapa de noche.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Cena fría comprada por la tarde</b> — a las 22 h arriba no hay nada.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Frontal a mano</b> — vais a aparcar y montar la cama a oscuras.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">D11 · lun 31</span><span class="d-title">Lago di Sorapis a pie → Val Gardena</span><span class="d-km">Ruta 11 km + ~120 km · 2h15</span><span class="d-toll free">💶 0 €</span><span class="d-tag">Lago turquesa al amanecer y traslado por Val Pusteria.</span></summary>
+        <div class="d-body">
+          <p>Dormisteis <b>junto al sendero</b>, así que madrugáis para tener el lago turquesa casi para vosotros. Por la tarde, traslado a Val Gardena por Val Pusteria — sin un solo puerto — y ahí os quedáis <b>dos noches</b>: mañana es Seceda y por primera vez no hay que conducir después de bajar de la montaña.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad · traslado de la tarde</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 2/5</span> Por la mañana no se conduce. El traslado de la tarde por Val Pusteria es <b>nacional ancha de dos carriles sin un solo puerto</b> — largo (2h15) pero fácil. La ruta "corta" por los pasos sería <b>5/5</b>.</li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Passo+Tre+Croci,+Cortina+d'Ampezzo,+Italy&amp;destination=Santa+Cristina+Valgardena,+Italy&amp;waypoints=Cortina+d'Ampezzo,+Italy%7CDobbiaco,+Italy%7CBrunico,+Italy%7CBressanone,+Italy%7CChiusa,+Italy&amp;avoid=tolls"><span>▶ Passo Tre Croci → Val Gardena (por Pusteria)</span></a><span class="rd-cost">SIN PEAJE · los 5 pasos forzados hacen imposible que os meta por Falzarego, Pordoi o Sella</span></div></li>
+            <li><i>✅</i><b>Ruta:</b> <b>SR48</b> → Cortina → <b>SS51 Alemagna</b> dirección norte → Dobbiaco/Toblach → <b>SS49 Val Pusteria</b> → Brunico → Bressanone/Brixen → <b>A22 dirección sur</b> (o SS12) → salida <b>Chiusa/Klausen</b> → <b>SS242</b> por Ortisei hasta Santa Cristina/Pontives.</li>
+            <li><i>⛔</i><b>La ruta "corta" que hay que rechazar:</b> Cortina → <b>Passo Falzarego</b> → <b>Passo Pordoi</b> → <b>Passo Sella</b>. Es media hora menos sobre el papel y tres puertos de lazadas con camper. También descartad el <b>Passo Giau (SP638)</b> y el <b>Passo Fedaia</b>.</li>
+            <li><i>⚠️</i><b>Bajada de Tre Croci a Cortina:</b> ~7 km de pendiente sostenida nada más arrancar, con los frenos fríos. <b>Marcha corta y freno motor.</b></li>
+            <li><i>⛔</i><b>Centro de Ortisei:</b> ZTL con cámaras. Rodead siempre por la SS242.</li>
+            <li><i>⛔</i><b>Carretera del Alpe di Siusi</b> (Siusi → Compatsch): <b>cerrada al tráfico privado de 09:00 a 17:00</b> con multa automática <span class="unver">verificar horario 2026</span>. No es vuestra ruta, pero algún navegador la propone como enlace.</li>
+            <li><i>📐</i><b>Gálibo:</b> SS51, SS49 Pusteria y SS242 sin límite. Ojo con las <b>marquesinas de gasolinera</b> del valle: varias tienen 3,20-3,50 m.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>07:00</b> Salida a pie desde donde dormís. <b>A las 8 ya no hay sitio</b> para aparcar en el trailhead: por eso dormisteis allí.</li>
+            <li><b>07:15</b> Sendero <b>CAI 215</b> desde el Passo Tre Croci (1.805 m). Empieza en pista forestal ancha y en ligera bajada.</li>
+            <li><b>09:15</b> <b>Lago di Sorapis</b> (1.925 m) y Rifugio Vandelli. Agua turquesa lechosa de verdad, y casi sin gente.</li>
+            <li><b>10:00</b> Vuelta por el mismo sendero.</li>
+            <li><b>12:00</b> De regreso en la camper. Comida y siesta corta.</li>
+            <li><b>13:30</b> Salida hacia Val Gardena por Val Pusteria (~120 km, 2h15).</li>
+            <li><b>16:00</b> Check-in en <b>Gasthof Pontives</b> o Santa Cristina. Tarde libre en Ortisei.</li>
+            <li><b>20:30</b> Cena ladina. Con suerte, <b>enrosadira</b> sobre las Odle al ponerse el sol.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>🥾 Sendero CAI 215 · la realidad</h4>
+              <p><b>Passo Tre Croci (1.805 m) → Lago di Sorapis (1.925 m).</b> ~5,5 km por trayecto, <b>~11 km ida y vuelta</b>. Desnivel neto pequeño (~200-310 m) pero con constantes sube-y-baja.</p>
+              <p><b>Tiempo real: 2h-2h30 por trayecto</b>, ~4h en total con paradas. <span class="unver">El PDF dice 2h30 ida y vuelta: eso es la ida sola.</span></p>
+              <p>Dificultad oficial <b>E</b> (excursionista), pero <b>no lo subestiméis</b>: todas las guías locales insisten en eso.</p>
+            </div>
+            <div class="cell"><h4>⚠️ Los tramos serios</h4>
+              <p><b>El último kilómetro y medio antes del Rifugio Vandelli</b> es corto pero exigente: está <b>equipado con cuerdas, cables y escaleras metálicas</b>, con tramos expuestos sobre el vallón del Sorapis.</p>
+              <ul>
+                <li><b>No apto si sufrís vértigo.</b></li>
+                <li><b>Con lluvia se vuelve peligroso</b> — mirad el parte antes de salir.</li>
+                <li>Hay un arroyo con <b>rocas lisas y resbaladizas</b> en el primer tramo.</li>
+                <li><b>Botas de trekking, no zapatillas.</b></li>
+                <li>Bastones muy recomendables.</li>
+              </ul>
+            </div>
+            <div class="cell"><h4>🛏 Dormir · Val Gardena (2 noches)</h4>
+              <p><b>Val Gardena no tiene campings y prohíbe pernoctar en el vehículo.</b> Bases reales:</p>
+              <p><b>Gasthof Pontives</b> (Frazione Pontives 36, Laion, a 3 km de Ortisei) — <span class="eur">~20-25 €/noche</span>, enganche eléctrico, agua y vaciado. <b>Incluye billete de bus gratuito válido 6 días</b> para todo el valle — que con dos noches aquí sí compensa de verdad. → <span class="mono">pontives.com</span></p>
+              <p><b>Alternativa:</b> parking de Santa Cristina (Strada Ruacia 30 / Strada Pana), <span class="eur">~15-20 €/24 h</span>, sin servicios.</p>
+            </div>
+            <div class="cell"><h4>🔄 Alternativas del sendero</h4>
+              <ul>
+                <li><b>Sin conducir:</b> Dolomiti Bus hasta la parada del Passo Tre Croci, a 150 m del inicio.</li>
+                <li><b>Sendero CAI 217:</b> más largo (~3h solo ida) y con más desnivel (600 m). Menos gente.</li>
+                <li><b>Circular panorámica 213-216-215:</b> 3h, dificultad EE (excursionistas expertos).</li>
+                <li><b>Rifugio Vandelli</b> está a 2/3 del recorrido: comida y agua en temporada. Aun así, llevad agua para todo.</li>
+              </ul>
+            </div>
+            <div class="cell"><h4>📖 Curiosidad: la leyenda y los Juegos</h4>
+              <p>Una leyenda ladina cuenta que el lago se formó por las lágrimas de Sorapis, padre de la ninfa Misurina (que da nombre a otro lago cercano). Y un dato de actualidad: <b>Cortina d'Ampezzo</b>, a un paso de aquí, fue sede de los <b>Juegos Olímpicos de Invierno Milano-Cortina 2026</b> (6-22 de febrero). Pasáis por instalaciones estrenadas seis meses antes.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima y agua</h4>
+              <p class="temp">Passo Tre Croci: máx ~20-22 °C · mín ~8 °C<br>Val Gardena: máx ~24-27 °C · mín ~10-14 °C</p>
+              <p><b>El lago a finales de agosto está en su mejor momento.</b> En otoño se queda casi seco y en invierno, helado. Vais en la ventana buena.</p>
+            </div>
+          </div>
+          <div class="tip-in"><b>Aquí la ruta inversa gana de calle.</b> En el plan original, Sorapis era el último día de montaña y terminaba con 3 h de autopista hasta Venecia. Ahora Sorapis es la <b>entrada</b> a los Dolomitas y el traslado acaba en el valle donde vais a dormir dos noches seguidas. Se conduce lo mismo, pero se llega descansado a Seceda.</div>
+          <div class="warn"><b>Overtourism:</b> es de los sitios más masificados de los Dolomitas. Salir a las 7 no es por deporte, es la única forma de disfrutarlo. A las 9 el sendero es una fila india.</div>
+          <div class="warn"><b>Perros con correa</b> obligatoria; los pequeños puede que tengáis que llevarlos en brazos en las escaleras metálicas.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.cosafareincadore.it/segnavia-215-rifugio-vandelli-lago-di-sorapis-partendo-dal-passo-tre-croci/">Cosa fare in Cadore</a> <span class="lt">— fotos de los tramos con cables</span></li>
+            <li><a href="https://www.dolomiti.it/it/itinerari/fiumi-laghi-cascate/lago-di-sorapis">dolomiti.it</a> <span class="lt">— las tres variantes del sendero</span></li>
+            <li><a href="https://www.komoot.com/it-it/smarttour/e994341570/sentiero-215-per-il-lago-di-sorapis">Komoot</a> <span class="lt">— track GPS, 11,1 km / 4h05</span></li>
+            <li><a href="https://www.cortinadolomiti.eu/">cortinadolomiti.eu</a> <span class="lt">— turismo de Cortina</span></li>
+            <li><a href="https://www.pontives.com/">pontives.com</a> <span class="lt">— Gasthof Pontives, la base + bus gratis</span></li>
+            <li><a href="https://www.valgardena.it/">valgardena.it</a> <span class="lt">— turismo oficial del valle, buses, senderos</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 11 · Sorapis al amanecer</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Frontal por persona</b> — salís a pie a las 07:00 y parte del bosque va aún en penumbra.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Botas de trekking</b>, no zapatillas: hay cables, escaleras metálicas y roca mojada.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Guantes finos de agarre</b> — el último tramo tiene cuerdas y escaleras, y a esa hora las manos van frías.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Venda elástica o tobillera</b> — los pasos expuestos del final son donde se tuercen los tobillos.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Manta térmica</b> en la mochila: pesa 40 g y es el seguro de montaña.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Bastones de trekking</b> — el sube-y-baja constante los agradece.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Bolsa para la basura propia</b> — en el sendero de Sorapis no hay papeleras.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">D12 · mar 1 sep</span><span class="d-title">Seceda a pie desde Cristauta</span><span class="d-km">12,3 km · 900 m D+</span><span class="d-toll free">💶 0 €</span><span class="d-tag">La cresta más fotografiada. Y hoy no hay que conducir después.</span></summary>
+        <div class="d-body">
+          <p>Día completo de montaña. La cresta de Seceda es <i>la</i> foto de los Dolomitas, con el grupo delle Odle enfrente. Y subís andando: además de ahorraros el dineral del remonte, <b>el torniquete panorámico de la cima es gratis para quien llega a pie por este lado</b>. Lo mejor del día: al bajar no hay traslado. Cena en el valle y a dormir en el mismo sitio.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">0 km reales · solo el fondo de valle</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 1/5</span> Cuatro kilómetros de fondo de valle por la mañana y los mismos de vuelta. Nada más. <b>Es el segundo día del viaje sin conducir de verdad.</b></li>
+            <li><i>✅</i><b>Por la mañana casi no se conduce:</b> de Pontives al parking <b>Cristauta-Praplan</b> son minutos por la carretera del fondo de valle. Si medís &gt;7 m, dejad la camper en el área y subid en el <b>bus de línea 350/351</b> — que además os sale gratis con el billete que incluye Pontives: el parking del trailhead es pequeño y maniobrar allí a las 8 de la mañana en agosto es un problema.</li>
+            <li><i>⛔</i><b>Centro de Ortisei:</b> ZTL con cámaras. Rodead siempre por la SS242.</li>
+            <li><i>⛔</i><b>Nada de "subir en coche a ver el atardecer"</b> por los pasos (Sella, Gardena, Pinei). Hoy la camper se queda quieta.</li>
+            <li><i>📐</i><b>Gálibo:</b> irrelevante hoy.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>07:30</b> Camper o bus al <b>parking Cristauta-Praplan</b> (Str. Plesdinaz, Santa Cristina, ~1.750 m). Pago con EasyPark.</li>
+            <li><b>08:00</b> Sendero <b>nº 4</b>, el "sentiero degli scoiattoli" (camino de las ardillas). Se entra por una portezuela de madera: hay vacas con terneros pastando, cerradla al pasar.</li>
+            <li><b>09:00</b> <b>Baita Gamsblut Hütte</b> (1.965 m). Parada de desayuno — sus <i>canederli dolci</i> tienen fama.</li>
+            <li><b>09:30</b> Sendero <b>1A</b>: Malga Neidia (2.030) → Baita Cuca (2.044) → Baita Fermeda (2.117) → Cappella Fermeda (2.154) → Baita Daniel (2.231) → Baita Mastlè (2.284) → Baita Sophie (2.410).</li>
+            <li><b>11:00</b> Sendero <b>1</b> hasta la cima (2.519 m, cruz de cumbre) y la estación superior del Furnes-Seceda (2.467 m).</li>
+            <li><b>13:00</b> Comida en la Baita Sophie o en la cima, sin mirar el reloj.</li>
+            <li><b>15:00</b> Bajada (o remonte si las piernas dicen basta).</li>
+            <li><b>18:00</b> De vuelta en Pontives. <b>Y ya está: hoy no hay traslado.</b> Ducha, cerveza y cena en Ortisei.</li>
+            <li><b>20:00</b> <b>Enrosadira</b> desde el valle si el cielo acompaña — el momento en que la roca se pone rosa.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>🥾 La subida · datos</h4>
+              <p><b>12,3 km</b> ida y vuelta · <b>~900 m de desnivel acumulado</b> (de 1.750 a 2.519 m). Unas <b>2h30 de subida</b> y 2h de bajada.</p>
+              <p><b>Técnicamente fácil:</b> casi todo pista forestal y senderos bien marcados, sin tramos expuestos. Pero el desnivel no es poco: hace falta estar en forma.</p>
+              <p><b>Lo más duro es el principio</b> — el primer tramo del sendero 4 es el más empinado. Después son subidas llevaderas.</p>
+              <p><b>Aviso para el 1 de septiembre:</b> el sendero está <b>totalmente expuesto al sol</b>. Salid pronto, gorra, crema y agua de sobra.</p>
+            </div>
+            <div class="cell"><h4>🅿️ Parking Cristauta-Praplan</h4>
+              <p>Str. Plesdinaz, Santa Cristina (~1.750 m), justo enfrente del inicio del sendero de las ardillas.</p>
+              <p><b>Precio: <span class="eur">10 €/día</span></b> según Marc. <span class="unver">las guías de 2022-25 dicen 6 €/día máximo</span> — probablemente haya subido. De pago solo del 1 de junio al 15 de octubre.</p>
+              <p><b>Pago con la app EasyPark</b> — descargadla antes, es lo más cómodo.</p>
+              <p><b>La pernocta NO está permitida</b> aquí — pero hoy da igual: dormís en Pontives.</p>
+            </div>
+            <div class="cell"><h4>🚡 Si preferís el remonte</h4>
+              <p><b>Cuidado, aquí hay tres precios distintos dando vueltas:</b></p>
+              <ul>
+                <li><b>35 €/persona</b> — el dato de Marc. Encaja con un <b>trayecto simple</b>, que es lo que tiene sentido: subir andando y bajar en remonte.</li>
+                <li><b>52 €</b> ida y vuelta <span class="unver">reseña de 2025</span></li>
+                <li><b>74 €</b> ida y vuelta <span class="unver">dato de 2026</span> — subida polémica.</li>
+              </ul>
+              <p><b>Confirmadlo en seceda.it</b> antes de contar con ello. Hay <b>reserva de franja horaria obligatoria</b> incluso con Gardena Card.</p>
+            </div>
+            <div class="cell"><h4>🎟 El torniquete de la cima</h4>
+              <p>Desde 2025 hay un <b>torniquete de 5 €</b> para el mirador panorámico de la cresta, y ha generado bastante polémica.</p>
+              <p><b>Buena noticia: es gratis para quien sube a pie por este lado.</b> Lo pagan los que llegan en funivia. Otro motivo para caminar.</p>
+            </div>
+            <div class="cell"><h4>🍽 Comer</h4>
+              <p>El sendero está sembrado de <b>baite y rifugios</b> — es media gracia de subir andando. Gamsblut, Cuca, Fermeda, Daniel, Mastlè, Sophie.</p>
+              <p><b>Canederli, speck, strudel</b>, y el <b>Kaiserschmarrn</b> para compartir. ~15-25 €/persona. Y esta noche, cena tirolesa en Ortisei sin prisa de carretera.</p>
+            </div>
+            <div class="cell"><h4>🪸 Curiosidad: montañas de coral</h4>
+              <p>Hace 250 millones de años esto era un <b>arrecife tropical bajo el mar</b>. La roca dolomía se formó por acumulación de corales, algas y conchas, y con el choque de placas emergió hasta convertirse en esta cresta. Al atardecer veréis la <b>"enrosadira"</b> (palabra ladina: "ponerse rosa"), el fenómeno por el que la roca se tiñe de rojo-rosado. Hace seis días estabais mirando granito y hielo en el Mont Blanc: esto es literalmente lo contrario, y por eso merecía la pena verlos separados.</p>
+            </div>
+            <div class="cell"><h4>🗣 Curiosidad: el valle de las tres lenguas</h4>
+              <p>Val Gardena es <b>trilingüe de verdad</b>: italiano, alemán y <b>ladino</b> (una lengua retorrománica de más de 2.000 años) tienen los tres el mismo estatus oficial desde 1989. Cada pueblo tiene tres nombres — Ortisei/St. Ulrich/Urtijëi, Santa Cristina/St. Christina/S. Crestina — y todos los carteles los llevan. Con el inglés desde primaria, los niños de aquí crecen hablando cuatro idiomas.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Valle: máx ~22-25 °C<br>Cresta a 2.500 m: 5-13 °C · viento constante</p>
+              <p>Capas: sudaréis subiendo al sol y os helaréis en la cresta. En septiembre las mañanas ya pican.</p>
+            </div>
+          </div>
+          <div class="tip-in"><b>Dos noches en el mismo sitio.</b> Es la única parada doble de toda la segunda mitad y cae justo en el día más duro de piernas del viaje (900 m de desnivel). En el plan original, después de Seceda tocaban 2h15 de carretera hasta Tre Croci. Aquí, no.</div>
+          <div class="warn"><b>Tormentas:</b> a principios de septiembre siguen formándose por la tarde con el calor. Mirad el radar por la mañana y estad bajando hacia las 15-16 h.</div>
+          <div class="warn"><b>Mañana hay 360 km hasta Milán</b>, con baño en el Garda de por medio. Salida a las 07:30: dejad todo listo esta noche y no cerréis el bar.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.seceda.it/en/summer">seceda.it</a> <span class="lt">— precios y reserva de franja</span></li>
+            <li><a href="https://www.valgardena.it/it/vacanze-estive-dolomiti/escursioni-val-gardena/seceda/come-arrivare-sul-monte-seceda/">valgardena.it — cómo subir al Seceda</a></li>
+            <li><a href="https://www.raccontapassi.it/il-monte-seceda-da-santa-cristina-a-piedi/">Raccontapassi</a> <span class="lt">— la ruta a pie desde Cristauta, paso a paso</span></li>
+            <li><a href="https://www.starealpasso.it/seceda/">Stare al Passo</a> <span class="lt">— senderos 4 → 1A → 6</span></li>
+            <li><a href="https://girovagandointrentino.it/escursioni/escursione-a-cima-seceda/">Girovagando in Trentino</a> <span class="lt">— track GPX y todas las baite</span></li>
+            <li><a href="https://www.viaggiacorrisogna.it/escursione-monte-seceda-senza-funivia/">Seceda sin funivia</a> <span class="lt">— tarifas del parking</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 12 · Seceda, 12,3 km y 900 m de desnivel</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Botas de trekking YA RODADAS</b> — y con los pies del Sorapis de ayer todavía calientes.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Apósitos para ampollas (Compeed)</b> — segundo día de montaña seguido: hoy es cuando salen.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>2 litros de agua por persona</b> — la subida está <b>toda al sol</b> y no hay fuente hasta arriba.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Crema 50+, gorra y gafas</b> — exposición total durante 900 m de desnivel.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Mochila de 20-30 L por persona</b> — son 4h30 con peso.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Bastones de trekking</b> — sobre todo para la bajada, que es la que destroza rodillas.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Cortavientos impermeable</b> — en la cresta hace viento y la tormenta entra a partir de las 15 h.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Calcetines técnicos</b> (nada de algodón) y un par seco de repuesto en la mochila.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Barritas y frutos secos</b> — 900 m de desnivel se pagan en calorías.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Mapa offline descargado</b> — sin cobertura fiable en la cresta.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">D13 · mié 2 sep</span><span class="d-title">Val Gardena → Sirmione (Garda) → Milán</span><span class="d-km">~360 km · 4h</span><span class="d-toll">💶 33-38 €</span><span class="d-tag">Baño en el Garda a mediodía y Navigli de aperitivo.</span></summary>
+        <div class="d-body">
+          <p>Se baja de los Dolomitas por el valle, se para a mediodía en <b>Sirmione</b> (Castello Scaligero, Grotte di Catullo y baño en el Garda) y se cruza la llanura hasta <b>Milán</b>, que entra en la ruta ocupando el sitio que tenía Alessandria. Llegando a media tarde os queda <b>el atardecer en los Navigli y el Duomo iluminado</b>, que es la mejor cara de la ciudad.</p>
+          <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Precaución al principio · ojo a Area B</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 2/5</span> La SS242 de bajada tiene curvas pero es carretera de valle ancha, y la hacéis a primera hora. El resto es autostrada de llanura. <b>El punto delicado de hoy no es la carretera: es dónde dejáis la camper al llegar a Milán.</b></li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Santa+Cristina+Valgardena,+Italy&amp;destination=Sirmione,+Italy&amp;waypoints=Chiusa,+Italy%7CBolzano,+Italy%7CTrento,+Italy%7CVerona,+Italy"><span>▶ Val Gardena → Sirmione (SS242 + A22)</span></a><span class="rd-cost">con peaje A22 · pasos forzados por Bolzano y Chiusa: imposible que os cuele un Passo</span></div></li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Sirmione,+Italy&amp;destination=Rho+Fiera,+Rho,+Italy&amp;waypoints=Brescia,+Italy%7CBergamo,+Italy%7CSesto+San+Giovanni,+Italy"><span>▶ Sirmione → Rho Fiera (rodeando Milán por el norte)</span></a><span class="rd-cost">con peaje A4 · <b>no entra en el municipio de Milán</b>, que es justo lo que buscamos</span></div></li>
+            <li><i>✅</i><b>Val Gardena → Sirmione:</b> <b>SS242</b> hasta Chiusa/Klausen → <b>A22 del Brennero dirección sur</b> → Bolzano → Trento → Verona → <b>A4 dirección Milán</b> → salida <b>Sirmione</b>.</li>
+            <li><i>✅</i><b>Sirmione → Milán:</b> <b>A4 dirección Milán</b> → Brescia → Bérgamo → <b>salida Rho Fiera</b> (o la tangenziale que corresponda a vuestra base). La A4 pasa <b>al norte de Milán sin entrar en la ciudad</b>: no toquéis las salidas del centro.</li>
+            <li><i>🚨</i><b>Area B y Area C de Milán — leed esto antes que nada.</b> <b>Area C</b> es un peaje de acceso al centro histórico (Cerchia dei Bastioni), laborables de mañana a tarde. <b>Area B</b> es mucho más gorda: una zona de bajas emisiones que cubre <b>casi todo el municipio de Milán</b> y prohíbe la entrada a diésel antiguos, también en laborables. <b>Hoy es miércoles: las dos están activas.</b> <span class="unver">verificad el escalón Euro de vuestra camper y los horarios vigentes en 2026 en comune.milano.it ANTES de salir de casa</span></li>
+            <li><i>✅</i><b>La solución limpia: no pisar el municipio.</b> Dormid en un <b>comune vecino con metro</b> y entrad en transporte público. <b>Rho / Rho Fiera</b> (línea M1 roja, ~30 min al Duomo, aparcamientos enormes dimensionados para autocares) es la mejor para vosotros porque además os deja encarados hacia Génova mañana. <b>Sesto San Giovanni</b> (M1) y <b>Cologno Monzese</b> (M2) son las alternativas por el este. <span class="unver">confirmar en park4night que el aparcamiento elegido admite pernocta y gálibo de camper</span></li>
+            <li><i>⛔</i><b>El único camping de Milán ciudad</b> (Camping Village Città di Milano, Via Airaghi, junto a San Siro) está <b>dentro de Area B</b>. Es cómodo y tiene metro cerca, pero solo sirve si vuestra camper puede entrar. Comprobadlo antes, no al llegar.</li>
+            <li><i>⛔</i><b>Sirmione:</b> el centro histórico y el puente del castillo son ZTL y físicamente imposibles con camper. Aparcad en el <b>Parcheggio Monte Baldo</b> (fuera de la península, admite vehículos largos) y entrad andando, 10 min.</li>
+            <li><i>⛔</i><b>Ni se os ocurra dejar que el GPS "atajé" por los pasos</b> al salir de Val Gardena: <b>Passo Sella</b>, <b>Passo Gardena</b>, <b>Passo Pordoi</b>, <b>Passo Costalunga</b> o <b>Passo Pinei/Panider</b>. Si la ruta propuesta dice "Passo" algo, rehacedla. Vuestra salida es <b>SS242 → Chiusa</b>, hacia abajo.</li>
+            <li><i>📐</i><b>Gálibo:</b> A22 y A4 sin límite. Ojo con las <b>marquesinas de gasolinera</b> del valle: varias tienen 3,20-3,50 m. Repostad en autostrada si medís más de 3 m.</li>
+            <li><i>⏰</i><b>Timing:</b> salid a las <b>07:30</b>. Es lo que os deja dos horas de lago a mediodía y llegar a Milán con la tarde por delante en vez de a las 20 h.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>07:30</b> Salida de Val Gardena (~230 km hasta Sirmione, 2h30).</li>
+            <li><b>10:30</b> Aparcar fuera del centro de Sirmione y entrar andando.</li>
+            <li><b>11:00</b> Castello Scaligero, casco antiguo, Grotte di Catullo.</li>
+            <li><b>13:00</b> Comida y <b>baño en el lago di Garda</b>. El agua está a 24-26 °C: es el mejor baño de toda la segunda mitad.</li>
+            <li><b>15:00</b> Salida hacia Milán (~130 km, 1h30).</li>
+            <li><b>16:30</b> Llegada a la base (Rho Fiera o similar) y check-in. <b>La camper ya no se mueve hasta mañana.</b></li>
+            <li><b>17:30</b> Metro al centro. <b>Duomo</b> y <b>Galleria Vittorio Emanuele II</b> con la luz de la tarde.</li>
+            <li><b>19:00</b> <b>Navigli</b>: aperitivo junto al canal, que es el rito local y por 10-12 € se cena de facto.</li>
+            <li><b>21:30</b> Vuelta al Duomo iluminado antes de coger el metro. Es otra ciudad de noche.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>🚨 Area B / Area C · lo imprescindible</h4>
+              <p><b>Area C</b> — peaje del centro histórico, laborables. No os afecta si no entráis, y no vais a entrar.</p>
+              <p><b>Area B</b> — zona de bajas emisiones de <b>casi todo el municipio</b>, laborables, con cámaras. Es la que puede dejaros fuera según el Euro de la camper.</p>
+              <p><b>Los fines de semana y festivos no están activas</b> <span class="unver">confirmar calendario 2026</span> — pero vuestro Milán cae en miércoles y jueves, así que contad con ellas activas.</p>
+              <p><b>Conclusión práctica:</b> base fuera del municipio + metro. Así el problema desaparece y encima aparcáis gratis o casi.</p>
+            </div>
+            <div class="cell"><h4>🛏 Dormir · fuera de Milán</h4>
+              <p><b>🥇 Zona Rho / Rho Fiera</b> — comune distinto (fuera de Area B), <b>M1 roja directa al Duomo</b> en ~30 min y aparcamientos de feria enormes, pensados para autocares. Y mañana salís hacia Génova sin cruzar la ciudad. <span class="unver">verificar pernocta, precio y gálibo</span></p>
+              <p><b>🥈 Sesto San Giovanni</b> (M1) o <b>Cologno Monzese</b> (M2) — también fuera del municipio, por el lado este. Más cómodos al llegar desde Sirmione, peor colocados para la salida de mañana.</p>
+              <p><b>🥉 Camping Village Città di Milano</b> (Via G. Airaghi 61, junto a San Siro) — el único camping de verdad, con M1 Bisceglie cerca. <b>Está dentro de Area B</b>: solo si vuestra camper puede entrar.</p>
+              <p><b>🚇 Comprad el billete de metro para todos al llegar.</b> Los billetes urbanos ATM valen para metro, tranvía y bus; hay diario y hay tarifas por zonas para Rho. <span class="unver">verificar zona tarifaria de Rho Fiera en atm.it</span></p>
+            </div>
+            <div class="cell"><h4>🌆 Qué ver esta tarde</h4>
+              <ul>
+                <li><b>Duomo</b> — la catedral gótica más grande de Italia, con 3.400 estatuas. Las terrazas quedan para mañana por la mañana, que es cuando hay mejor luz y menos cola.</li>
+                <li><b>Galleria Vittorio Emanuele II</b> — el "salotto di Milano", de 1877. Gratis. Buscad el mosaico del toro: girar el talón sobre él da suerte.</li>
+                <li><b>Navigli</b> (Naviglio Grande y Pavese) — los canales. A partir de las 18:30 es donde está la ciudad entera.</li>
+                <li><b>Teatro alla Scala</b> — por fuera decepciona a todo el mundo, y aun así hay que verlo.</li>
+                <li>Si os sobra energía: <b>Cimitero Monumentale</b>, gratis y espectacular, aunque cierra pronto.</li>
+              </ul>
+            </div>
+            <div class="cell"><h4>🍽 Comer y aperitivo</h4>
+              <p><b>Risotto alla milanese</b> (con azafrán), <b>cotoletta alla milanese</b>, <b>ossobuco</b> y <b>cassoeula</b> en invierno. Y los <b>panzerotti</b> fritos de Luini, junto al Duomo, que son la merienda de pie clásica.</p>
+              <p><b>El aperitivo milanés</b> es una institución: por el precio de la copa (~10-12 €) te ponen bufé. En los Navigli es donde mejor sale de precio. El <b>Negroni sbagliato</b> se inventó aquí, en el bar Basso, por confundir la ginebra con el prosecco.</p>
+            </div>
+            <div class="cell"><h4>⛪ Curiosidad: 600 años de obras</h4>
+              <p>El Duomo se empezó en <b>1386</b> y no se dio por terminado hasta bien entrado el s. XX — de ahí la expresión milanesa <i>"lunga come la fabbrica del Duomo"</i>, que se usa para cualquier cosa que no acaba nunca. Sobre la aguja más alta está la <b>Madonnina</b> (1774), y durante siglos rigió una regla no escrita: <b>ningún edificio de Milán podía ser más alto que ella</b>. Cuando el rascacielos Pirelli la superó en 1958, colocaron arriba una réplica en miniatura — y desde entonces cada torre nueva que la adelanta hace lo mismo. Hay copias de la Madonnina por todo el skyline.</p>
+            </div>
+            <div class="cell"><h4>💘 Curiosidad: el poeta y la diva</h4>
+              <p>Las <b>Grotte di Catullo</b> de Sirmione llevan el nombre del poeta romano Catulo, que se cree tenía una villa en la zona — aunque las ruinas que se visitan hoy son algo posteriores. Siglos después, otra celebridad eligió Sirmione para desconectar: la soprano <b>Maria Callas</b> pasaba aquí sus vacaciones, y su antigua casa (hoy Palazzo Callas, en Piazza Carducci) acoge exposiciones. Y esta noche dormís a una hora de <b>La Scala</b>, donde ella reinó: la coincidencia es bonita.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Val Gardena: mín ~10-14 °C<br>Sirmione: máx ~28-30 °C · agua ~24-26 °C<br>Milán: máx ~29-31 °C · húmedo</p>
+              <p>Ya es septiembre y la llanura afloja respecto a agosto, pero Milán sigue siendo calor húmedo sin brisa.</p>
+            </div>
+          </div>
+          <div class="warn"><b>Reservad HOY la Última Cena, si la queréis.</b> El <b>Cenacolo Vinciano</b> de Santa Maria delle Grazie se agota <b>con meses de antelación</b>: la visita es de 15 min, con franja horaria cerrada y grupos de aforo limitado. No es algo que se pueda improvisar mañana por la mañana. <span class="unver">verificar precio y apertura de entradas en cenacolovinciano.vivaticket.it</span></div>
+          <div class="warn"><b>Milán sustituye a Alessandria.</b> Lo único que se pierde con el cambio es una noche de tránsito (la Cittadella y el Museo Borsalino). A cambio, este día pasa de <b>4h30 a 4h</b> de conducción y deja de ser el más largo del viaje.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.visitsirmione.com/">visitsirmione.com</a> <span class="lt">— Castello Scaligero, Grotte di Catullo</span></li>
+            <li><a href="https://www.comune.milano.it/aree-b-c">comune.milano.it — Area B y Area C</a> <span class="lt">— <b>miradlo antes de salir de casa</b></span></li>
+            <li><a href="https://www.atm.it/">atm.it</a> <span class="lt">— metro, tarifas y zonas (incluida Rho Fiera)</span></li>
+            <li><a href="https://www.yesmilano.it/">yesmilano.it</a> <span class="lt">— turismo oficial, agenda y aperitivo</span></li>
+            <li><a href="https://cenacolovinciano.vivaticket.it/">Cenacolo Vinciano</a> <span class="lt">— La Última Cena: reservad ya</span></li>
+            <li><a href="https://park4night.com/es/search">park4night</a> <span class="lt">— pernocta en Rho / Sesto / Cologno</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 13 · de 12 °C a 31 °C, lago y ciudad</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Bañador y toalla arriba del todo</b> — a mediodía os metéis en el Garda. Si están en el garaje, no os bañáis.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Ropa fresca y algo decente para la noche</b> — salís con forro polar a 12 °C, coméis en bañador y cenáis en los Navigli.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Riñonera antirrobo</b> — metro de Milán a hora punta y Navigli llenos.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Tarjeta contactless</b> — el metro de Milán se valida directamente con la tarjeta bancaria.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Nevera cargada la noche antes</b> — comer en autostrada es caro y lento.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Chanclas</b> — para el lago.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Zapatillas cómodas</b> — Milán son distancias largas de asfalto.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">D14 · jue 3 sep</span><span class="d-title">Milán → Génova</span><span class="d-km">~145 km · 1h50</span><span class="d-toll">💶 13-16 €</span><span class="d-tag">Terrazas del Duomo por la mañana, carruggi por la tarde.</span></summary>
+        <div class="d-body">
+          <p>Mañana milanesa con lo que de verdad merece madrugón — <b>las terrazas del Duomo</b>, el Castello Sforzesco y, si la reservasteis a tiempo, <b>La Última Cena</b> — y a mediodía, salto corto a <b>Génova</b>. Sigue siendo una etapa cortísima, así que la ciudad conserva <b>tarde, atardecer y noche</b>: Via Garibaldi, los <i>carruggi</i> y cena de pesto sin mirar el reloj.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad · no crucéis Milán</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 1/5</span> Menos de dos horas de autostrada. La A7 <i>dei Giovi</i> tiene viaductos, túneles y bastante camión, pero carriles anchos y trazado moderno.</li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Rho+Fiera,+Rho,+Italy&amp;destination=Genova,+Italy&amp;waypoints=Assago,+Italy%7CTortona,+Italy%7CSerravalle+Scrivia,+Italy"><span>▶ Rho Fiera → Génova (tangenziale + A7)</span></a><span class="rd-cost">con peaje · el paso por Assago <b>rodea Milán por el oeste sin entrar en Area B</b></span></div></li>
+            <li><i>✅</i><b>Ruta:</b> <b>A50 Tangenziale Ovest</b> dirección sur → <b>A7 dei Giovi</b> → Tortona → Serravalle → <b>Génova</b>, salida a la periferia o al Porto Antico. Desde Rho no hace falta tocar la ciudad ni una vez.</li>
+            <li><i>🚨</i><b>Si dormisteis por el este</b> (Sesto, Cologno), <b>no crucéis Milán por dentro</b> para llegar a la A7: dad la vuelta por la <b>tangenziale Est → Ovest</b>. Cruzar la ciudad un jueves laborable es entrar en Area B. <span class="unver">confirmar que el tramo de tangenziale elegido queda fuera de Area B</span></li>
+            <li><i>⛔</i><b>No cojáis la SS35 dei Giovi</b> ni el <b>Passo della Bocchetta (SP4)</b> para "ahorrar peaje": son los pasos históricos de los Apeninos, estrechos, con lazadas cerradas y llenos de camiones. El peaje de la A7 es de los baratos del viaje.</li>
+            <li><i>🅿️</i><b>Génova:</b> <b>ZTL en todo el centro histórico</b>. Aparcad en <b>Marina Porto Antico</b> o en la periferia y entrad andando. Los <i>carruggi</i> son de 2 m de ancho: ni acercarse.</li>
+            <li><i>⛔</i><b>No pidáis al GPS "la ruta más corta al centro"</b> de Génova: os mete directo en la ZTL.</li>
+            <li><i>📐</i><b>Gálibo:</b> túneles de la A7 sin restricción. Ningún límite en todo el día.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>08:15</b> Metro al Duomo. <b>Terrazas en la primera franja del día</b>: sin cola, sin calor y con la mejor luz sobre las agujas.</li>
+            <li><b>09:30</b> Interior del Duomo y Galleria.</li>
+            <li><b>10:30</b> <b>Castello Sforzesco</b> — los patios son gratis y enormes — y el Parco Sempione detrás.</li>
+            <li><b>11:30</b> <b>Cenacolo Vinciano</b> si conseguisteis reserva (son 15 min exactos, sed puntuales). Si no: <b>Pinacoteca di Brera</b> o el barrio de Brera a secas.</li>
+            <li><b>12:45</b> Vuelta a la camper en metro. Comida rápida y salida.</li>
+            <li><b>14:00</b> Salida hacia Génova (~145 km, 1h50).</li>
+            <li><b>16:00</b> Llegada y aparcamiento. <b>Focaccia y farinata</b> de pie, como se hace aquí.</li>
+            <li><b>17:00</b> <b>Via Garibaldi</b> y los Palazzi dei Rolli (UNESCO). Acuario si os cuadra el horario.</li>
+            <li><b>19:00</b> Carruggi y catedral de San Lorenzo con la luz de la tarde entrando por los callejones.</li>
+            <li><b>20:30</b> <b>Cena de pesto genovese</b>. Trofie o trenette, y de aquí sale el original.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>⛪ Terrazas del Duomo</h4>
+              <p>Se sube <b>entre las agujas y las gárgolas</b>, no a un mirador cualquiera: es de las visitas más raras de Europa y la mejor razón para madrugar hoy.</p>
+              <p>Hay entrada solo-terrazas y combinada con catedral y museo, y <b>dos precios: escaleras o ascensor</b> (el ascensor sale bastante más caro). <span class="unver">verificar tarifas 2026 y comprar franja horaria online en duomomilano.it</span></p>
+              <p><b>Código de vestimenta estricto</b>: hombros y rodillas cubiertos, también para subir.</p>
+            </div>
+            <div class="cell"><h4>🎨 La Última Cena · si la reservasteis</h4>
+              <p>El <b>Cenacolo</b> de Leonardo, en el refectorio de Santa Maria delle Grazie. <b>Visita de 15 minutos</b>, grupos pequeños, franja horaria cerrada y puntualidad obligatoria: si llegáis tarde, no entráis.</p>
+              <p><b>Se agota con meses de antelación</b> y cierra los lunes (vuestro jueves está bien). <span class="unver">verificar precio y calendario de venta</span></p>
+              <p><b>Si no hay entradas:</b> la <b>Pinacoteca di Brera</b> tiene el <i>Cristo muerto</i> de Mantegna y el <i>Beso</i> de Hayez, y no necesita reserva.</p>
+            </div>
+            <div class="cell"><h4>🅿️ Génova en camper</h4>
+              <p>Génova tiene <b>ZTL en el centro histórico</b> y los carruggi son intransitables. Aparcad en la periferia o en el Porto Antico y entrad andando. <span class="unver">verificar área y ZTL antes de ir</span></p>
+            </div>
+            <div class="cell"><h4>🍽 Comer</h4>
+              <p><b>El pesto es de aquí.</b> Trofie o trenette al pesto genovese, focaccia genovese (la de verdad, aceitosa y salada), farinata de garbanzos.</p>
+              <p>Comprad pesto y focaccia buenos para los días de Francia: es el mejor souvenir comestible del viaje.</p>
+            </div>
+            <div class="cell"><h4>⚓ Curiosidad: Génova y Colón</h4>
+              <p>La casa donde se dice que creció Cristóbal Colón se conserva junto a la Porta Soprana, en el centro histórico — una reconstrucción del s. XVIII, pero en el sitio original. Dato curioso: la familia Colombo estaba vinculada al cuidado de la <b>Lanterna</b>, el faro más antiguo de Italia y símbolo de la ciudad, lo que refuerza para los historiadores el origen genovés de Colón.</p>
+            </div>
+            <div class="cell"><h4>🔧 Antes de Francia</h4>
+              <p>Mañana empieza la <b>recta final por Francia</b> y ya no hay días cortos. Aprovechad la tarde de hoy en Génova para presiones, aceite y <b>depósito lleno</b> — el gasóleo italiano suele salir mejor que el francés.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Milán: máx ~29-31 °C<br>Génova: máx ~27-29 °C, húmedo · mín ~20 °C</p>
+              <p>Septiembre en Liguria es más amable que agosto: se pasea bien hasta tarde.</p>
+            </div>
+          </div>
+          <div class="tip-in"><b>Génova sigue ganando con la ruta inversa.</b> Aunque hoy salís de Milán y no de Alessandria, la etapa sigue siendo de menos de dos horas: Génova conserva tarde, atardecer y cena, que es cuando los carruggi de verdad valen la pena. En el plan original era "una mañana antes de salir corriendo".</div>
+          <div class="warn"><b>Salid de Milán a las 14:00 como muy tarde.</b> No por el tráfico, sino porque llegar a Génova a las 16:00 es lo que convierte esta parada en una ciudad vista y no en una cena rápida.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.duomomilano.it/">duomomilano.it</a> <span class="lt">— terrazas: tarifas y franjas horarias</span></li>
+            <li><a href="https://cenacolovinciano.vivaticket.it/">Cenacolo Vinciano</a> <span class="lt">— La Última Cena</span></li>
+            <li><a href="https://www.milanocastello.it/">milanocastello.it</a> <span class="lt">— Castello Sforzesco</span></li>
+            <li><a href="https://www.visitgenoa.it/">visitgenoa.it</a> <span class="lt">— turismo oficial, Via Garibaldi, carruggi</span></li>
+            <li><a href="https://www.acquariodigenova.it/">acquariodigenova.it</a> <span class="lt">— Acuario, entradas online</span></li>
+            <li><a href="https://www.museidigenova.it/">museidigenova.it</a> <span class="lt">— Palazzi dei Rolli (UNESCO)</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 14 · Duomo por la mañana, carruggi por la noche</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Ropa que cubra hombros y rodillas</b> — el Duomo y San Lorenzo aplican el código de vestimenta de verdad, y hoy pisáis los dos.</span></li>
+            <li><span class="imp imp-5">5/5</span><span><b>Reservas en el móvil</b> — terrazas del Duomo y, si la tenéis, el Cenacolo con su hora exacta.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Riñonera antirrobo bajo la ropa</b> — metro de Milán por la mañana y carruggi de noche.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Zapatillas cómodas</b> — las terrazas del Duomo por escaleras son 250 escalones, y Génova es cuesta y escalón.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Tuppers</b> — comprad pesto y focaccia buenos para los días de Francia.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Gorra y agua</b> — la plaza del Duomo a las 9 de la mañana ya pega.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Herramientas y compresor</b> — mañana empieza la tanda francesa sin días tontos.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">D15 · vie 4 sep</span><span class="d-title">Génova → Mónaco (base en Menton)</span><span class="d-km">~200 km · 2h30</span><span class="d-toll">💶 22-27 €</span><span class="d-tag">Riviera dei Fiori y Montecarlo a pie. Cambio de guardia a las 11:55.</span></summary>
+        <div class="d-body">
+          <p>Se cruza la Riviera por la A10 <i>dei Fiori</i> y se planta el campamento en <b>Menton</b> para entrar en Mónaco en tren, que es la única forma sensata de hacerlo con camper. Saliendo pronto llegáis a tiempo del <b>cambio de guardia de las 11:55</b> en la Place du Palais, y os queda la tarde entera de Principado.</p>
+          <div class="road road-crit"><h4>🛣 Ruta segura camper <span class="rd-lvl">Crítico · trampa de navegador</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 2/5</span> Por la A10/A8 el firme es perfecto — pero es <b>viaducto y túnel continuos con viento lateral</b>, así que cansa más de lo que parece. Salirse de ella lo dispara a <b>5/5</b>: aquí el peligro no está en la ruta, está en aceptar el desvío que propone el móvil.</li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Genova,+Italy&amp;destination=Menton,+France&amp;waypoints=Savona,+Italy%7CSanremo,+Italy%7CVentimiglia,+Italy"><span>▶ Génova → Menton (A10 dei Fiori)</span></a><span class="rd-cost">CON PEAJE A PROPÓSITO · la gratuita es la SS1 Aurelia: pueblo a pueblo, horas de más</span></div></li>
+            <li><i>✅</i><b>Regla del día, sin excepciones:</b> <b>A10 "dei Fiori"</b> desde Génova → Savona → Sanremo → frontera de Ventimiglia → <b>A8</b> → <b>salida 59 Menton</b> → aparcar en Menton → tren a Mónaco. <b>No salgáis de la autopista en todo el tramo</b> salvo para repostar.</li>
+            <li><i>⛔</i><b>Las tres Corniches, prohibidas:</b> <b>D2564 Grande Corniche</b>, <b>D6007 Moyenne Corniche</b> y <b>D6098 Basse Corniche</b>. Curvas colgadas del acantilado, túneles antiguos y cero margen. Google las propone como "ruta más corta" a Mónaco: rechazadlo siempre.</li>
+            <li><i>⛔</i><b>SS1 Aurelia</b> (Génova → Ventimiglia): cruza todos los pueblos de la Riviera con calles de un carril y aparcamiento en batería. Horas de más y roces garantizados.</li>
+            <li><i>⛔</i><b>No entréis en Mónaco con la camper.</b> Los aparcamientos del Principado son subterráneos con barreras de <b>1,90-2,20 m</b> y las rampas del circuito no perdonan. La solución ya está en el plan: tren desde Menton.</li>
+            <li><i>📐</i><b>Gálibo A10/A8:</b> más de 4 m en todos los túneles — cualquier camper pasa. La A10 es literalmente un viaducto continuo: viento lateral, sujetad el volante y no adelantéis a camiones con ráfagas.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>07:30</b> Salida de Génova (~200 km, 2h30). Es la única madrugada de la recta final y sirve para llegar al cambio de guardia.</li>
+            <li><b>10:15</b> Llegada a <b>Menton</b>. Aparcar y <b>TER a Monaco-Monte-Carlo</b> (10 min).</li>
+            <li><b>11:55</b> <b>Cambio de guardia</b> en la Place du Palais (~7 min). Vestimenta correcta obligatoria.</li>
+            <li><b>12:30</b> Mónaco-Ville, catedral, Puerto Hércules, exterior del Casino. <b>Picnic</b> en los jardines de Saint-Martin, con el mar debajo.</li>
+            <li><b>15:30</b> Trazado del circuito de F1 a pie: túnel, chicane del puerto, Rascasse.</li>
+            <li><b>17:30</b> Tren de vuelta a Menton. Baño en la playa antes de cenar.</li>
+            <li><b>20:00</b> Cena en el casco viejo de Menton — la mitad de precio que en el Principado y con más gracia.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>🚫 Mónaco en camper: no</h4>
+              <p>Los parkings subterráneos tienen <b>límite de altura (~1,90-2,20 m)</b> y las calles son un laberinto de túneles. <b>Aparcad fuera y entrad en tren.</b></p>
+              <p>Opciones: parking en <b>Beausoleil</b> (justo encima de Mónaco) o en <b>Menton</b> + <b>TER a Monaco-Monte-Carlo</b>: <span class="eur">~2,90-4 €</span>, 10 min, unos 40-46 trenes al día (05:14-23:58).</p>
+            </div>
+            <div class="cell"><h4>🎟 Gratis en Mónaco</h4>
+              <ul>
+                <li><b>Cambio de guardia</b> en la Place du Palais: <b>todos los días a las 11:55</b>, ~7 min.</li>
+                <li>Mónaco-Ville (casco viejo), catedral, jardines de Saint-Martin, Puerto Hércules, exterior del Casino.</li>
+                <li>Jardín Exótico: de pago. <span class="unver">verificar precio</span></li>
+              </ul>
+            </div>
+            <div class="cell"><h4>🛏 Dormir · zona Menton</h4>
+              <p>La costa entre <b>Menton</b>, <b>Roquebrune-Cap-Martin</b> y <b>Cap-d'Ail</b> concentra las opciones de camper del lado francés. <span class="unver">verificar plazas, gálibo y precio en park4night: es una de las zonas más restrictivas de Francia para la pernocta</span></p>
+              <p><b>Aviso:</b> aquí muchos aparcamientos costeros tienen barrera de altura y hay control activo de pernocta. Id con la ubicación decidida <b>antes</b> de bajar de la autopista, no dando vueltas al atardecer.</p>
+              <p><b>Plan B:</b> campings de la zona de Roquebrune / Sospel, algo más al interior.</p>
+            </div>
+            <div class="cell"><h4>🍽 Comer</h4>
+              <p>En Mónaco todo es carísimo: <b>picnic</b> en los jardines de Saint-Martin con vistas al mar es el plan y no es ninguna renuncia.</p>
+              <p>En Menton: <b>barbajuan</b>, <b>pichade</b>, socca, y todo lo que lleve <b>limón de Menton IGP</b>, que es el producto de la ciudad.</p>
+            </div>
+            <div class="cell"><h4>🎲 Curiosidad: el país imposible</h4>
+              <p>Mónaco tiene solo <b>2 km²</b> — el segundo país más pequeño del mundo tras el Vaticano — y aun así mete dentro un Gran Premio de F1, un casino centenario y más de <b>560 cámaras de videovigilancia</b>. Un dato para el paseo: <b>los propios monegascos tienen prohibida la entrada al Casino de Montecarlo</b>, que se financia enteramente con turistas.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Máx ~27-29 °C · mín ~20 °C · mar ~25-26 °C</p>
+              <p>Septiembre en la Costa Azul es la mejor época del año: mar caliente y sin la masa de agosto.</p>
+            </div>
+          </div>
+          <div class="warn"><b>La frontera de Ventimiglia</b> tiene controles frecuentes y colas a media mañana. Con salida a las 07:30 la cruzáis antes de las 10 h y no la notaréis.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.visitmonaco.com/">visitmonaco.com</a> <span class="lt">— turismo oficial de Mónaco</span></li>
+            <li><a href="https://www.palais.mc/">palais.mc</a> <span class="lt">— Palacio del Príncipe y cambio de guardia</span></li>
+            <li><a href="https://www.ter.sncf.com/sud-provence-alpes-cote-d-azur">TER SUD</a> <span class="lt">— horarios y billetes Menton ⇄ Mónaco</span></li>
+            <li><a href="https://www.tourisme-menton.fr/">tourisme-menton.fr</a> <span class="lt">— Menton, dónde comer y aparcar</span></li>
+            <li><a href="https://park4night.com/es/search">park4night</a> <span class="lt">— pernocta en la Costa Azul: mirad antes de bajar</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 15 · Mónaco a pie</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Riñonera antirrobo bajo la ropa</b> — el tren de Menton a Mónaco va lleno.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Ropa que cubra hombros y rodillas</b> — la catedral de Mónaco aplica el código de vestimenta de verdad.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Zapatillas cómodas</b> — Mónaco es todo cuesta y escaleras.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Tarjeta contactless</b> — el TER se paga sin efectivo y se ahorra cola.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Picnic preparado desde la camper</b> — comer en el Principado cuesta lo que dos días de camping.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Bañador</b> — al volver a Menton, el mar está a 25 °C.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Powerbank</b> — día largo fuera del vehículo con el móvil de guía.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">D16 · sáb 5 sep</span><span class="d-title">Menton → Gorges du Verdon</span><span class="d-km">~200 km · 3h</span><span class="d-toll">💶 22-27 €</span><span class="d-tag">Del mar al cañón. Tarde de agua turquesa y kayak.</span></summary>
+        <div class="d-body">
+          <p>Se deja la costa y se sube a la meseta hasta el <b>cañón más grande de Europa</b>. Llegando a mediodía os queda <b>toda la tarde de agua</b>: baño y kayak en el lago de Sainte-Croix, que es el mejor plan del Verdon y el que en el plan original quedaba siempre a medias.</p>
+          <div class="road road-crit"><h4>🛣 Ruta segura camper <span class="rd-lvl">Crítico · la entrada al cañón</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 2/5 por la buena · 5/5 por la mala</span> La autopista y la subida por la meseta oeste son departamentales anchas, sin drama. Pero <b>la entrada equivocada al cañón es el peor tramo posible de todo el viaje</b>, así que hoy el enlace de abajo no es una sugerencia.</li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Menton,+France&amp;destination=Moustiers-Sainte-Marie,+France&amp;waypoints=Le+Muy,+France%7CDraguignan,+France%7CAups,+France"><span>▶ Menton → Moustiers (por la meseta oeste)</span></a><span class="rd-cost">peaje solo en la A8 · sube por Aups/Draguignan, <b>nunca por Castellane</b></span></div></li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Moustiers-Sainte-Marie,+France&amp;destination=Bauduen,+France&amp;waypoints=Les+Salles-sur-Verdon,+France"><span>▶ Tarde de agua: Moustiers → Bauduen</span></a><span class="rd-cost">sin peaje · orilla del lago, ancha, aparcamiento grande</span></div></li>
+            <li><i>✅</i><b>Ruta:</b> <b>A8 dirección oeste</b> → <b>salida 36 Le Muy</b> → D54/D557 → Draguignan → D557 → <b>Aups</b> → <b>D957</b> → <b>Moustiers-Sainte-Marie</b>. Subida suave por la meseta: departamentales anchas, dos carriles de verdad, curvas abiertas y sin acantilado.</li>
+            <li><i>⛔</i><b>NO entréis por Castellane.</b> La <b>D952 Castellane → Point Sublime</b> tiene tramos de un solo carril colgados sobre el cañón y con desprendimientos. Es el peor error posible del viaje. Tampoco la <b>N85 Route Napoléon</b>.</li>
+            <li><i>⛔</i><b>Route des Crêtes (D23/D71), 24 km:</b> sentido único obligatorio, calzada de ~4 m, sin arcén. Túneles de <b>4,30 m en el centro pero 3,60 m en los laterales</b> <span class="unver">verificar in situ</span>. <b>Altura &gt;3,20 m o largo &gt;7 m: descartada sin discusión.</b></li>
+            <li><i>⚠️</i><b>D71 Corniche Sublime:</b> doble sentido y más ancha que la D23, pero el <b>Pont de l'Artuby</b> y sus curvas piden ir despacio. Aceptable hasta <b>7 m de largo</b>; por encima, no.</li>
+            <li><i>✅</i><b>El plan que sí funciona:</b> camper quieta en <b>Moustiers</b>, <b>Aiguines</b> o <b>La Palud</b>, y el cañón a pie y en agua. Kayak desde la playa de <b>Bauduen</b> o <b>Les Salles-sur-Verdon</b> (accesos anchos y aparcamiento grande).</li>
+            <li><i>📐</i><b>Resumen de umbrales:</b> ≤2,60 m alto y ≤6 m largo → todo abierto salvo prudencia. 2,60-3,20 m → sin Route des Crêtes. &gt;3,20 m o &gt;7 m → solo D952/D957 y miradores bajos. Y el aparcamiento del centro de Moustiers <b>no admite &gt;7 m</b>.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>09:00</b> Salida de Menton por la A8. Última vista del Mediterráneo hasta Cataluña.</li>
+            <li><b>12:00</b> Llegada a <b>Moustiers-Sainte-Marie</b>. Check-in en el área o camping y comida.</li>
+            <li><b>14:00</b> Bajada al <b>lago de Sainte-Croix</b> (Bauduen o Les Salles). Baño.</li>
+            <li><b>15:30</b> <b>Kayak o barca</b> remando hasta la entrada de la garganta — el plan estrella del Verdon. <span class="eur">~18-30 €</span> medio día por kayak.</li>
+            <li><b>18:30</b> Vuelta a Moustiers. Paseo por el pueblo y la estrella colgada entre los dos riscos.</li>
+            <li><b>20:30</b> Cena provenzal. Mañana se sale a las 11:00, así que hay margen.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>🥾 Qué hacer</h4>
+              <ul>
+                <li><b>Kayak o barca en el lago de Sainte-Croix</b> — entrar remando en la garganta es <i>el</i> plan. <span class="eur">~18-30 €</span> medio día / día completo por kayak.</li>
+                <li><b>Mirador de la Mescla</b> y <b>Balcons de la Mescla</b> (D71) — la vista sin caminar, accesibles por carretera de doble sentido.</li>
+                <li><b>Point Sublime</b> desde el aparcamiento bajo, andando 15 min.</li>
+                <li><b>Sentier Martel</b> — la ruta clásica: <b>~15 km, 5-7 h, de un solo sentido</b> (hay que organizar el regreso). Si queréis hacerla entera, es el motivo número uno para estirar el viaje al martes 8.</li>
+              </ul>
+            </div>
+            <div class="cell"><h4>🛏 Dormir · Verdon</h4>
+              <p>Campings y áreas en <b>Moustiers-Sainte-Marie</b>, <b>Aiguines</b> y <b>Les Salles-sur-Verdon</b>. <span class="unver">verificar en park4night</span></p>
+              <p><b>Reservad.</b> La zona se satura en verano y las carreteras de acceso son estrechas: llegar con la ubicación exacta en el GPS es parte del plan. La ventaja de este sentido es que <b>llegáis a mediodía y con luz</b>, no de noche como en la ruta original.</p>
+            </div>
+            <div class="cell"><h4>💚 Curiosidad: por qué es turquesa</h4>
+              <p>El color viene de la <b>"harina de roca"</b>: partículas microscópicas de piedra caliza molidas por los glaciares que quedan en suspensión en el agua. Cuando el sol las golpea, dispersan la luz y crean ese azul-verde lechoso tan característico. El nombre "Verdon" viene precisamente del latín <i>viridis</i> (verde).</p>
+            </div>
+            <div class="cell"><h4>🍽 Comer</h4>
+              <p>Provenza pura: cordero de Sisteron, ratatouille, quesos de cabra de Banon, miel de lavanda y aceite del Alto Var. Moustiers es además famosa por su <b>loza</b> desde el s. XVII.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Máx ~28-30 °C · agua del lago fresca pero perfectamente bañable</p>
+              <p>Principios de septiembre en el Verdon es la mejor combinación posible: calor de sobra para el agua y la mitad de gente que en agosto.</p>
+            </div>
+          </div>
+          <div class="tip-in"><b>Este día es el que más gana con un día extra.</b> Tal como está, tenéis una tarde de agua y una mañana de miradores. Con un día más (vuelta el martes 8) tendríais además el <b>Sentier Martel</b> completo o una jornada entera de kayak. Todo lo demás del plan aguanta igual: solo hay que duplicar esta parada.</div>
+          <div class="warn"><b>Camper en el Verdon:</b> carreteras estrechas, túneles sin iluminar y muros de piedra. Id despacio y comprobad la altura del vehículo antes de meteros en cualquier cosa que no sea la D952 o la D957.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.lesgorgesduverdon.fr/">lesgorgesduverdon.fr</a> <span class="lt">— Sentier Martel, Route des Crêtes</span></li>
+            <li><a href="https://www.verdontourisme.com/en/route-des-cretes/">verdontourisme.com — Route des Crêtes</a> <span class="lt">— gálibos y sentido de circulación</span></li>
+            <li><a href="https://www.verdontourisme.com/">verdontourisme.com</a> <span class="lt">— alquiler de kayak en Sainte-Croix</span></li>
+            <li><a href="https://www.moustiers.fr/">moustiers.fr</a> <span class="lt">— Moustiers-Sainte-Marie</span></li>
+            <li><a href="https://park4night.com/es/search">park4night</a> <span class="lt">— áreas en Moustiers / Aiguines</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 16 · día de agua en el Verdon</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Bañador y toalla de secado rápido</b> — hoy es el último baño de agua dulce del viaje.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Escarpines o calzado de agua</b> — las orillas del Sainte-Croix son de piedra y canto rodado.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Bolsa estanca para el móvil</b> — si hacéis kayak hasta la entrada del cañón, es la diferencia entre fotos y un móvil muerto.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Crema solar resistente al agua</b> — el reflejo del lago quema el doble.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Biodramina</b> — la subida a la meseta marea a quien sea propenso.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Nevera o placas de frío</b> — picnic junto al lago.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Gafas de sol categoría 3</b> — reverbero fuerte sobre el agua turquesa.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">D17 · dom 6 sep</span><span class="d-title">Verdon → Nimes → Narbona</span><span class="d-km">~380 km · 4h</span><span class="d-toll">💶 48-53 €</span><span class="d-tag">Miradores por la mañana, Nimes romana por la tarde, playa de noche.</span></summary>
+        <div class="d-body">
+          <p>Mañana de cañón sin conducir apenas — miradores de la Mescla y Point Sublime a pie — y luego el gran salto hacia el oeste con parada en <b>Nimes</b>: anfiteatro romano, Maison Carrée y Jardins de la Fontaine. Última noche del viaje, y a pie de playa en <b>Narbonne-Plage</b>.</p>
+          <div class="road road-mid"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad técnica · pero son 380 km</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 2/5</span> La salida del Verdon por la meseta es nacional ancha y el resto autopista. La dificultad es <b>la longitud</b>: 380 km partidos por una visita, que es exactamente por lo que la visita va en medio y no al final.</li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Moustiers-Sainte-Marie,+France&amp;destination=Nimes,+France&amp;waypoints=Riez,+France%7CGreoux-les-Bains,+France%7CManosque,+France%7CSalon-de-Provence,+France"><span>▶ Moustiers → Nimes (por la meseta)</span></a><span class="rd-cost">peaje desde Manosque · pasos forzados por Riez y Gréoux: <b>impide que os baje por Castellane</b></span></div></li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Nimes,+France&amp;destination=Narbonne-Plage,+France&amp;waypoints=Montpellier,+France%7CBeziers,+France%7CNarbonne,+France"><span>▶ Nimes → Narbonne-Plage</span></a><span class="rd-cost">con peaje A9 · sin peaje sería la N113 cruzando Montpellier</span></div></li>
+            <li><i>✅</i><b>Salida del Verdon:</b> <b>D952 vía Riez</b> → Gréoux-les-Bains → Manosque → <b>A51</b> → <b>A7</b> → Salon-de-Provence → <b>A54</b> → Nimes, salida 25 <b>Nîmes-Ouest</b>. Departamentales anchas hasta Manosque y autopista a partir de ahí.</li>
+            <li><i>⛔</i><b>Ni hoy ni nunca por Castellane.</b> Salid por la meseta oeste, igual que entrasteis.</li>
+            <li><i>⛔</i><b>Nimes:</b> aparcad <b>fuera del centro</b>. El casco tiene calles de 3 m y arcos, y el parking <b>Jean Jaurès</b> es subterráneo (gálibo ~1,90 m, <b>NO</b>). Buscad superficie en la periferia o el <b>P+R Parnasse / A54</b> y entrad en bus.</li>
+            <li><i>📐</i><b>Gálibo:</b> ninguno en ruta. Solo en los parkings de Nimes, ya avisados.</li>
+            <li><i>🅿️</i><b>Al llegar:</b> el área de Narbonne-Plage no tiene barrera de altura y admite hasta <b>8 m de largo</b>. La D168 de acceso es ancha y llana.</li>
+            <li><i>⏰</i><b>Timing:</b> salid del Verdon a las <b>11:00</b> como muy tarde. Así coméis en Nimes, la veis con calma y llegáis a la playa antes del anochecer, que en septiembre ya es sobre las 20:15.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>08:00</b> Mañana de cañón a pie: <b>Belvédère de la Mescla</b>, <b>Balcons de la Mescla</b> o el <b>Point Sublime</b> desde el aparcamiento bajo (15 min andando).</li>
+            <li><b>10:30</b> Vuelta, recogida y servicios.</li>
+            <li><b>11:00</b> Salida hacia Nimes (~200 km, 2h30).</li>
+            <li><b>13:30</b> <b>Nimes.</b> Comida — <b>brandade de morue</b>, el plato de la ciudad — o picnic de <b>Les Halles</b>, el mercado cubierto (~70 puesteros).</li>
+            <li><b>15:00</b> Anfiteatro romano, Maison Carrée y Jardins de la Fontaine.</li>
+            <li><b>17:00</b> Salida hacia Narbonne-Plage (~180 km, 1h45).</li>
+            <li><b>19:00</b> Llegada. <b>Último baño del viaje</b> y cena a pie de playa.</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>🏛 Nimes</h4>
+              <p>Las <b>Arènes</b> son el anfiteatro romano mejor conservado del mundo, y siguen en uso. La <b>Maison Carrée</b>, templo romano casi intacto, es Patrimonio de la Humanidad desde 2023. Los <b>Jardins de la Fontaine</b> son de los primeros jardines públicos de Europa (s. XVIII).</p>
+              <p>Se ve todo andando en dos o tres horas. → <span class="mono">arenes-nimes.com</span></p>
+            </div>
+            <div class="cell"><h4>🛏 Dormir · Narbonne-Plage</h4>
+              <p>Área de <b>Narbonne-Plage</b>, sin barrera de altura y hasta <b>8 m de largo</b>. Pago con tarjeta, sin reserva. <span class="unver">verificar precio 2026</span></p>
+              <p><b>Última noche del viaje</b> y con el mar a cien metros. En septiembre la costa languedociana está mucho más tranquila que en agosto.</p>
+              <p><b>Nunca:</b> dormir en área de servicio de la A9. Robos habituales.</p>
+            </div>
+            <div class="cell"><h4>🍽 Comer</h4>
+              <p>Nimes: <b>brandade de morue</b> (el plato de la ciudad), aceitunas picholine, tapenade. Vinos Costières de Nîmes.</p>
+              <p>Les Halles de Nîmes, cerca de la Maison Carrée, son perfectas para montar un picnic de mediodía con producto local.</p>
+            </div>
+            <div class="cell"><h4>🐊 Curiosidad: el cocodrilo</h4>
+              <p>El símbolo de Nimes es un <b>cocodrilo encadenado a una palmera</b> — lo veréis en placas doradas por todas partes. Viene de una moneda romana acuñada tras la conquista de Egipto por Augusto: los legionarios de Nimes habían luchado en esa campaña, y el cocodrilo representaba a Egipto sometido. Está hasta en el escudo del equipo de fútbol local.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Nimes: máx ~29-31 °C · mín ~17 °C<br>Narbonne-Plage: mar ~24 °C</p>
+              <p>Septiembre quita a Nimes lo peor de su fama de horno. Aun así, gorra y agua para las Arènes.</p>
+            </div>
+          </div>
+          <div class="tip-in"><b>Aquí se ve claro por qué la ruta inversa funciona.</b> En el plan original, este mismo tramo se hacía el día 2 y terminaba <b>llegando de noche al Verdon</b> por carreteras de montaña — el punto más flojo de todo el itinerario. Al invertirlo, el Verdon se hace de día y este tramo termina en una playa, que es donde debe terminar un penúltimo día.</div>
+          <div class="warn"><b>Domingo de septiembre:</b> el valle del Ródano y la A9 ya no tienen el atasco de agosto, pero el tramo Montpellier-Béziers sigue cargando a media tarde. Salir de Nimes a las 17:00 os deja por delante.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.arenes-nimes.com/">arenes-nimes.com</a> <span class="lt">— Arenas + Maison Carrée, entradas</span></li>
+            <li><a href="https://www.nimes-tourisme.com/">nimes-tourisme.com</a> <span class="lt">— qué ver, restaurantes</span></li>
+            <li><a href="https://www.verdontourisme.com/">verdontourisme.com</a> <span class="lt">— miradores accesibles del cañón</span></li>
+            <li><a href="https://www.narbonne-tourisme.com/">narbonne-tourisme.com</a> <span class="lt">— Narbonne-Plage y el área</span></li>
+            <li><a href="https://www.bison-fute.gouv.fr/">Bison Futé</a> <span class="lt">— miradlo la noche antes</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 17 · cañón, Nimes al sol y playa</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>Gorra, gafas y crema 50+</b> — el anfiteatro de Nimes no tiene sombra.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Botella reutilizable por persona</b> — Nimes está llena de fuentes públicas.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Zapatillas cómodas de ciudad</b> — Nimes se ve entero andando.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Bañador otra vez a mano</b> — último baño en el Mediterráneo esta noche.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Bolsa de tela plegable</b> — para el picnic de Les Halles.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Bolsas de basura</b> — empezad a vaciar la camper hoy, no mañana con prisa.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+      <div class="day"><details>
+        <summary><span class="d-num">D18 · lun 7 sep</span><span class="d-title">Narbona → Carcassonne → Barcelona</span><span class="d-km">~430 km · 4h30 + visita</span><span class="d-toll">💶 53-56 €</span><span class="d-tag">Fortaleza medieval, cassoulet y a casa. 🎉</span></summary>
+        <div class="d-body">
+          <p>Último día, partido en dos con una parada de lujo: la <b>Cité de Carcassonne</b>, la fortaleza medieval más grande de Europa. Está a 60 km de donde dormís, así que el día empieza suave. Y como cae en <b>lunes</b>, la AP-7 hacia Barcelona va como debe ir.</p>
+          <div class="road road-ok"><h4>🛣 Ruta segura camper <span class="rd-lvl">Sin dificultad</span></h4><ul>
+            <li><i>🎚</i><span class="rd-diff">Dificultad 1/5</span> Cero dificultad técnica en los 430 km. Y hoy ni siquiera hay factor tráfico: es lunes, no domingo.</li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Narbonne-Plage,+France&amp;destination=Carcassonne,+France&amp;waypoints=Narbonne,+France%7CCapendu,+France&amp;avoid=tolls"><span>▶ Narbonne-Plage → Carcassonne (SIN PEAJE)</span></a><span class="rd-cost">−13 € y solo +13 min · la D6113 es ancha y con poca curva. <b>El mejor ahorro del viaje</b></span></div></li>
+            <li><i>🗺</i><div class="rd-maps-row"><a class="rd-map" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=driving&amp;origin=Carcassonne,+France&amp;destination=Barcelona,+Spain&amp;waypoints=Narbonne,+France%7CPerpignan,+France%7CLa+Jonquera,+Spain"><span>▶ Carcassonne → Barcelona</span></a><span class="rd-cost">con peaje en Francia · la AP-7 catalana ya es gratuita</span></div></li>
+            <li><i>✅</i><b>Ruta:</b> D168 → Narbona → <b>D6113 sin peaje</b> vía Capendu/Floure (ancha, poca curva, 13 € menos) o A61 → Carcassonne → vuelta por <b>A61 → A9 → AP-7</b>.</li>
+            <li><i>⛔</i><b>No subáis a la Cité con la camper.</b> Las calles intramuros son medievales y el acceso rodado está restringido. Aparcad en el <b>área de camping-cars junto al Camping de la Cité</b> o en el <b>P1 Délestage</b> (dimensionado para autobús, así que cualquier camper cabe) y subid andando 10-20 min.</li>
+            <li><i>📐</i><b>Gálibo:</b> ninguno en toda la etapa. Único día del viaje sin una sola restricción.</li>
+            <li><i>⏰</i><b>Salid de Carcassonne antes de las 16 h.</b> En lunes la AP-7 no se satura como los domingos de agosto, pero la entrada a Barcelona a última hora sigue siendo la entrada a Barcelona.</li>
+          </ul></div>
+          <div class="plan"><h4>Plan del día</h4><ul>
+            <li><b>08:30</b> Último café con el mar delante y salida. Son solo 60 km hasta Carcassonne.</li>
+            <li><b>10:00</b> Aparcar y subir a la <b>Cité</b>. Murallas, basílica Saint-Nazaire, callejeo intramuros.</li>
+            <li><b>13:00</b> Comida de cierre: <b>cassoulet</b> de verdad.</li>
+            <li><b>15:00</b> Salida hacia Barcelona (~370 km, ~3h45).</li>
+            <li><b>19:00</b> Llegada. Fin de los 18 días. 🎉</li>
+          </ul></div>
+          <div class="grid">
+            <div class="cell"><h4>🎟 Cité de Carcassonne</h4>
+              <p><b>El recinto medieval es de acceso libre y gratuito</b>: calles, murallas exteriores y basílica Saint-Nazaire. Solo se paga el castillo:</p>
+              <ul>
+                <li><b>Château Comtal + murallas altas: <span class="eur">19 €</span></b> de abril a septiembre (13 € de octubre a marzo). Audioguía +4 €.</li>
+                <li><b>Gratis para menores de 18 y para ciudadanos de la UE de 18 a 25 años</b> con documento válido. <b>Si el grupo entra en esa franja, es gratis.</b></li>
+                <li>Horario verano: 10:00-18:30 (billetería cierra 45 min antes). → <span class="mono">tickets.monuments-nationaux.fr</span></li>
+              </ul>
+            </div>
+            <div class="cell"><h4>🅿️ Aparcar</h4>
+              <p><b>Aire de camping-cars de Carcassonne</b>, junto al Camping de la Cité: plazas amplias, agua y vaciado, sin electricidad, <span class="eur">~12-18 €</span> + tasas. Camino peatonal a la Cité (10-20 min).</p>
+              <p><b>Parking P1 Délestage</b> (Chemin de Montlegun): para bus y camper.</p>
+              <p>Llegando a las 10 h de un lunes de septiembre, sitio de sobra — nada que ver con agosto.</p>
+            </div>
+            <div class="cell"><h4>🍽 Comer</h4>
+              <p><b>Cassoulet de Carcassonne</b>: alubias, confit de pato y salchicha de Toulouse. Pesado, glorioso y la mejor forma de terminar un viaje.</p>
+              <p>Vinos de Corbières y Minervois. Evitad los restaurantes de la calle principal de la Cité.</p>
+            </div>
+            <div class="cell"><h4>🔔 Curiosidad: la dama que dio nombre a la ciudad</h4>
+              <p>La leyenda dice que, durante un asedio de cinco años de Carlomagno, la princesa <b>Dame Carcas</b> tomó el mando de la defensa; al ver que el ejército franco se retiraba, mandó tocar todas las campanas de júbilo — "<i>Carcas sonne</i>" ("Carcas suena"), de ahí el nombre de la ciudad. Otra curiosidad, esta de verdad: los tejados cónicos de las torres que fotografiaréis <b>no son medievales</b>, sino una invención del arquitecto <b>Viollet-le-Duc</b>, que restauró la Cité en el s. XIX con un estilo más romántico que fiel al original — polémico entonces y hoy.</p>
+            </div>
+            <div class="cell"><h4>🌡 Clima</h4>
+              <p class="temp">Carcassonne: máx ~27-29 °C · mín ~15 °C<br>Barcelona: ~28 °C</p>
+            </div>
+          </div>
+          <div class="tip-in"><b>Terminar en lunes es un regalo pequeño pero real.</b> En el plan original el último día caía en domingo, con el aviso de "salid antes de las 16 h porque la AP-7 se satura a partir de las 18". Un lunes de septiembre, ese problema no existe: podéis alargar la comida en Carcassonne sin mirar el reloj.</div>
+          <div class="links"><h4>🔗 Enlaces útiles</h4><ul>
+            <li><a href="https://www.tourisme-carcassonne.fr/">tourisme-carcassonne.fr</a> <span class="lt">— la Cité, restaurantes, parkings</span></li>
+            <li><a href="https://www.remparts-carcassonne.fr/">remparts-carcassonne.fr</a> <span class="lt">— Château Comtal, entradas</span></li>
+            <li><a href="https://www.tickets.monuments-nationaux.fr/">tickets.monuments-nationaux.fr</a> <span class="lt">— reserva online</span></li>
+            <li><a href="https://www.campingdelacite.com/">Camping de la Cité</a> <span class="lt">— el área de camper está al lado</span></li>
+          </ul></div>
+          <div class="pack"><h4>🎒 De la maleta, hoy · Día 18 · Carcassonne y vuelta a casa</h4><ul>
+            <li><span class="imp imp-5">5/5</span><span><b>DNI o pasaporte de los menores de 26 EN LA MANO</b> — el Château Comtal es <b>gratis para ciudadanos UE de 18 a 25 años</b>. Sin documento, son 19 € por cabeza. El objeto más rentable de la maleta hoy.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Zapatillas cómodas</b> — las murallas de la Cité son empedrado irregular.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Bolsas de basura</b> — vaciad la camper antes de llegar a casa, no después.</span></li>
+            <li><span class="imp imp-4">4/5</span><span><b>Documentación a mano</b> — cruce de frontera de vuelta.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Bolsa de tela</b> — última compra de vino de Corbières y Minervois.</span></li>
+            <li><span class="imp imp-3">3/5</span><span><b>Gorra y agua</b> — la Cité a mediodía sigue sin perdonar.</span></li>
+          </ul></div>
+        </div>
+      </details></div>
+
+    </div>
+
+    <div class="legtot" style="border-left-color:#4B3F8A">
+      <h4>💶 Total de peajes · ruta inversa (18 días)</h4>
+      <div class="big" style="color:#4B3F8A">~315 - 390 €</div>
+      <p>Reparto aproximado: <b>~185-215 € en Francia</b> (los días 1, 2, 15, 17 y 18 concentran casi todo) y <b>~135-180 € en Italia</b> (A5/A4/A26, A22, A4, A7, A10, A27). <b>Cuatro días a cero:</b> el 4 (Petit-Saint-Bernard), el 5 (Courmayeur parado), el 11 (Val Pusteria) y el 12 (Seceda).</p>
+      <p>El <b>día 4 sigue siendo el gran ahorro</b>: cruzar los Alpes por el puerto en vez del túnel del Mont Blanc son <b>204,80 € que no pagáis</b> — más que el peaje de toda la semana italiana junta.</p>
+      <p><b>Frente al plan original</b> (~350-409 € en 17 días), esta ruta sale prácticamente igual pese a tener un día más: la parada de Grenoble y la de Montpellier se pagan con lo que se ahorra al no subir dos veces por el Ródano.</p>
+    </div>
+
+    <div class="legtot" style="border-left-color:var(--pine);margin-top:14px">
+      <h4>✅ Comprobación de las normas</h4>
+      <p><b>1. Salida el 21 al mediodía</b> → día 1, salida a las 12:30-13:00, con Montpellier esa misma tarde. ✅</p>
+      <p><b>2. Venecia la noche del 29</b> → día 9, check-in en Fusina a las 17:30 y cena en la laguna. Con tres horas de margen y los ocho días anteriores calculados hacia atrás desde ahí. ✅</p>
+      <p><b>3. Respetar las paradas decididas</b> → se mantienen las 17. Solo caen <b>Pont du Gard</b> y <b>Uzès/Avignon</b>, que es justo el cambio que pedisteis. ✅</p>
+      <p><b>4. Noche de fiesta en Grenoble y mañana siguiente suave</b> → día 2, <b>sábado</b>, con llegada a mediodía para no llegar reventados; y el día 3 son <b>105 km sin hora de salida</b>. ✅</p>
+      <p><b>5. Parada en Montpellier sin noche</b> → día 1, tarde completa y a dormir a la playa de Palavas, 12 km más allá. ✅</p>
+      <p><b>Extra: máximo 5 h de conducción al día</b> → el día más largo es el <b>18</b>, con 4h30 partidos en dos por la visita a Carcassonne. Le siguen el <b>13</b> (4h) y el <b>17</b> (4h). Ningún otro llega a 3h45. ✅</p>
+    </div>
+  </div>
+</section>
 <!-- ===================== COSTES ===================== -->
 <section id="costes">
   <div class="wrap">
